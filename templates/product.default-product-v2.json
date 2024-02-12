@@ -1,5 +1,5 @@
 {
-  "wrapper": "div.shopify-section-wrapper.section",
+  // "wrapper": "div.shopify-section-wrapper.section",
   "sections": {
     "sidebar": {
       "type": "product-sidebar",
@@ -13,12 +13,6 @@
         "title": {
           "type": "title",
           "settings": {
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-            "display_savings": true
           }
         },
         "loox-rating": {
@@ -41,24 +35,29 @@
           "settings": {
           }
         },
+        "short_benefits_w9UXmW": {
+          "type": "short-benefits",
+          "settings": {
+          }
+        },
         "form": {
           "type": "form",
           "settings": {
           }
         },
-        "share": {
-          "type": "share",
+        "trust_seals_8rEAFt": {
+          "type": "trust-seals",
           "settings": {
           }
         }
       },
       "block_order": [
         "title",
-        "price",
         "loox-rating",
         "description",
+        "short_benefits_w9UXmW",
         "form",
-        "share"
+        "trust_seals_8rEAFt"
       ],
       "settings": {
         "product_breadcrumb": false,
@@ -76,19 +75,9 @@
         "enable_thumbnail_slider": true
       }
     },
-    "recently-viewed": {
-      "type": "recently-viewed",
-      "settings": {
-        "rv_title": "Recently viewed products",
-        "rv_products_style": "grid",
-        "rv_max_display": 6,
-        "rv_per": 4,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
     "recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "show_product_recommendations": true,
         "product_recommendations_style": "grid",
@@ -116,27 +105,12 @@
       ],
       "settings": {
       }
-    },
-    "featured_text_pzdwN9": {
-      "type": "featured-text",
-      "settings": {
-        "title": "Don't talk about your brand",
-        "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
-        "button_label": "",
-        "button_link": "",
-        "text_size": "featured_text",
-        "text_alignment": "center",
-        "css_class": "",
-        "custom_css": ""
-      }
     }
   },
   "order": [
     "sidebar",
     "main",
-    "recently-viewed",
     "recommendations",
-    "loox-product-reviews-app-section",
-    "featured_text_pzdwN9"
+    "loox-product-reviews-app-section"
   ]
 }

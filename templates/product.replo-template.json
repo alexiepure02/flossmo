@@ -1,1 +1,298 @@
-{"sections":{"1661671249671c3512":{"type":"logo-listv2","disabled":true,"blocks":{"16616712498728d031-0":{"type":"logo_image","settings":{"svg_link":"usa-today.svg","link":""}},"16616712498728d031-1":{"type":"logo_image","settings":{"svg_link":"cbs-news.svg","link":""}},"16616712498728d031-2":{"type":"logo_image","settings":{"svg_link":"fox_1.svg","link":""}},"16616712498728d031-3":{"type":"logo_image","settings":{"svg_link":"nbc-03.svg","link":""}}},"block_order":["16616712498728d031-0","16616712498728d031-1","16616712498728d031-2","16616712498728d031-3"],"settings":{"title":"AS SEEN ON","dsvg_height":30,"msvg_height":15,"svg_fit":"contain","css_class":"","custom_css":""}},"main":{"type":"product-templatev2","blocks":{"title":{"type":"title","settings":{}},"ecde6337-11c1-479b-82ac-94f262487386":{"type":"liquid","settings":{"custom_liquid":"<a href=\"#looxReviews\"><div class=\"loox-rating\" data-id=\"{{ product.id }}\" data-rating=\"{{ product.metafields.loox.avg_rating }}\" data-raters=\"{{ product.metafields.loox.num_reviews }}\"   data-pattern=\"[count] reviews by happy customers\"><\/div><\/a>"}},"51a031a1-c0c2-4140-9465-37d12f687141":{"type":"text","settings":{"text":"<p><strong>“the American Dental Hygienists' Association recommends water flossing over string dental flossing<\/strong>. <strong>\"<\/strong><\/p>","custom_css":"small--text"}},"7919dfcc-6bba-44b5-9279-f820300a9708":{"type":"liquid","settings":{"custom_liquid":"<ul role=\"list\" class=\"influencer-list mt15 w-list-unstyled\">\n<li class=\"icon-list-item\">\n<div class=\"feature-wrap\">\n<div class=\"checkmark w-embed\"><svg width=\"420\" height=\"420\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z\" fill=\"currentColor\"><\/path>\n<\/svg>\n<\/div>\n<div class=\"feature-text\">Perfect flossing everytime<strong><br><\/strong><\/div>\n<\/div>\n<\/li>\n<li class=\"icon-list-item\">\n<div class=\"feature-wrap\">\n<div class=\"checkmark w-embed\"><svg width=\"420\" height=\"420\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z\" fill=\"currentColor\"><\/path>\n<\/svg>\n<\/div>\n<div class=\"feature-text\">Removes bateria lingering<strong><br><\/strong><\/div>\n<\/div>\n<\/li>\n<li class=\"icon-list-item\">\n<div class=\"feature-wrap\">\n<div class=\"checkmark w-embed\"><svg width=\"420\" height=\"420\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n <path d=\"M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z\" fill=\"currentColor\"><\/path>\n<\/svg>\n<\/div>\n<div class=\"feature-text\">reduce gum disease and bleeding<strong><br><\/strong><\/div>\n<\/div>\n<\/li>\n<li class=\"icon-list-item\">\n<div class=\"feature-wrap\">\n<div class=\"checkmark w-embed\"><svg width=\"420\" height=\"420\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z\" fill=\"currentColor\"><\/path>\n<\/svg>\n<\/div>\n<div class=\"feature-text\">30 seconds daily routine for a better teeth and breath<strong><br><\/strong><\/div>\n<\/div>\n<\/li>\n<\/ul>"}},"price":{"type":"price","settings":{"display_savings":true}},"form":{"type":"form","settings":{}},"share":{"type":"share","disabled":true,"settings":{}},"766b95fe-05da-4b51-b805-aa1a6a5d0b60":{"type":"badge","settings":{"badge":true,"text":"<p><strong>30-Day Guarantee:<\/strong> Flossmo offers a 30-Day Money Back Guarantee in case you don't fall in love with our product.<\/p>"}},"dcff8b06-2c9c-440a-9494-ece34b2daa7c":{"type":"logo-items","disabled":true,"settings":{"title":"AS SEEN ON","svg_link1":"usa-today.svg","svg_link2":"cbs-news.svg","svg_link3":"fox_1.svg","svg_link4":"nbc-03.svg","dsvg_height":30,"msvg_height":15,"svg_fit":"contain"}}},"block_order":["title","ecde6337-11c1-479b-82ac-94f262487386","51a031a1-c0c2-4140-9465-37d12f687141","7919dfcc-6bba-44b5-9279-f820300a9708","price","form","share","766b95fe-05da-4b51-b805-aa1a6a5d0b60","dcff8b06-2c9c-440a-9494-ece34b2daa7c"],"settings":{"product_breadcrumb":false,"dpt":28,"mpt":28,"media_position":"is-flex-row","set_product_height":true,"product_height":600,"video_looping":false,"product_thumbs":true,"gallery_arrows":true,"enable_product_lightbox":true,"activate_zoom":false,"slideshow_speed":0,"slideshow_animation":"slide","thumbnail_position":"bottom","enable_thumbnail_slider":true}},"4eae75fc-5fea-4762-b43b-2b2d77e5728e":{"type":"replo-replo-product-page","settings":{}},"recently-viewed":{"type":"recently-viewed","disabled":true,"settings":{"rv_title":"Recently viewed products","rv_products_style":"grid","rv_max_display":6,"rv_per":4,"css_class":"","custom_css":""}},"recommendations":{"type":"product-recommendations","disabled":true,"settings":{"show_product_recommendations":true,"product_recommendations_style":"grid","product_recommendations_heading":"You may also like","products_per_row":3,"recommended_products_limit":4}},"1646823664aa806146":{"type":"image-text","blocks":{"16468236641339c507-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/sudoku87_Flossmo_Product_VB_17-May-2022_220509333884_0001_06_CB_2500x2500_288c8d11-e4d2-4054-b9a9-4dc0a5982d36.jpg","image_crop":"none","title":"Portable and Light","title_size":36,"title_weight":"bold","title_align":"center","text":"<p>Lightweight and cordless, Flossmo can easily fit in your bag so that you can take it with you on the go, to the office, the gym or on travel.<\/p><p>Each box contains:<\/p><p>✔️ 1 x Water Flosser Device<\/p><p>✔️ 2 x Classic Jet Tips<\/p><p>✔️ 1 x Travel Pouch<\/p><p>✔️ 1 x USB Charging Cord<\/p><p>✔️ 1 x User Manual<\/p>","button_label":"CHOOSE YOUR WATER FLOSSER","link":"#product--variants","in_page_anchor":"#product--variants","btn_bg":"#d53600","btntext_bg":"#ffffff","link_style":"solid","bg_color":"#ffffff","text_color":""}}},"block_order":["16468236641339c507-1"],"settings":{"wide_display":false,"featured_links_per_row":"1","frontpage_text_align":"left","frontpage_image_position":"row-reverse","css_class":"","custom_css":""}},"16468274777014ba46":{"type":"reviews-and-faq","blocks":{"8e002877-52ca-424b-83b6-7329348f1ef2":{"type":"faq","settings":{"q":" What are some benefits of Water Flossers?","a":"<p>Water flossers are known to be more gentle in comparison to traditional string floss. They are less likely to cause bleeding and inflammation in the gums. <br\/><br\/>Along with this, water flossers are super important for those with braces as they can help get food and plaque that may be stuck under the wires. <\/p>"}},"55e0dc44-f78e-4c80-a09f-bbbaee0a8db7":{"type":"faq","settings":{"q":"How often should I brush and use my water flosser?","a":"<p>You should brush twice a day and use the water flosser once a day. However, make sure you use the water flosser prior to brushing.<\/p>"}},"1646827477fb0d1970-0":{"type":"faq","settings":{"q":"Can a Water Flosser effectively remove plaque?","a":"<p>Water flossers are very effective in that they are able to reach more deep sockets and remove plaque that may not be in reach for normal string floss. <\/p>"}},"1646827477fb0d1970-1":{"type":"faq","settings":{"q":"Should I use my water flosser before or after I brush my teeth?","a":"<p>We recommend that you use a water flosser before you brush your teeth. This aids in getting out debris that way when you brush, it enhances the effectiveness of the tooth brush.<\/p>"}},"1646827477fb0d1970-2":{"type":"faq","settings":{"q":"How often should I replace the tips of my water flosser? ","a":"<p>It is recommended that you replace the tips of your water flossers every 6 months. This way the performance stays enhanced and the quality of the water flosser doesn’t go down. <\/p>"}},"1646827477fb0d1970-3":{"type":"faq","settings":{"q":"What pressure setting should I put my water flosser on? ","a":"<p>Though all the pressure settings are safe, it is recommended that you start with the lowest setting and work your way up based on comfort over time. <\/p>"}},"35f803b5-c978-4d38-ab47-a66c029ff4c8":{"type":"faq","settings":{"q":"Do you offer any warranty?","a":"<p>Yes! In case you don't fall in love with Flossmo, we offer a 30 days money back guarantee when you return it.<\/p>"}},"4414adcf-9a8a-402e-8208-1a748a723651":{"type":"faq","settings":{"q":"How long is the shipping?","a":"<p>Shipping typically takes 7-14 working days! <br\/><br\/>Just reach out to our friendly customer support team at support@flossmo.com and we will fix any issues! :)<\/p>"}}},"block_order":["8e002877-52ca-424b-83b6-7329348f1ef2","55e0dc44-f78e-4c80-a09f-bbbaee0a8db7","1646827477fb0d1970-0","1646827477fb0d1970-1","1646827477fb0d1970-2","1646827477fb0d1970-3","35f803b5-c978-4d38-ab47-a66c029ff4c8","4414adcf-9a8a-402e-8208-1a748a723651"],"settings":{"accent":"#37a1d3","tab1":"Reviews","tab2":"FAQ","pad_top":20,"pad_bot":20}}},"order":["1661671249671c3512","main","4eae75fc-5fea-4762-b43b-2b2d77e5728e","recently-viewed","recommendations","1646823664aa806146","16468274777014ba46"]}
+{
+  "sections": {
+    "1661671249671c3512": {
+      "type": "logo-listv2",
+      "blocks": {
+        "16616712498728d031-0": {
+          "type": "logo_image",
+          "settings": {
+            "svg_link": "usa-today.svg",
+            "link": ""
+          }
+        },
+        "16616712498728d031-1": {
+          "type": "logo_image",
+          "settings": {
+            "svg_link": "cbs-news.svg",
+            "link": ""
+          }
+        },
+        "16616712498728d031-2": {
+          "type": "logo_image",
+          "settings": {
+            "svg_link": "fox_1.svg",
+            "link": ""
+          }
+        },
+        "16616712498728d031-3": {
+          "type": "logo_image",
+          "settings": {
+            "svg_link": "nbc-03.svg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16616712498728d031-0",
+        "16616712498728d031-1",
+        "16616712498728d031-2",
+        "16616712498728d031-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "AS SEEN ON",
+        "dsvg_height": 30,
+        "msvg_height": 15,
+        "svg_fit": "contain",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "product-templatev2",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "ecde6337-11c1-479b-82ac-94f262487386": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<a href=\"#looxReviews\"><div class=\"loox-rating\" data-id=\"{{ product.id }}\" data-rating=\"{{ product.metafields.loox.avg_rating }}\" data-raters=\"{{ product.metafields.loox.num_reviews }}\"   data-pattern=\"[count] reviews by happy customers\"><\/div><\/a>"
+          }
+        },
+        "51a031a1-c0c2-4140-9465-37d12f687141": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>“the American Dental Hygienists' Association recommends water flossing over string dental flossing<\/strong>. <strong>\"<\/strong><\/p>",
+            "custom_css": "small--text"
+          }
+        },
+        "7919dfcc-6bba-44b5-9279-f820300a9708": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<ul role=\"list\" class=\"influencer-list mt15 w-list-unstyled\">\n<li class=\"icon-list-item\">\n<div class=\"feature-wrap\">\n<div class=\"checkmark w-embed\"><svg width=\"420\" height=\"420\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z\" fill=\"currentColor\"><\/path>\n<\/svg>\n<\/div>\n<div class=\"feature-text\">Perfect flossing everytime<strong><br><\/strong><\/div>\n<\/div>\n<\/li>\n<li class=\"icon-list-item\">\n<div class=\"feature-wrap\">\n<div class=\"checkmark w-embed\"><svg width=\"420\" height=\"420\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z\" fill=\"currentColor\"><\/path>\n<\/svg>\n<\/div>\n<div class=\"feature-text\">Removes bateria lingering<strong><br><\/strong><\/div>\n<\/div>\n<\/li>\n<li class=\"icon-list-item\">\n<div class=\"feature-wrap\">\n<div class=\"checkmark w-embed\"><svg width=\"420\" height=\"420\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n <path d=\"M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z\" fill=\"currentColor\"><\/path>\n<\/svg>\n<\/div>\n<div class=\"feature-text\">reduce gum disease and bleeding<strong><br><\/strong><\/div>\n<\/div>\n<\/li>\n<li class=\"icon-list-item\">\n<div class=\"feature-wrap\">\n<div class=\"checkmark w-embed\"><svg width=\"420\" height=\"420\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11.003 16L18.073 8.929L16.659 7.515L11.003 13.172L8.174 10.343L6.76 11.757L11.003 16Z\" fill=\"currentColor\"><\/path>\n<\/svg>\n<\/div>\n<div class=\"feature-text\">30 seconds daily routine for a better teeth and breath<strong><br><\/strong><\/div>\n<\/div>\n<\/li>\n<\/ul>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "766b95fe-05da-4b51-b805-aa1a6a5d0b60": {
+          "type": "badge",
+          "settings": {
+            "badge": true,
+            "text": "<p><strong>30-Day Guarantee:<\/strong> Flossmo offers a 30-Day Money Back Guarantee in case you don't fall in love with our product.<\/p>"
+          }
+        },
+        "dcff8b06-2c9c-440a-9494-ece34b2daa7c": {
+          "type": "logo-items",
+          "disabled": true,
+          "settings": {
+            "title": "AS SEEN ON",
+            "svg_link1": "usa-today.svg",
+            "svg_link2": "cbs-news.svg",
+            "svg_link3": "fox_1.svg",
+            "svg_link4": "nbc-03.svg",
+            "dsvg_height": 30,
+            "msvg_height": 15,
+            "svg_fit": "contain"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "ecde6337-11c1-479b-82ac-94f262487386",
+        "51a031a1-c0c2-4140-9465-37d12f687141",
+        "7919dfcc-6bba-44b5-9279-f820300a9708",
+        "price",
+        "form",
+        "share",
+        "766b95fe-05da-4b51-b805-aa1a6a5d0b60",
+        "dcff8b06-2c9c-440a-9494-ece34b2daa7c"
+      ],
+      "settings": {
+        "product_breadcrumb": false,
+        "dpt": 28,
+        "mpt": 28,
+        "media_position": "is-flex-row",
+        "set_product_height": true,
+        "product_height": 600,
+        "video_looping": false,
+        "product_thumbs": true,
+        "gallery_arrows": true,
+        "enable_product_lightbox": true,
+        "activate_zoom": false,
+        "slideshow_speed": 0,
+        "slideshow_animation": "slide",
+        "thumbnail_position": "bottom",
+        "enable_thumbnail_slider": true
+      }
+    },
+    "4eae75fc-5fea-4762-b43b-2b2d77e5728e": {
+      "type": "replo-replo-product-page",
+      "settings": {
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "rv_title": "Recently viewed products",
+        "rv_products_style": "grid",
+        "rv_max_display": 6,
+        "rv_per": 4,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_style": "grid",
+        "product_recommendations_heading": "You may also like",
+        "products_per_row": 3,
+        "recommended_products_limit": 4
+      }
+    },
+    "1646823664aa806146": {
+      "type": "image-text",
+      "blocks": {
+        "16468236641339c507-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sudoku87_Flossmo_Product_VB_17-May-2022_220509333884_0001_06_CB_2500x2500_288c8d11-e4d2-4054-b9a9-4dc0a5982d36.jpg",
+            "image_crop": "none",
+            "title": "Portable and Light",
+            "title_size": 36,
+            "title_weight": "bold",
+            "title_align": "center",
+            "text": "<p>Lightweight and cordless, Flossmo can easily fit in your bag so that you can take it with you on the go, to the office, the gym or on travel.<\/p><p>Each box contains:<\/p><p>✔️ 1 x Water Flosser Device<\/p><p>✔️ 2 x Classic Jet Tips<\/p><p>✔️ 1 x Travel Pouch<\/p><p>✔️ 1 x USB Charging Cord<\/p><p>✔️ 1 x User Manual<\/p>",
+            "button_label": "CHOOSE YOUR WATER FLOSSER",
+            "link": "#product--variants",
+            "in_page_anchor": "#product--variants",
+            "btn_bg": "#d53600",
+            "btntext_bg": "#ffffff",
+            "link_style": "solid",
+            "bg_color": "#ffffff",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16468236641339c507-1"
+      ],
+      "settings": {
+        "wide_display": false,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row-reverse",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16468274777014ba46": {
+      "type": "reviews-and-faq",
+      "blocks": {
+        "8e002877-52ca-424b-83b6-7329348f1ef2": {
+          "type": "faq",
+          "settings": {
+            "q": " What are some benefits of Water Flossers?",
+            "a": "<p>Water flossers are known to be more gentle in comparison to traditional string floss. They are less likely to cause bleeding and inflammation in the gums. <br\/><br\/>Along with this, water flossers are super important for those with braces as they can help get food and plaque that may be stuck under the wires. <\/p>"
+          }
+        },
+        "55e0dc44-f78e-4c80-a09f-bbbaee0a8db7": {
+          "type": "faq",
+          "settings": {
+            "q": "How often should I brush and use my water flosser?",
+            "a": "<p>You should brush twice a day and use the water flosser once a day. However, make sure you use the water flosser prior to brushing.<\/p>"
+          }
+        },
+        "1646827477fb0d1970-0": {
+          "type": "faq",
+          "settings": {
+            "q": "Can a Water Flosser effectively remove plaque?",
+            "a": "<p>Water flossers are very effective in that they are able to reach more deep sockets and remove plaque that may not be in reach for normal string floss. <\/p>"
+          }
+        },
+        "1646827477fb0d1970-1": {
+          "type": "faq",
+          "settings": {
+            "q": "Should I use my water flosser before or after I brush my teeth?",
+            "a": "<p>We recommend that you use a water flosser before you brush your teeth. This aids in getting out debris that way when you brush, it enhances the effectiveness of the tooth brush.<\/p>"
+          }
+        },
+        "1646827477fb0d1970-2": {
+          "type": "faq",
+          "settings": {
+            "q": "How often should I replace the tips of my water flosser? ",
+            "a": "<p>It is recommended that you replace the tips of your water flossers every 6 months. This way the performance stays enhanced and the quality of the water flosser doesn’t go down. <\/p>"
+          }
+        },
+        "1646827477fb0d1970-3": {
+          "type": "faq",
+          "settings": {
+            "q": "What pressure setting should I put my water flosser on? ",
+            "a": "<p>Though all the pressure settings are safe, it is recommended that you start with the lowest setting and work your way up based on comfort over time. <\/p>"
+          }
+        },
+        "35f803b5-c978-4d38-ab47-a66c029ff4c8": {
+          "type": "faq",
+          "settings": {
+            "q": "Do you offer any warranty?",
+            "a": "<p>Yes! In case you don't fall in love with Flossmo, we offer a 30 days money back guarantee when you return it.<\/p>"
+          }
+        },
+        "4414adcf-9a8a-402e-8208-1a748a723651": {
+          "type": "faq",
+          "settings": {
+            "q": "How long is the shipping?",
+            "a": "<p>Shipping typically takes 7-14 working days! <br\/><br\/>Just reach out to our friendly customer support team at support@flossmo.com and we will fix any issues! :)<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "8e002877-52ca-424b-83b6-7329348f1ef2",
+        "55e0dc44-f78e-4c80-a09f-bbbaee0a8db7",
+        "1646827477fb0d1970-0",
+        "1646827477fb0d1970-1",
+        "1646827477fb0d1970-2",
+        "1646827477fb0d1970-3",
+        "35f803b5-c978-4d38-ab47-a66c029ff4c8",
+        "4414adcf-9a8a-402e-8208-1a748a723651"
+      ],
+      "settings": {
+        "accent": "#37a1d3",
+        "tab1": "Reviews",
+        "tab2": "FAQ",
+        "pad_top": 20,
+        "pad_bot": 20
+      }
+    }
+  },
+  "order": [
+    "1661671249671c3512",
+    "main",
+    "4eae75fc-5fea-4762-b43b-2b2d77e5728e",
+    "recently-viewed",
+    "recommendations",
+    "1646823664aa806146",
+    "16468274777014ba46"
+  ]
+}
