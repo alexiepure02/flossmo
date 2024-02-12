@@ -1,0 +1,44 @@
+
+  $(function($){ 
+ 
+    $(document).ready(function() {    
+
+      $('#shopify-section-{{ section.id }} #tabs li a:not(:first)').addClass('inactive');
+      $('#shopify-section-{{ section.id }} .tabs-contents .containers').hide();
+      $('#shopify-section-{{ section.id }} .tabs-contents .containers:first').show();
+
+      
+        
+      var texts = $('#shopify-section-{{ section.id }} #tabs li a:first').text();
+      
+      $('#shopify-section-{{ section.id }} #tabs li a').click(function(){
+          var t = $(this).attr('id');
+        $('#shopify-section-{{ section.id }} .mobile-compare-title').trigger('click');
+        
+       texts = $(this).text();
+        
+               
+        $('#shopify-section-{{ section.id }} .mobile-compare-title span').text(texts);
+        
+        if($(this).hasClass('inactive')){ //this is the start of our condition 
+          $('#shopify-section-{{ section.id }} #tabs li a').addClass('inactive');           
+          $(this).removeClass('inactive');
+
+          $('#shopify-section-{{ section.id }} .tabs-contents .containers').hide();
+          $('#shopify-section-{{ section.id }} #'+ t + 'c').fadeIn('slow');
+       }
+      });
+    
+ 
+      $('#shopify-section-{{ section.id }} .mobile-compare-title').click(function(){
+        $(this).toggleClass('opened');
+ 
+      });
+                                       
+      
+	  
+    });
+    
+    
+    
+  });

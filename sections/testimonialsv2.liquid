@@ -1,0 +1,520 @@
+{% comment %} Advanced {% endcomment %}
+{%- assign css_class = section.settings.css_class -%}
+{%- assign custom_css = section.settings.custom_css -%}
+
+{% comment %} Section specific CSS {% endcomment %}
+{% style %}
+  {%
+    render 'css-loop',
+    css: custom_css,
+    id: id
+  %}
+  #shopify-section-{{ section.id }} {
+    padding: 38px 0;
+    background-color: {{ section.settings.bg_color }};
+  }
+  #shopify-section-{{ section.id }} .pretitle{
+    font-size: {{ section.settings.mpt_size }}px;
+    color: {{ section.settings.pt_color }};
+    margin-bottom: 16px;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+  
+  #shopify-section-{{ section.id }} .title{
+    font-size: {{ section.settings.mt_size }}px;
+    color: {{ section.settings.t_color }};
+    margin-bottom: 24px;
+    margin-top: 0;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  #shopify-section-{{ section.id }} .container.summary-container {
+    width: 100%;
+    max-width: 860px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    border-radius: 18px;
+    background-color: {{ section.settings.sbg_color }};
+  }
+
+  #shopify-section-{{ section.id }} .summary-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 6px;
+  }
+
+  #shopify-section-{{ section.id }} .summary-items .summary-title{
+    font-size: 12px;
+  }
+  #shopify-section-{{ section.id }} .summary-items .summary-stars {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ #shopify-section-{{ section.id }} .stars--icons{
+    color: #ffb815;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ #shopify-section-{{ section.id }} .summary-stars svg{
+    width: 16px;
+    height: 16px;
+}
+
+#shopify-section-{{ section.id }} .rating-text {
+    margin-left: 5px;
+    width: 16px;
+    font-size: 12px;
+}
+
+#shopify-section-{{ section.id }} .container.testimonials-items-container {
+    max-width: 860px;
+    width: 100%;
+    margin: 25px auto 40px;
+    column-gap: 10px;
+    row-gap: 20px;
+}
+
+#shopify-section-{{ section.id }} .container.testimonials-items-container .stars-icon{
+     display: flex;
+     align-items: center;
+}
+
+#shopify-section-{{ section.id }} .container.testimonials-items-container .stars-icon svg {
+    width: 14px;
+    height: 14px;
+    color: #ffb815;
+    width: 20px;
+    height: 20px;
+}
+
+#shopify-section-{{ section.id }} .container.testimonials-items-container .testimonial-item-rating{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    font-weight: 500;
+    flex-direction: column;
+}
+
+#shopify-section-{{ section.id }} .container.testimonials-items-container .testimonial-item-content p{
+    font-size: 12px;
+    margin-bottom: 12px;
+    padding-bottom: 20px;
+}
+
+#shopify-section-{{ section.id }} .container.testimonials-items-container .testimonial-item-container {
+    border-radius: 6px;
+    overflow: hidden;
+}
+ 
+#shopify-section-{{ section.id }} .container.testimonials-items-container .testimonial-item-image {
+    height: 165px;
+}
+
+#shopify-section-{{ section.id }} .container.testimonials-items-container .testimonial-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#shopify-section-{{ section.id }} .container.testimonials-items-container .testimonial-item-content{
+    height: 100%;
+    padding: 20px 22px;
+    background-color: {{ section.settings.tibg_color }};
+}
+
+#shopify-section-{{ section.id }} .container.testimonials-items-container .testimonial-item-source-content{
+    color: #b6b6b6;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+#shopify-section-{{ section.id }} .container.testimonials-items-container .testimonial-item-source-content img{
+    margin-left: 5px;
+    max-width: 70px;
+}
+
+#shopify-section-{{ section.id }} .medium-down--one-half{
+    width: calc(50% - 10px);
+}
+
+  @media (min-width: 769px){
+    #shopify-section-{{ section.id }} {
+        padding: 64px 0;
+    }
+    #shopify-section-{{ section.id }} .pretitle{
+        font-size: {{ section.settings.dpt_size }}px;
+    }
+    #shopify-section-{{ section.id }} .title{
+        font-size: {{ section.settings.dt_size }}px;
+    }
+    #shopify-section-{{ section.id }} .container.testimonials-items-container {
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    #shopify-section-{{ section.id }} .container.testimonials-items-container .testimonial-item-rating{
+        align-items: center;
+        flex-direction: row;
+    }
+    #shopify-section-{{ section.id }} .summary-stars svg{
+        width: 24px;
+        height: 24px;
+    }
+
+    #shopify-section-{{ section.id }} .rating-text{
+        font-size: 16px;
+        width: 24px;
+    }
+
+    #shopify-section-{{ section.id }} .container.testimonials-items-container .testimonial-item-image {
+        height: 230px;
+    }
+
+    #shopify-section-{{ section.id }} .medium-down--one-half{
+        width: calc(50% - 30px);
+    }
+
+  }
+{% endstyle %}
+
+<section class="section {{ css_class }}">
+    {% if section.settings.pre-title != blank or section.settings.title != blank %}
+        <div class="container">
+
+                <div class="one-whole column">
+                    {% if section.settings.pre-title != blank %}
+                        <h3 class="pretitle {{ section.settings.hph_alignment }}">
+                            {{ section.settings.pre-title }}
+                        </h3>
+                    {% endif %}
+                    
+                    {% if section.settings.title != blank %}
+                    <h2 class="title {{ section.settings.hph_alignment }}">
+                        {{ section.settings.title }}
+                    </h2>
+                    {% endif %}
+                </div>
+
+        </div>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+        {% assign summary = section.blocks | where: 'type', 'summary_block' %}
+        {% assign testimonialItem = section.blocks | where: 'type', 'testimonial_block' %}
+
+        {% if summary.size > 0%}
+        <div class="container summary-container">
+            <div class="one-whole column">
+                {% for block in summary %}
+                        <div class="summary-items">
+                            <div class="summary-title">
+                                {{ block.settings.summary-text }}
+                            </div>
+                            <div class="summary-stars">
+                                {% if block.settings.image_rating != blank %}
+                                    {% case block.settings.image_rating %}
+                                        
+                                            {% when 'wstars' %}
+                                                <div class="stars--icons">
+                                                    <svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.0002 17L6.12223 20.59L7.72023 13.89L2.49023 9.41L9.35523 8.86L12.0002 2.5L14.6452 8.86L21.5112 9.41L16.2802 13.89L17.8782 20.59L12.0002 17Z" fill="currentColor"></path>
+                                                    </svg>
+                                                    <svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.0002 17L6.12223 20.59L7.72023 13.89L2.49023 9.41L9.35523 8.86L12.0002 2.5L14.6452 8.86L21.5112 9.41L16.2802 13.89L17.8782 20.59L12.0002 17Z" fill="currentColor"></path>
+                                                    </svg>
+                                                    <svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.0002 17L6.12223 20.59L7.72023 13.89L2.49023 9.41L9.35523 8.86L12.0002 2.5L14.6452 8.86L21.5112 9.41L16.2802 13.89L17.8782 20.59L12.0002 17Z" fill="currentColor"></path>
+                                                    </svg>
+                                                    <svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.0002 17L6.12223 20.59L7.72023 13.89L2.49023 9.41L9.35523 8.86L12.0002 2.5L14.6452 8.86L21.5112 9.41L16.2802 13.89L17.8782 20.59L12.0002 17Z" fill="currentColor"></path>
+                                                    </svg>
+                                                    <svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.0002 17L6.12223 20.59L7.72023 13.89L2.49023 9.41L9.35523 8.86L12.0002 2.5L14.6452 8.86L21.5112 9.41L16.2802 13.89L17.8782 20.59L12.0002 17Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                            {% when 'hstars' %}
+                                                <div class="stars--icons">
+                                                    <svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.0002 17L6.12223 20.59L7.72023 13.89L2.49023 9.41L9.35523 8.86L12.0002 2.5L14.6452 8.86L21.5112 9.41L16.2802 13.89L17.8782 20.59L12.0002 17Z" fill="currentColor"></path>
+                                                    </svg>
+                                                    <svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.0002 17L6.12223 20.59L7.72023 13.89L2.49023 9.41L9.35523 8.86L12.0002 2.5L14.6452 8.86L21.5112 9.41L16.2802 13.89L17.8782 20.59L12.0002 17Z" fill="currentColor"></path>
+                                                    </svg>
+                                                    <svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.0002 17L6.12223 20.59L7.72023 13.89L2.49023 9.41L9.35523 8.86L12.0002 2.5L14.6452 8.86L21.5112 9.41L16.2802 13.89L17.8782 20.59L12.0002 17Z" fill="currentColor"></path>
+                                                    </svg>
+                                                    <svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.0002 17L6.12223 20.59L7.72023 13.89L2.49023 9.41L9.35523 8.86L12.0002 2.5L14.6452 8.86L21.5112 9.41L16.2802 13.89L17.8782 20.59L12.0002 17Z" fill="currentColor"></path>
+                                                    </svg>
+                                                    <svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.0002 14.656L14.8172 16.376L14.0512 13.166L16.5582 11.019L13.2682 10.755L12.0002 7.708V14.656ZM12.0002 17L6.12223 20.59L7.72023 13.89L2.49023 9.41L9.35523 8.86L12.0002 2.5L14.6452 8.86L21.5112 9.41L16.2802 13.89L17.8782 20.59L12.0002 17Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                        {% endcase %}
+                                {% endif %}
+                                <div class="rating-text">{{ block.settings.rating }}</div>
+                            </div>
+                        </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if testimonialItem.size > 0 %}
+        <div class="container testimonials-items-container">
+            {% for block in testimonialItem %}
+            <div class="one-third medium-down--one-half">
+                <div class="testimonial-item-container">
+                    <div class="testimonial-item-image">
+                        {% if block.settings.image != blank %}
+                        <img src="{{ block.settings.image | img_url: 'master' }}">
+                        {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                        {% endif %}
+                    </div>
+                    <div class="testimonial-item-content">
+                        <div class="testimonial-item-rating">
+                            
+                            <div class="stars-icon">
+                                {% for stars in (1..block.settings.rating)%}
+                                    <svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.0002 17L6.12223 20.59L7.72023 13.89L2.49023 9.41L9.35523 8.86L12.0002 2.5L14.6452 8.86L21.5112 9.41L16.2802 13.89L17.8782 20.59L12.0002 17Z" fill="currentColor"></path>
+                                    </svg>
+                                {% endfor %}
+                            </div>
+                            {{ block.settings.name }}
+                            
+                        </div>
+                        {{ block.settings.content }}
+                    
+                        <div class="testimonial-item-source">
+                            <div class="testimonial-item-source-content">
+                                Posted on 
+                                {% if block.settings.posted_image != blank %}
+                                <img src="{{ block.settings.posted_image | img_url: 'master' }}">
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Testimonial v2",
+  "settings": [
+    {
+      "type": "text",
+      "id": "pre-title",
+      "label": "Pre Heading",
+      "default": "Pre Heading"
+    },
+	{
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+	  "default": "Heading"
+    },
+	{
+	  "type": "select",
+	  "id": "hph_alignment",
+	  "label": "Heading and pre heading alignment",
+	  "default": "center",
+	  "options": [
+			{
+				"value": "left",
+				"label": "Left"
+			},
+			{
+				"value": "center",
+				"label": "Center"
+			},
+			{
+				"value": "right",
+				"label": "Right"
+			}
+	  ]
+	},
+    {
+        "type": "header",
+        "content" : "Styles"
+    },
+    {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Section background color",
+        "default": "#fff3d9"
+    },
+    {
+        "type": "color",
+        "id": "sbg_color",
+        "label": "Summary background color",
+        "default": "#fff"
+    },
+    {
+        "type": "color",
+        "id": "tibg_color",
+        "label": "Testimonial item background color",
+        "default": "#fff"
+    },
+    {
+        "type": "color",
+        "id": "pt_color",
+        "label": "Pre-title color",
+        "default": "#000"
+    },
+    {
+        "type": "number",
+        "id": "dpt_size",
+        "label": "Pre-title font size (desktop)",
+        "default": 14,
+        "info": "unit in px"
+    },
+    {
+        "type": "number",
+        "id": "mpt_size",
+        "label": "Pre-title font size (mobile)",
+        "default": 14,
+        "info": "unit in px"
+    },
+    {
+        "type": "color",
+        "id": "t_color",
+        "label": "Title color",
+        "default": "#000"
+    },
+    {
+        "type": "number",
+        "id": "dt_size",
+        "label": "Title font size (desktop)",
+        "default": 36,
+        "info": "unit in px"
+    },
+    {
+        "type": "number",
+        "id": "mt_size",
+        "label": "Title font size (mobile)",
+        "default": 24,
+        "info": "unit in px"
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "paragraph",
+      "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "summary_block",
+        "name": "Summary Reviews",
+        "settings": [
+            {
+                "type": "text",
+                "id": "summary-text",
+                "label": "Summary label",
+                "default": "Lorem ipsum dolor sit amet"
+            },
+            {
+                "type": "select",
+                "id": "image_rating",
+                "label": "Stars",
+                "default": "wstars",
+                "options" : [
+                    {
+                        "value": "wstars",
+                        "label": "Whole Stars"
+                    },
+                    {
+                        "value": "hstars",
+                        "label": "With half stars"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "id": "rating",
+                "label": "Rating",
+                "default": "5"
+            }
+        ]
+    },
+    {
+      "type": "testimonial_block",
+      "name": "Testimonial Column",
+      "settings": [
+            {
+                "type" : "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "range",
+                "id": "rating",
+                "label": "Rating",
+                "default": 5,
+                "min": 1,
+                "max": 5
+            },
+            {
+                "type": "text",
+                "id": "name",
+                "label": "Author name",
+                "default": "John Doe"
+            },
+            {
+                "type": "richtext",
+                "id": "content",
+                "label": "Content",
+                "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+            },
+            {
+                "type": "image_picker",
+                "id": "posted_image",
+                "label": "Review source image"
+            }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials V2",
+      "category": "Text",
+      "blocks": [
+      ]
+    }
+  ],
+  "templates": [
+    "index",
+    "product",
+    "page"
+  ]
+}
+
+{% endschema %}

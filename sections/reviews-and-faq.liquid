@@ -1,0 +1,230 @@
+
+
+{% assign i = section.settings %}
+<div class="container narrow-width--true wrap-true">
+  <div class="reviewsNfaqs">
+    {% if section.blocks.size > 0 %}
+    <div class="tab flexx center">
+      <button class="tablinks excludeee active" onclick="openCity(event, 'London')">{{ i.tab1 }}</button>
+      <button class="tablinks excludeee" onclick="openCity(event, 'Paris')">{{ i.tab2 }}</button>
+    </div>
+
+    <div id="London" class="tabcontent" style="display: block;">
+      
+      {% comment %}Reviews snippet goes in under here..{% endcomment %}
+      {% endif %}
+      <div style="clear: both;">
+        <div id="looxReviews" data-loox-aggregate></div>
+        {% comment %}
+        <div id="shopify-ali-review" product-id="{{ product.id }}"> {{ shop.metafields.review_collector.review_code }} </div>
+      {% endcomment %}
+      </div>
+      {% if section.blocks.size > 0 %}
+    </div>
+    
+    <style>
+      .reviewsNfaqs .tab {color: {{ i.accent }} !important;}
+      .reviewsNfaqs .tab .active {background-color: {{ i.accent }} !important;color: #fff !important;}
+      .reviewsNfaqs .accordionn.excludeee.active {background-color: {{ i.accent | color_darken: 10 }} !important;color: #fff !important;}
+    </style>
+
+    <div id="Paris" class="tabcontent">
+       <dl class="accordion" data-state="open">
+      	{% for block in section.blocks %}
+      	{% assign b = block.settings %}
+      
+     
+        <dt><a href="#">{{ b.q }}</a></dt>
+        <dd>
+          <div class="panel">
+            {{ b.a }}
+          </div>
+         </dd>
+
+
+      {% endfor %}
+    </dl>
+    </div>
+    {% endif %}
+  </div>
+</div>
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+<style>
+   #shopify-section-{{ section.id }}{
+     padding-top: {{ section.settings.pad_top }}px;
+     padding-bottom: {{ section.settings.pad_bot }}px;
+   }
+  
+  #shopify-section-{{ section.id }} .tab.flexx.center {
+    display: flex;
+}
+  #shopify-section-{{ section.id }} .reviewsNfaqs {
+  color: currentColor;
+     box-shadow: 0px 0px 10px 2px {{ settings.regular_color | color_modify: 'alpha', 0.3 }};
+    width: 100%;
+  }
+  #shopify-section-{{ section.id }} .tab {
+    overflow: hidden;
+    border: none;
+    background: transparent;
+  }
+  #shopify-section-{{ section.id }} .tab button.excludeee {
+    background-color: transparent;
+    color: currentColor;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 50%;
+    display: inline-block;
+    
+  }
+  
+  #shopify-section-{{ section.id }} .tabcontent {
+    display: none;
+    padding: 15px;
+    border: none;
+  }
+
+  #shopify-section-{{ section.id }} .accordion > dt > a {
+    color: currentColor;
+    cursor: pointer;
+    width: 100%;
+    min-height: unset;
+    height: unset;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    background-color: #eee;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+  }
+  
+  #shopify-section-{{ section.id }} .accordion > dt > a[aria-expanded="true"]{
+    background-color: #69c7ed;
+  }
+  
+  #shopify-section-{{ section.id }} .accordion > dt > a[aria-expanded="true"]:after{
+    color: #fff;
+  }
+  
+  #shopify-section-{{ section.id }} .accordion > dt{
+    margin-bottom: 5px;
+  }
+  
+  #shopify-section-{{ section.id }} .accordion > dt > a::after{
+    left: unset;
+    right: 15px;
+  }
+
+
+</style>
+
+{% schema %}
+  {
+    "name": "Reviews & FAQs",
+    "settings": [
+      {
+        "type": "color",
+        "id": "accent",
+        "label": "Accent color",
+		"default": "#947fff"
+      },
+      {
+        "type": "header",
+        "content": "Tab"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add FAQ Q&A blocks to activate tab"
+      },
+      {
+        "type": "text",
+        "id": "tab1",
+        "label": "Tab 1 heading",
+        "default": "Reviews"
+      },
+      {
+        "type": "text",
+        "id": "tab2",
+        "label": "Tab 2 heading",
+        "default": "FAQ"
+      },
+	  {
+		"type": "number",
+		"id": "pad_top",
+		"label": "Padding Top",
+		"default": 20,
+		"info": "unit in px"
+	  },
+	  {
+		"type": "number",
+		"id": "pad_bot",
+		"label": "Padding Bottom",
+		"default": 20,
+		"info": "unit in px"
+	  }
+
+	],
+    "blocks": [
+      {
+        "type": "faq",
+        "name": "FAQ Q&A",
+        "settings": [
+          {
+            "type": "text",
+            "id": "q",
+            "label": "Q",
+            "default": "What is Lorem Ipsum?"
+          },
+          {
+            "type": "richtext",
+            "id": "a",
+            "label": "A",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+          }
+        ]
+      }
+    ],
+	"presets": [
+      {
+        "name": "Review & Faq",
+        "category": "Text",
+        "blocks": [
+          {
+           "type": "faq"
+          },
+          {
+            "type": "faq"
+          },
+		  {
+            "type": "faq"
+          },
+		  {
+            "type": "faq"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

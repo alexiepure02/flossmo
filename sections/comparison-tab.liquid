@@ -1,0 +1,690 @@
+<div class="section">
+<div class="containers-outer">
+  <div class="compare-header">
+
+    <div class="mobile-compare-header">
+      <div class="mobile-compare-title">
+        {% for cblock in section.blocks %}
+          {% if forloop.first == true %}
+              <span>{{ cblock.settings.item_title }}</span>
+          {% endif %}
+        {% endfor %}
+       <img src="{{ 'down-icon.svg' | asset_url }}">
+      </div>
+
+      <ul id="tabs">
+        {% for cblock in section.blocks %}
+          <li><a id="{{ cblock.settings.item_title | downcase | replace: " ", "-"}}-{{ forloop.index }}">{{ cblock.settings.item_title }}</a></li>
+        {% endfor %}
+      </ul>
+
+    </div>
+    <span class="compare_vs">vs</span>
+    <h2><strong>{{ section.settings.h_title }}</strong></h2>
+  </div>
+
+  <div class="tabs-contents">
+    {% for cblock in section.blocks %}
+      <div class="containers" id="{{ cblock.settings.item_title | downcase | replace: " ", "-"}}-{{ forloop.index }}c">
+          <table>
+              <tbody>
+                  <tr>
+                      <td>
+                          <div class="compare_ipl_image_wrap">
+                            {% if cblock.settings.bimage != blank %}
+                              <img src="{{ cblock.settings.bimage | img_url: "300x300", crop: "center" }}"
+                                  alt="{{ cblock.settings.bimage.alt }}">
+                            {% else %}
+                            	{{ 'product-1' | placeholder_svg_tag: 'placeholder--css' }}
+                            {% endif %}
+                          </div>
+                      </td>
+                      <td>
+                          <div class="compare_ipl_image_wrap">
+                            {% if cblock.settings.aimage != blank %}
+                              <img src="{{ cblock.settings.aimage | img_url: "300x300", crop: "center" }}"
+                                  alt="{{ cblock.settings.aimage.alt }}">
+                            {% else %}
+                            	{{ 'product-2' | placeholder_svg_tag: 'placeholder--css' }}
+                            {% endif %}
+                          </div>
+                      </td>
+                  </tr>
+
+                 {% if cblock.settings.cp1 != blank and cblock.settings.cpr1 != blank %}
+                	<tr>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'close_blue.png' | asset_url }}" alt="Cross Icon">
+                            </div>
+
+                            	{{ cblock.settings.cp1 }}
+
+                          </div>
+                      </td>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'checked_blue.png' | asset_url }}" alt="Check Icon">
+                            </div>
+
+                            	{{ cblock.settings.cpr1 }}
+
+                          </div>
+                      </td>
+                  </tr>
+                 {% endif %}
+
+                {% if cblock.settings.cp2 != blank and cblock.settings.cpr2 != blank %}
+                	<tr>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'close_blue.png' | asset_url }}" alt="Cross Icon">
+                            </div>
+
+                            	{{ cblock.settings.cp2 }}
+
+                          </div>
+                      </td>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'checked_blue.png' | asset_url }}" alt="Check Icon">
+                            </div>
+
+                            	{{ cblock.settings.cpr2 }}
+
+                          </div>
+                      </td>
+                  </tr>
+                 {% endif %}
+
+                {% if cblock.settings.cp3 != blank and cblock.settings.cpr3 != blank %}
+                	<tr>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'close_blue.png' | asset_url }}" alt="Cross Icon">
+                            </div>
+
+                            	{{ cblock.settings.cp3 }}
+
+                          </div>
+                      </td>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'checked_blue.png' | asset_url }}" alt="Check Icon">
+                            </div>
+
+                            	{{ cblock.settings.cpr3 }}
+
+                          </div>
+                      </td>
+                  </tr>
+                 {% endif %}
+
+                {% if cblock.settings.cp4 != blank and cblock.settings.cpr4 != blank %}
+                	<tr>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'close_blue.png' | asset_url }}" alt="Cross Icon">
+                            </div>
+
+                            	{{ cblock.settings.cp4 }}
+
+                          </div>
+                      </td>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'checked_blue.png' | asset_url }}" alt="Check Icon">
+                            </div>
+
+                            	{{ cblock.settings.cpr4 }}
+
+                          </div>
+                      </td>
+                  </tr>
+                 {% endif %}
+
+                {% if cblock.settings.cp5 != blank and cblock.settings.cpr5 != blank %}
+                	<tr>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'close_blue.png' | asset_url }}" alt="Cross Icon">
+                            </div>
+
+                            	{{ cblock.settings.cp5 }}
+
+                          </div>
+                      </td>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'checked_blue.png' | asset_url }}" alt="Check Icon">
+                            </div>
+
+                            	{{ cblock.settings.cpr5 }}
+
+                          </div>
+                      </td>
+                  </tr>
+                 {% endif %}
+
+                {% if cblock.settings.cp6 != blank and cblock.settings.cpr6 != blank %}
+                	<tr>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'close_blue.png' | asset_url }}" alt="Cross Icon">
+                            </div>
+
+                            	{{ cblock.settings.cp6 }}
+
+                          </div>
+                      </td>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'checked_blue.png' | asset_url }}" alt="Check Icon">
+                            </div>
+
+                            	{{ cblock.settings.cpr6 }}
+
+                          </div>
+                      </td>
+                  </tr>
+                 {% endif %}
+
+                {% if cblock.settings.cp7 != blank and cblock.settings.cpr7 != blank %}
+                	<tr>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'close_blue.png' | asset_url }}" alt="Cross Icon">
+                            </div>
+
+                            	{{ cblock.settings.cp7 }}
+
+                          </div>
+                      </td>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'checked_blue.png' | asset_url }}" alt="Check Icon">
+                            </div>
+
+                            	{{ cblock.settings.cpr7 }}
+
+                          </div>
+                      </td>
+                  </tr>
+                 {% endif %}
+
+                {% if cblock.settings.cp8 != blank and cblock.settings.cpr8 != blank %}
+                	<tr>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'close_blue.png' | asset_url }}" alt="Cross Icon">
+                            </div>
+
+                            	{{ cblock.settings.cp8 }}
+
+                          </div>
+                      </td>
+                      <td>
+                          <div class="compare_data">
+                            <div class="icon">
+                              <img src="{{ 'checked_blue.png' | asset_url }}" alt="Check Icon">
+                            </div>
+
+                            	{{ cblock.settings.cpr8 }}
+
+                          </div>
+                      </td>
+                  </tr>
+                 {% endif %}
+
+              </tbody>
+          </table>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+<style>
+
+
+  #shopify-section-{{ section.id }} .compare_ipl_image_wrap {
+    text-align: center;
+}
+
+  #tabs{
+        margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+  }
+
+   #tabs li {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 40px;
+    letter-spacing: 2px;
+     margin-bottom: 0px;
+}
+  #tabs li a{
+     color: #37a1d3;
+  }
+   #tabs li a.inactive{
+         opacity: .5;
+   }
+
+   #shopify-section-{{ section.id }} .compare-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 2px solid #37a1d3;
+}
+
+ #shopify-section-{{ section.id }} .compare-header .compare_vs {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.25;
+
+}
+
+   #shopify-section-{{ section.id }} .compare-header .mobile-compare-header {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+ #shopify-section-{{ section.id }} .compare-header h2 {
+    margin: 0;
+    font-size: 16px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+   #shopify-section-{{ section.id }} .mobile-compare-header .mobile-compare-title {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #69c7ed;
+    border: 1px solid #37a1d3;
+    font-weight: 700;
+    padding: 4px 10px;
+     line-height: 1.25;
+}
+
+
+  #shopify-section-{{ section.id }} .tabs-contents table tr td .compare_data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5px;
+}
+
+  #shopify-section-{{ section.id }} .tabs-contents  .icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+    #shopify-section-{{ section.id }} .tabs-contents  .icon img{
+      width: 100%;
+      max-width: 100%;
+    }
+  #shopify-section-{{ section.id }} .tabs-contents table {
+    width: 100%;
+}
+
+  #shopify-section-{{ section.id }} .tabs-contents table tr td {
+    width: 50%;
+    vertical-align: top;
+    border: unset !important;
+}
+
+   #shopify-section-{{ section.id }} .tabs-contents table tr:first-child{
+     border-bottom: unset !important;
+   }
+   #shopify-section-{{ section.id }} .tabs-contents table tr:not(:first-child) {
+    border-bottom: 2px solid #37a1d3!Important;
+}
+
+   #shopify-section-{{ section.id }} .tabs-contents  .containers{
+    display: none;
+}
+
+  #shopify-section-{{ section.id }} .mobile-compare-title img{
+    width: 10px;
+    height: 10px;
+    margin-left: 3px;
+  }
+
+   #shopify-section-{{ section.id }} .mobile-compare-title.opened + #tabs{
+    display: flex;
+}
+
+  #shopify-section-{{ section.id }} .containers-outer {
+    padding: 0 20px 20px;
+}
+
+  #shopify-section-{{ section.id }} .tabs-contents table tr td .compare_ipl_image_wrap {
+    min-height: 200px;
+    padding: 30px 0 0;
+    margin-bottom: 0px;
+}
+
+  #shopify-section-{{ section.id }} .tabs-contents table tr td .compare_ipl_image_wrap img,
+     #shopify-section-{{ section.id }} .tabs-contents  table tr td .compare_ipl_image_wrap .placeholder--css {
+    max-height: 150px;
+}
+  #shopify-section-{{ section.id }} table{
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .tabs-contents table tr td .compare_data p{
+    margin-bottom: 0px;
+  }
+
+
+  @media only screen and (max-width: 989px){
+   #tabs {
+     z-index: 2;
+        display: none;
+        flex-direction: column;
+        border-radius: 16px;
+        background: #fff;
+        border: 1px solid #37a1d3;
+        padding: 10px;
+        position: absolute;
+        min-width: 114px;
+        top: calc(100% + 10px);
+        white-space: nowrap;
+        box-shadow: 2px 2px 8px #37a1d3;
+    }
+
+    .mobile-compare-title {
+        display: flex !important;
+    }
+
+    #tabs li {
+     margin-left: 0px;
+      text-align: center;
+    }
+        #shopify-section-{{ section.id }} .containers-outer {
+      width: 100%;
+    }
+  }
+
+
+  @media only screen and (min-width: 750px){
+    #shopify-section-{{ section.id }} .compare-header h2 {
+      margin-bottom: 0;
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    #shopify-section-{{ section.id }} .tabs-contents table tr td .compare_ipl_image_wrap{
+      margin-bottom: 30px;
+
+    }
+
+     #shopify-section-{{ section.id }} .compare-header .compare_vs {
+        font-size: 35px;
+              margin-top: -10px;
+    }
+
+   #shopify-section-{{ section.id }} .tabs-contents table tr td .compare_data {
+        padding: 30px;
+    }
+
+    #shopify-section-{{ section.id }} .tabs-contents table tr td .compare_ipl_image_wrap img,
+     #shopify-section-{{ section.id }} .tabs-contents  table tr td .compare_ipl_image_wrap .placeholder--css{
+          max-width: 260px;
+   		 max-height: 260px;
+    }
+
+     #shopify-section-{{ section.id }} .tabs-contents  table tr td .compare_ipl_image_wrap{
+        min-height: 300px;
+    }
+  }
+
+
+</style>
+<script>
+
+  $(function($){
+
+    $(document).ready(function() {
+
+      $('#shopify-section-{{ section.id }} #tabs li a:not(:first)').addClass('inactive');
+      $('#shopify-section-{{ section.id }} .tabs-contents .containers').hide();
+      $('#shopify-section-{{ section.id }} .tabs-contents .containers:first').show();
+
+
+
+      var texts = $('#shopify-section-{{ section.id }} #tabs li a:first').text();
+
+      $('#shopify-section-{{ section.id }} #tabs li a').click(function(){
+          var t = $(this).attr('id');
+    //  console.log(t);
+        $('#shopify-section-{{ section.id }} .mobile-compare-title').trigger('click');
+
+       texts = $(this).text();
+
+
+        $('#shopify-section-{{ section.id }} .mobile-compare-title span').text(texts);
+
+        if( $(this).hasClass('inactive') ){ //this is the start of our condition
+          $('#shopify-section-{{ section.id }} #tabs li a').addClass('inactive');
+          $(this).removeClass('inactive');
+
+          $('#shopify-section-{{ section.id }} .tabs-contents .containers').hide();
+          $('#shopify-section-{{ section.id }} #'+ t + 'c').fadeIn('slow');
+       }
+      });
+
+
+      $('#shopify-section-{{ section.id }} .mobile-compare-title').click(function(){
+        $(this).toggleClass('opened');
+
+      });
+
+
+
+    });
+
+
+
+  });
+</script>
+
+
+{% schema %}
+  {
+    "name": "Comparison Tab",
+    "settings": [
+		{
+          "type": "text",
+          "id": "h_title",
+          "label": "Title",
+          "default": "Compare"
+		}
+	],
+	"blocks":[
+		{
+          "type": "compare",
+          "name": "Comparison",
+          "settings":[
+			{
+			  "type": "header",
+			  "content": "Item Comparing",
+			  "info": "All info in left side"
+			},
+            {
+              "type": "image_picker",
+              "id": "bimage",
+              "label": "Image",
+              "info": "Image at left (300x300px recommended size)"
+            },
+			{
+				"type": "text",
+				"id": "item_title",
+				"label": "Title",
+				"default": "Item"
+			},
+            {
+              "type": "richtext",
+              "id": "cp1",
+              "label": "Comparison 1",
+			  "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cp2",
+              "label": "Comparison 2",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cp3",
+              "label": "Comparison 3",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cp4",
+              "label": "Comparison 4",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cp5",
+              "label": "Comparison 5",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cp6",
+              "label": "Comparison 6",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cp7",
+              "label": "Comparison 7",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cp8",
+              "label": "Comparison 8",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+			  "type": "header",
+			  "content": "Item Comparing",
+			  "info": "All info in right side"
+			},
+            {
+              "type": "image_picker",
+              "id": "aimage",
+              "label": "Image",
+              "info": "Image at right (300x300px recommended size)"
+            },
+            {
+              "type": "richtext",
+              "id": "cpr1",
+              "label": "Comparison 1",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cpr2",
+              "label": "Comparison 2",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cpr3",
+              "label": "Comparison 3",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cpr4",
+              "label": "Comparison 4",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cpr5",
+              "label": "Comparison 5",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cpr6",
+              "label": "Comparison 6",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cpr7",
+              "label": "Comparison 7",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            },
+			{
+              "type": "richtext",
+              "id": "cpr8",
+              "label": "Comparison 8",
+			   "default": "<p>Lorem Ipsum dolor</p>"
+            }
+
+          ]
+		}
+	],
+	"presets": [
+      {
+        "name": "Comparison Tab",
+        "category": "Text",
+		"blocks": [
+          {
+            "type": "compare"
+          },
+          {
+            "type": "compare"
+          },
+		  {
+            "type": "compare"
+          }
+        ]
+	  }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

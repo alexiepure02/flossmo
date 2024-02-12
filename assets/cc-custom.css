@@ -1,0 +1,352 @@
+@font-face {
+  font-family: "DinNext-Bold";
+  src: url("") format("woff2"),
+       url("Linotype_-_DIN_Next_LT_Pro_Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "DinNext-Regular";
+  src: url("Linotype_-_DIN_Next_LT_Pro_Regular.ttf") format("truetype"),
+}
+
+
+h1,h2,h3,h4.h5,h6{
+  font-family: "DinNext-Bold" !important;
+}
+
+
+.product-templatev2 .flosser-size .swatch-element {
+  width: calc((100% / 2) - 12px);
+  border: 1px solid #e7e7ee;
+  border-radius: 6px;
+  background-color: transparent;
+  margin: 0 12px 12px 0 !important;
+}
+
+.product-templatev2 .flosser-size .swatch-element label {
+  padding: 15px 10px;
+}
+
+
+
+.product-templatev2 .flosser-size span.money {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: unset;
+}
+
+
+.product-templatev2 .swatch_options input:checked+.swatch-element {
+  background-color: transparent;
+
+  box-shadow: unset;
+  border-color: #000;
+  outline: none;
+}
+
+
+
+.product-templatev2 .swatch_options input:checked+.swatch-element .discount-pill {
+    background-color: black !important;
+}
+
+.product-templatev2 .swatch_options input:checked+.swatch-element .discount-pill {
+    background-color: black !important;
+}
+
+/* .product-templatev2 .swatch_options input:checked+.swatch-element .check-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+} */
+
+.product-templatev2 .swatch .swatch-element{
+  margin: 0;
+  width: calc(33% - 8px);
+}
+
+.product-templatev2 .swatch--item-container{
+  gap: 8px;
+}
+
+.product-templatev2 span.value--name {
+  display: block;
+  line-height: 1;
+  font-size: 16px;
+}
+
+.value-title-money {
+  width: 70%;
+}
+
+.quantity.swatch{
+  margin-bottom: 1em;
+}
+
+.discount-pill {
+    /* position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox; */
+    display: flex;
+  
+    margin-top: 0px;
+    padding: 6px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #000;
+    width: 35px;
+    height: 35px;
+}
+
+.badge-best-value {
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    bottom: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    padding: 4px 10px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #69c7ed;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    width: 100px;
+    max-width: 100%;
+}
+
+.best-span {
+    color: #fff;
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.product-templatev2 .swatch label{
+  font-size: 16px;
+  padding: 20px 10px;
+      display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discount-span {
+    color: #fff;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.discount-span span {
+  color: white;
+}
+
+.check-wrapper {
+  display:none;
+  position: absolute;
+  left: 10px;
+  top: 0%;
+  right: auto;
+  bottom: 0%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.check-circle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 14px;
+  height: 14px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-style: none;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.09);
+  border-radius: 100px;
+  background-color: #fff;
+}
+
+.check-white {
+  position: relative;
+  z-index: 400;
+  width: 8px;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.global-button{
+  position: relative;
+  overflow: hidden;
+}
+.global-button:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 150%;
+  width: 200%;
+  height: 100%;
+  transform: skew(-20deg);
+  background-image: linear-gradient(90deg,transparent,hsla(0,0%,100%,.25),transparent);
+}
+
+.global-button:hover:after{
+  animation: shine .75s cubic-bezier(.01,.56,1,1);
+}
+
+button.add_to_cart {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 15px 20px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.product-templatev2 button.add_to_cart{
+  text-align: left;
+}
+
+.checkout_box {
+  display: flex;
+  align-items: center;
+}
+
+.checkout_box .text{
+  margin-right: 8px;
+}
+
+button.add_to_cart .text {
+  font-size: 1rem;
+}
+
+.product_form {
+  max-width: 100% !important;
+}
+
+.product-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.product--image > img {
+  max-width: 60px;
+}
+
+.product--content > p {
+  margin-bottom: 0;
+  line-height: 120%;
+  font-size: 15px;
+}
+
+#looxReviews, #looxCarousel{
+
+  position: relative;
+  z-index: -1; 
+}
+
+
+@keyframes shine{
+  to{
+    left:-200%;
+  }
+}
+
+@media (min-width: 769px){
+  .product-templatev2 .swatch .swatch-element{
+    margin: 0;
+    width: calc(33% - 8px);
+  }
+}
+
+@media (max-width: 480px){
+  .product-templatev2 h2.title {
+    font-size: 28px !important;
+    line-height: 120%;
+    margin: 15px 0;
+  }
+  .product-templatev2 .flosser-size .swatch-element label {
+      padding: 15px 34px;
+  }
+  .product-templatev2 .swatch label {
+    flex-direction: column-reverse;
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 12px 0 10px;
+  }
+  .discount-pill{
+    margin-bottom: 8px;
+  }
+
+  .product-templatev2 span.value--name{
+    font-size: 13px;
+  }
+  label span, legend span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px){
+  .discount-pill {
+    right: 8px;
+  }
+  .discount-span span{
+    font-size: 10px;
+  }
+  
+  .product-templatev2 .swatch label{
+    font-size: 12px;
+  }
+  
+}

@@ -1,0 +1,190 @@
+<div class="section">
+    <div class="cc__ugcsection">
+        <div class="container">
+            <div class="one-whole column">
+                {% if section.settings.title != blank %}
+                    <div class="cc__ugcheader">
+                        <h2>{{ section.settings.title }}</h2>
+                    </div>
+                {% endif %}
+                {% if section.blocks.size > 0 %}
+                    <div class="cc__ugcslider">
+                        <div class="sliderugc{{ section.id | remove:'-'}}">
+                            {% for block in section.blocks%}
+                                <div class="cc__ugccontent">
+                                    {% if block.settings.image != blank %}
+                                        <div class="cc__ugcimage">
+                                            <img src="{{ block.settings.image | img_url: 'master'}}">
+                                        </div>
+                                        {% else %}
+                                        <div class="cc__ugcimage">
+                                        {{ 'image' | placeholder_svg_tag }}
+                                        </div>
+                                    {% endif %}
+                                    {% if block.settings.contents != blank %}
+                                        <div class="cc__ugccontent">
+                                            {{ block.settings.contents }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #shopify-section-{{ section.id }}{
+        overflow: hidden;
+    }
+    #shopify-section-{{ section.id }} .cc__ugcimage{
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    #shopify-section-{{ section.id }} .cc__ugcimage img,
+    #shopify-section-{{ section.id }} .cc__ugcimage svg{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #shopify-section-{{ section.id }} .cc__ugccontent{
+        padding: 25px 10px;
+    }
+
+    #shopify-section-{{ section.id }} .cc__ugccontent >* {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #shopify-section-{{ section.id }} .cc__ugcheader{
+        text-align: center;
+    }
+
+    #shopify-section-{{ section.id }} .cc__ugcheader h2{
+        font-size: 28px;
+        line-height: 1.4;
+        font-weight: 600;
+        margin: 0;
+    }
+
+
+
+    #shopify-section-{{ section.id }} .cc__ugcheader.mobileugc h2 span{
+        margin-left: 20px;
+        margin-right: 20px;
+        display: inline-block;
+      }
+
+    @keyframes scrolling-text{
+        0%{
+          transform:translateX(0);
+          -webkit-transform:translateX(0);
+        }
+        to{
+          transform:translateX(-100%);
+          -webkit-transform:translateX(-100%);
+        }
+      }
+
+
+
+    @media (min-width: 1200px){
+        #shopify-section-{{ section.id }} .cc__ugccontent{
+            padding: 25px 20px;
+        }
+
+        #shopify-section-{{ section.id }} .sliderugc{{ section.id | remove:'-'}}{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 50px;
+        }
+
+        #shopify-section-{{ section.id }} .cc__ugcheader h2{
+            font-size: 30px;
+        }
+
+    }
+</style>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    if( window.innerWidth < 1199){
+      $('.sliderugc{{ section.id | remove:'-'}}').slick({
+        dots: true,
+        arrows: false,
+        infinite: false,
+        slidesToShow: 1,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+  }
+  </script>
+
+{% schema %}
+{
+    "name": "UGC Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "UGC Section"
+        }
+    ],
+    "blocks": [
+        {
+            "type":"content",
+            "name": "UGC Item",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "richtext",
+                    "id": "contents",
+                    "label": "Content",
+                    "default": "<p><strong>Lorem ipsum dolor</strong></br>Itu lorem im itmu dolorat</p><p>- John Doe (USA)</p>"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name": "UGC Section",
+            "blocks":[
+                {
+                    "type": "content"
+                },
+                {
+                    "type": "content"
+                },
+                {
+                    "type": "content"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
