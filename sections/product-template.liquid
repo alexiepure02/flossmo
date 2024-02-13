@@ -277,7 +277,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 75px;
+    gap: 50px;
     padding: 12px;
   }
 
@@ -296,7 +296,7 @@
     border-radius: 12px;
   }
 
-  .text-box {
+  .step-box .text-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -304,12 +304,213 @@
     gap: 8px;
   }
 
-  @media screen and (min-width: 1200px) {
-  .steps h1 {
-    font-size: 32px;
-  }
   .steps h3 {
+    font-size: 26px;
+  }
+
+  @media screen and (min-width: 800px) {
+    .steps .container {
+      gap: 75px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .steps h1 {
+      font-size: 32px;
+    }
+
+    .steps h3 {
       font-size: 28px;
+    }
+  }
+
+  /* Benefits Section */
+
+  .benefits-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 15px;
+  }
+
+  .benefit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benefit-container img {
+    order: 0;
+    width: 90%;
+    max-width: 390px;
+    height: auto;
+    background-color: gray;
+    border-radius: 12px;
+  }
+
+  .benefit-container .text-box {
+    order: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 25px 0;
+  }
+
+  .benefit-container .text {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .benefit-container h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .benefits-section {
+      padding: 75px 15px;
+    }
+
+    .benefit-container {
+      flex-direction: row;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .benefit-container img {
+      order: 0;
+    }
+
+    .benefit-container .text-box {
+      order: 0;
+      padding: 50px 75px;
+    }
+
+    .benefit-container .text {
+      max-width: 550px;
+      gap: 22px;
+    }
+
+    .align-text-right {
+      align-items: flex-end !important;
+    }
+
+    .align-text-left {
+      align-items: flex-start !important;
+    }
+
+    .benefit-container h3 {
+      font-size: 36px;
+    }
+  }
+
+  /* Features Section */
+
+  .features-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    background-color: #3ecaf2;
+  }
+
+  .features-container {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding: 0 15px;
+  }
+
+  .features-container h1 {
+    font-size: 32px;
+    color: white !important;
+  }
+
+  .features-container .feature {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features-container .feature h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: white !important;
+  }
+
+  .features-container .feature p {
+    font-size: 16px;
+    color: white !important;
+  }
+
+  .features-section img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (min-width: 600px) {
+    .features-section {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .features-section img {
+      width: 300px;
+      height: 300px;
+    }
+
+    .features-container {
+      max-width: 100%;
+    }
+
+    .features-container h1 {
+      margin-bottom: 20px;
+    }
+
+    .features-container .feature {
+      max-width: 790px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .features-section img {
+      width: 600px;
+      height: 600px;
+    }
+
+    .features-container h1 {
+      font-size: 34px;
+    }
+
+    .features-container .feature h3 {
+      font-size: 28px;
+      font-weight: 600;
+      color: white !important;
+    }
+
+    .features-container .feature p {
+      font-size: 20px;
+      color: white !important;
     }
   }
 </style>
@@ -410,61 +611,63 @@
 <div class="social-proof">
   <div class="headline-social-proof">
     <h1>Everyone loves their Flossmo!</h1>
-    <div class="social-proof-stars">
-      <div class="stars headline-stars">
-        <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_25_64)">
-          <path d="M24.1111 11.6527C24.3692 11.4605 24.5606 11.1922 24.6586 10.8857C24.7565 10.5791 24.7561 10.2495 24.6573 9.94323C24.5585 9.63692 24.3664 9.36921 24.1077 9.17763C23.8491 8.98605 23.537 8.88021 23.2152 8.87496L16.9652 8.63885C16.9345 8.63672 16.9051 8.62576 16.8804 8.60728C16.8558 8.5888 16.837 8.56359 16.8264 8.53468L14.6666 2.70135C14.5581 2.40457 14.361 2.1483 14.1021 1.96725C13.8431 1.78619 13.5347 1.68909 13.2187 1.68909C12.9027 1.68909 12.5944 1.78619 12.3354 1.96725C12.0764 2.1483 11.8793 2.40457 11.7708 2.70135L9.61802 8.55551C9.60738 8.58442 9.58861 8.60963 9.56397 8.62811C9.53933 8.6466 9.50987 8.65756 9.47914 8.65968L3.22914 8.89579C2.90734 8.90105 2.59525 9.00688 2.33663 9.19846C2.07802 9.39004 1.88585 9.65775 1.78706 9.96406C1.68828 10.2704 1.68783 10.5999 1.78579 10.9065C1.88375 11.2131 2.07521 11.4813 2.3333 11.6736L7.23608 15.5277C7.26062 15.547 7.27896 15.5731 7.28883 15.6027C7.29871 15.6324 7.29968 15.6642 7.29164 15.6944L5.60414 21.6736C5.51669 21.978 5.52516 22.3021 5.6284 22.6016C5.73164 22.901 5.92463 23.1615 6.18111 23.3474C6.4376 23.5333 6.74514 23.6357 7.06188 23.6406C7.37863 23.6456 7.6892 23.5528 7.95136 23.375L13.1319 19.9027C13.1574 19.8851 13.1877 19.8757 13.2187 19.8757C13.2497 19.8757 13.28 19.8851 13.3055 19.9027L18.4861 23.375C18.7447 23.5589 19.0542 23.6577 19.3715 23.6577C19.6888 23.6577 19.9983 23.5589 20.2569 23.375C20.5135 23.1908 20.7066 22.9316 20.8099 22.6332C20.9131 22.3347 20.9213 22.0116 20.8333 21.7083L19.1319 15.7083C19.1229 15.6782 19.1234 15.646 19.1333 15.6162C19.1433 15.5863 19.1622 15.5603 19.1875 15.5416L24.1111 11.6527Z" fill="#FFBD00"/>
-          </g>
-          <defs>
-          <clipPath id="clip0_25_64">
-          <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
-          </clipPath>
-          </defs>
-        </svg>
-        <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_25_64)">
-          <path d="M24.1111 11.6527C24.3692 11.4605 24.5606 11.1922 24.6586 10.8857C24.7565 10.5791 24.7561 10.2495 24.6573 9.94323C24.5585 9.63692 24.3664 9.36921 24.1077 9.17763C23.8491 8.98605 23.537 8.88021 23.2152 8.87496L16.9652 8.63885C16.9345 8.63672 16.9051 8.62576 16.8804 8.60728C16.8558 8.5888 16.837 8.56359 16.8264 8.53468L14.6666 2.70135C14.5581 2.40457 14.361 2.1483 14.1021 1.96725C13.8431 1.78619 13.5347 1.68909 13.2187 1.68909C12.9027 1.68909 12.5944 1.78619 12.3354 1.96725C12.0764 2.1483 11.8793 2.40457 11.7708 2.70135L9.61802 8.55551C9.60738 8.58442 9.58861 8.60963 9.56397 8.62811C9.53933 8.6466 9.50987 8.65756 9.47914 8.65968L3.22914 8.89579C2.90734 8.90105 2.59525 9.00688 2.33663 9.19846C2.07802 9.39004 1.88585 9.65775 1.78706 9.96406C1.68828 10.2704 1.68783 10.5999 1.78579 10.9065C1.88375 11.2131 2.07521 11.4813 2.3333 11.6736L7.23608 15.5277C7.26062 15.547 7.27896 15.5731 7.28883 15.6027C7.29871 15.6324 7.29968 15.6642 7.29164 15.6944L5.60414 21.6736C5.51669 21.978 5.52516 22.3021 5.6284 22.6016C5.73164 22.901 5.92463 23.1615 6.18111 23.3474C6.4376 23.5333 6.74514 23.6357 7.06188 23.6406C7.37863 23.6456 7.6892 23.5528 7.95136 23.375L13.1319 19.9027C13.1574 19.8851 13.1877 19.8757 13.2187 19.8757C13.2497 19.8757 13.28 19.8851 13.3055 19.9027L18.4861 23.375C18.7447 23.5589 19.0542 23.6577 19.3715 23.6577C19.6888 23.6577 19.9983 23.5589 20.2569 23.375C20.5135 23.1908 20.7066 22.9316 20.8099 22.6332C20.9131 22.3347 20.9213 22.0116 20.8333 21.7083L19.1319 15.7083C19.1229 15.6782 19.1234 15.646 19.1333 15.6162C19.1433 15.5863 19.1622 15.5603 19.1875 15.5416L24.1111 11.6527Z" fill="#FFBD00"/>
-          </g>
-          <defs>
-          <clipPath id="clip0_25_64">
-          <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
-          </clipPath>
-          </defs>
-        </svg>
-        <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_25_64)">
-          <path d="M24.1111 11.6527C24.3692 11.4605 24.5606 11.1922 24.6586 10.8857C24.7565 10.5791 24.7561 10.2495 24.6573 9.94323C24.5585 9.63692 24.3664 9.36921 24.1077 9.17763C23.8491 8.98605 23.537 8.88021 23.2152 8.87496L16.9652 8.63885C16.9345 8.63672 16.9051 8.62576 16.8804 8.60728C16.8558 8.5888 16.837 8.56359 16.8264 8.53468L14.6666 2.70135C14.5581 2.40457 14.361 2.1483 14.1021 1.96725C13.8431 1.78619 13.5347 1.68909 13.2187 1.68909C12.9027 1.68909 12.5944 1.78619 12.3354 1.96725C12.0764 2.1483 11.8793 2.40457 11.7708 2.70135L9.61802 8.55551C9.60738 8.58442 9.58861 8.60963 9.56397 8.62811C9.53933 8.6466 9.50987 8.65756 9.47914 8.65968L3.22914 8.89579C2.90734 8.90105 2.59525 9.00688 2.33663 9.19846C2.07802 9.39004 1.88585 9.65775 1.78706 9.96406C1.68828 10.2704 1.68783 10.5999 1.78579 10.9065C1.88375 11.2131 2.07521 11.4813 2.3333 11.6736L7.23608 15.5277C7.26062 15.547 7.27896 15.5731 7.28883 15.6027C7.29871 15.6324 7.29968 15.6642 7.29164 15.6944L5.60414 21.6736C5.51669 21.978 5.52516 22.3021 5.6284 22.6016C5.73164 22.901 5.92463 23.1615 6.18111 23.3474C6.4376 23.5333 6.74514 23.6357 7.06188 23.6406C7.37863 23.6456 7.6892 23.5528 7.95136 23.375L13.1319 19.9027C13.1574 19.8851 13.1877 19.8757 13.2187 19.8757C13.2497 19.8757 13.28 19.8851 13.3055 19.9027L18.4861 23.375C18.7447 23.5589 19.0542 23.6577 19.3715 23.6577C19.6888 23.6577 19.9983 23.5589 20.2569 23.375C20.5135 23.1908 20.7066 22.9316 20.8099 22.6332C20.9131 22.3347 20.9213 22.0116 20.8333 21.7083L19.1319 15.7083C19.1229 15.6782 19.1234 15.646 19.1333 15.6162C19.1433 15.5863 19.1622 15.5603 19.1875 15.5416L24.1111 11.6527Z" fill="#FFBD00"/>
-          </g>
-          <defs>
-          <clipPath id="clip0_25_64">
-          <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
-          </clipPath>
-          </defs>
-        </svg>
-        <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_25_64)">
-          <path d="M24.1111 11.6527C24.3692 11.4605 24.5606 11.1922 24.6586 10.8857C24.7565 10.5791 24.7561 10.2495 24.6573 9.94323C24.5585 9.63692 24.3664 9.36921 24.1077 9.17763C23.8491 8.98605 23.537 8.88021 23.2152 8.87496L16.9652 8.63885C16.9345 8.63672 16.9051 8.62576 16.8804 8.60728C16.8558 8.5888 16.837 8.56359 16.8264 8.53468L14.6666 2.70135C14.5581 2.40457 14.361 2.1483 14.1021 1.96725C13.8431 1.78619 13.5347 1.68909 13.2187 1.68909C12.9027 1.68909 12.5944 1.78619 12.3354 1.96725C12.0764 2.1483 11.8793 2.40457 11.7708 2.70135L9.61802 8.55551C9.60738 8.58442 9.58861 8.60963 9.56397 8.62811C9.53933 8.6466 9.50987 8.65756 9.47914 8.65968L3.22914 8.89579C2.90734 8.90105 2.59525 9.00688 2.33663 9.19846C2.07802 9.39004 1.88585 9.65775 1.78706 9.96406C1.68828 10.2704 1.68783 10.5999 1.78579 10.9065C1.88375 11.2131 2.07521 11.4813 2.3333 11.6736L7.23608 15.5277C7.26062 15.547 7.27896 15.5731 7.28883 15.6027C7.29871 15.6324 7.29968 15.6642 7.29164 15.6944L5.60414 21.6736C5.51669 21.978 5.52516 22.3021 5.6284 22.6016C5.73164 22.901 5.92463 23.1615 6.18111 23.3474C6.4376 23.5333 6.74514 23.6357 7.06188 23.6406C7.37863 23.6456 7.6892 23.5528 7.95136 23.375L13.1319 19.9027C13.1574 19.8851 13.1877 19.8757 13.2187 19.8757C13.2497 19.8757 13.28 19.8851 13.3055 19.9027L18.4861 23.375C18.7447 23.5589 19.0542 23.6577 19.3715 23.6577C19.6888 23.6577 19.9983 23.5589 20.2569 23.375C20.5135 23.1908 20.7066 22.9316 20.8099 22.6332C20.9131 22.3347 20.9213 22.0116 20.8333 21.7083L19.1319 15.7083C19.1229 15.6782 19.1234 15.646 19.1333 15.6162C19.1433 15.5863 19.1622 15.5603 19.1875 15.5416L24.1111 11.6527Z" fill="#FFBD00"/>
-          </g>
-          <defs>
-          <clipPath id="clip0_25_64">
-          <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
-          </clipPath>
-          </defs>
-        </svg>
-        <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_25_64)">
-          <path d="M24.1111 11.6527C24.3692 11.4605 24.5606 11.1922 24.6586 10.8857C24.7565 10.5791 24.7561 10.2495 24.6573 9.94323C24.5585 9.63692 24.3664 9.36921 24.1077 9.17763C23.8491 8.98605 23.537 8.88021 23.2152 8.87496L16.9652 8.63885C16.9345 8.63672 16.9051 8.62576 16.8804 8.60728C16.8558 8.5888 16.837 8.56359 16.8264 8.53468L14.6666 2.70135C14.5581 2.40457 14.361 2.1483 14.1021 1.96725C13.8431 1.78619 13.5347 1.68909 13.2187 1.68909C12.9027 1.68909 12.5944 1.78619 12.3354 1.96725C12.0764 2.1483 11.8793 2.40457 11.7708 2.70135L9.61802 8.55551C9.60738 8.58442 9.58861 8.60963 9.56397 8.62811C9.53933 8.6466 9.50987 8.65756 9.47914 8.65968L3.22914 8.89579C2.90734 8.90105 2.59525 9.00688 2.33663 9.19846C2.07802 9.39004 1.88585 9.65775 1.78706 9.96406C1.68828 10.2704 1.68783 10.5999 1.78579 10.9065C1.88375 11.2131 2.07521 11.4813 2.3333 11.6736L7.23608 15.5277C7.26062 15.547 7.27896 15.5731 7.28883 15.6027C7.29871 15.6324 7.29968 15.6642 7.29164 15.6944L5.60414 21.6736C5.51669 21.978 5.52516 22.3021 5.6284 22.6016C5.73164 22.901 5.92463 23.1615 6.18111 23.3474C6.4376 23.5333 6.74514 23.6357 7.06188 23.6406C7.37863 23.6456 7.6892 23.5528 7.95136 23.375L13.1319 19.9027C13.1574 19.8851 13.1877 19.8757 13.2187 19.8757C13.2497 19.8757 13.28 19.8851 13.3055 19.9027L18.4861 23.375C18.7447 23.5589 19.0542 23.6577 19.3715 23.6577C19.6888 23.6577 19.9983 23.5589 20.2569 23.375C20.5135 23.1908 20.7066 22.9316 20.8099 22.6332C20.9131 22.3347 20.9213 22.0116 20.8333 21.7083L19.1319 15.7083C19.1229 15.6782 19.1234 15.646 19.1333 15.6162C19.1433 15.5863 19.1622 15.5603 19.1875 15.5416L24.1111 11.6527Z" fill="#FFBD00"/>
-          </g>
-          <defs>
-          <clipPath id="clip0_25_64">
-          <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
-          </clipPath>
-          </defs>
-        </svg>
+    <a href="#looxReviews">
+      <div class="social-proof-stars">
+        <div class="stars headline-stars">
+          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_25_64)">
+            <path d="M24.1111 11.6527C24.3692 11.4605 24.5606 11.1922 24.6586 10.8857C24.7565 10.5791 24.7561 10.2495 24.6573 9.94323C24.5585 9.63692 24.3664 9.36921 24.1077 9.17763C23.8491 8.98605 23.537 8.88021 23.2152 8.87496L16.9652 8.63885C16.9345 8.63672 16.9051 8.62576 16.8804 8.60728C16.8558 8.5888 16.837 8.56359 16.8264 8.53468L14.6666 2.70135C14.5581 2.40457 14.361 2.1483 14.1021 1.96725C13.8431 1.78619 13.5347 1.68909 13.2187 1.68909C12.9027 1.68909 12.5944 1.78619 12.3354 1.96725C12.0764 2.1483 11.8793 2.40457 11.7708 2.70135L9.61802 8.55551C9.60738 8.58442 9.58861 8.60963 9.56397 8.62811C9.53933 8.6466 9.50987 8.65756 9.47914 8.65968L3.22914 8.89579C2.90734 8.90105 2.59525 9.00688 2.33663 9.19846C2.07802 9.39004 1.88585 9.65775 1.78706 9.96406C1.68828 10.2704 1.68783 10.5999 1.78579 10.9065C1.88375 11.2131 2.07521 11.4813 2.3333 11.6736L7.23608 15.5277C7.26062 15.547 7.27896 15.5731 7.28883 15.6027C7.29871 15.6324 7.29968 15.6642 7.29164 15.6944L5.60414 21.6736C5.51669 21.978 5.52516 22.3021 5.6284 22.6016C5.73164 22.901 5.92463 23.1615 6.18111 23.3474C6.4376 23.5333 6.74514 23.6357 7.06188 23.6406C7.37863 23.6456 7.6892 23.5528 7.95136 23.375L13.1319 19.9027C13.1574 19.8851 13.1877 19.8757 13.2187 19.8757C13.2497 19.8757 13.28 19.8851 13.3055 19.9027L18.4861 23.375C18.7447 23.5589 19.0542 23.6577 19.3715 23.6577C19.6888 23.6577 19.9983 23.5589 20.2569 23.375C20.5135 23.1908 20.7066 22.9316 20.8099 22.6332C20.9131 22.3347 20.9213 22.0116 20.8333 21.7083L19.1319 15.7083C19.1229 15.6782 19.1234 15.646 19.1333 15.6162C19.1433 15.5863 19.1622 15.5603 19.1875 15.5416L24.1111 11.6527Z" fill="#FFBD00"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_25_64">
+            <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
+            </clipPath>
+            </defs>
+          </svg>
+          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_25_64)">
+            <path d="M24.1111 11.6527C24.3692 11.4605 24.5606 11.1922 24.6586 10.8857C24.7565 10.5791 24.7561 10.2495 24.6573 9.94323C24.5585 9.63692 24.3664 9.36921 24.1077 9.17763C23.8491 8.98605 23.537 8.88021 23.2152 8.87496L16.9652 8.63885C16.9345 8.63672 16.9051 8.62576 16.8804 8.60728C16.8558 8.5888 16.837 8.56359 16.8264 8.53468L14.6666 2.70135C14.5581 2.40457 14.361 2.1483 14.1021 1.96725C13.8431 1.78619 13.5347 1.68909 13.2187 1.68909C12.9027 1.68909 12.5944 1.78619 12.3354 1.96725C12.0764 2.1483 11.8793 2.40457 11.7708 2.70135L9.61802 8.55551C9.60738 8.58442 9.58861 8.60963 9.56397 8.62811C9.53933 8.6466 9.50987 8.65756 9.47914 8.65968L3.22914 8.89579C2.90734 8.90105 2.59525 9.00688 2.33663 9.19846C2.07802 9.39004 1.88585 9.65775 1.78706 9.96406C1.68828 10.2704 1.68783 10.5999 1.78579 10.9065C1.88375 11.2131 2.07521 11.4813 2.3333 11.6736L7.23608 15.5277C7.26062 15.547 7.27896 15.5731 7.28883 15.6027C7.29871 15.6324 7.29968 15.6642 7.29164 15.6944L5.60414 21.6736C5.51669 21.978 5.52516 22.3021 5.6284 22.6016C5.73164 22.901 5.92463 23.1615 6.18111 23.3474C6.4376 23.5333 6.74514 23.6357 7.06188 23.6406C7.37863 23.6456 7.6892 23.5528 7.95136 23.375L13.1319 19.9027C13.1574 19.8851 13.1877 19.8757 13.2187 19.8757C13.2497 19.8757 13.28 19.8851 13.3055 19.9027L18.4861 23.375C18.7447 23.5589 19.0542 23.6577 19.3715 23.6577C19.6888 23.6577 19.9983 23.5589 20.2569 23.375C20.5135 23.1908 20.7066 22.9316 20.8099 22.6332C20.9131 22.3347 20.9213 22.0116 20.8333 21.7083L19.1319 15.7083C19.1229 15.6782 19.1234 15.646 19.1333 15.6162C19.1433 15.5863 19.1622 15.5603 19.1875 15.5416L24.1111 11.6527Z" fill="#FFBD00"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_25_64">
+            <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
+            </clipPath>
+            </defs>
+          </svg>
+          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_25_64)">
+            <path d="M24.1111 11.6527C24.3692 11.4605 24.5606 11.1922 24.6586 10.8857C24.7565 10.5791 24.7561 10.2495 24.6573 9.94323C24.5585 9.63692 24.3664 9.36921 24.1077 9.17763C23.8491 8.98605 23.537 8.88021 23.2152 8.87496L16.9652 8.63885C16.9345 8.63672 16.9051 8.62576 16.8804 8.60728C16.8558 8.5888 16.837 8.56359 16.8264 8.53468L14.6666 2.70135C14.5581 2.40457 14.361 2.1483 14.1021 1.96725C13.8431 1.78619 13.5347 1.68909 13.2187 1.68909C12.9027 1.68909 12.5944 1.78619 12.3354 1.96725C12.0764 2.1483 11.8793 2.40457 11.7708 2.70135L9.61802 8.55551C9.60738 8.58442 9.58861 8.60963 9.56397 8.62811C9.53933 8.6466 9.50987 8.65756 9.47914 8.65968L3.22914 8.89579C2.90734 8.90105 2.59525 9.00688 2.33663 9.19846C2.07802 9.39004 1.88585 9.65775 1.78706 9.96406C1.68828 10.2704 1.68783 10.5999 1.78579 10.9065C1.88375 11.2131 2.07521 11.4813 2.3333 11.6736L7.23608 15.5277C7.26062 15.547 7.27896 15.5731 7.28883 15.6027C7.29871 15.6324 7.29968 15.6642 7.29164 15.6944L5.60414 21.6736C5.51669 21.978 5.52516 22.3021 5.6284 22.6016C5.73164 22.901 5.92463 23.1615 6.18111 23.3474C6.4376 23.5333 6.74514 23.6357 7.06188 23.6406C7.37863 23.6456 7.6892 23.5528 7.95136 23.375L13.1319 19.9027C13.1574 19.8851 13.1877 19.8757 13.2187 19.8757C13.2497 19.8757 13.28 19.8851 13.3055 19.9027L18.4861 23.375C18.7447 23.5589 19.0542 23.6577 19.3715 23.6577C19.6888 23.6577 19.9983 23.5589 20.2569 23.375C20.5135 23.1908 20.7066 22.9316 20.8099 22.6332C20.9131 22.3347 20.9213 22.0116 20.8333 21.7083L19.1319 15.7083C19.1229 15.6782 19.1234 15.646 19.1333 15.6162C19.1433 15.5863 19.1622 15.5603 19.1875 15.5416L24.1111 11.6527Z" fill="#FFBD00"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_25_64">
+            <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
+            </clipPath>
+            </defs>
+          </svg>
+          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_25_64)">
+            <path d="M24.1111 11.6527C24.3692 11.4605 24.5606 11.1922 24.6586 10.8857C24.7565 10.5791 24.7561 10.2495 24.6573 9.94323C24.5585 9.63692 24.3664 9.36921 24.1077 9.17763C23.8491 8.98605 23.537 8.88021 23.2152 8.87496L16.9652 8.63885C16.9345 8.63672 16.9051 8.62576 16.8804 8.60728C16.8558 8.5888 16.837 8.56359 16.8264 8.53468L14.6666 2.70135C14.5581 2.40457 14.361 2.1483 14.1021 1.96725C13.8431 1.78619 13.5347 1.68909 13.2187 1.68909C12.9027 1.68909 12.5944 1.78619 12.3354 1.96725C12.0764 2.1483 11.8793 2.40457 11.7708 2.70135L9.61802 8.55551C9.60738 8.58442 9.58861 8.60963 9.56397 8.62811C9.53933 8.6466 9.50987 8.65756 9.47914 8.65968L3.22914 8.89579C2.90734 8.90105 2.59525 9.00688 2.33663 9.19846C2.07802 9.39004 1.88585 9.65775 1.78706 9.96406C1.68828 10.2704 1.68783 10.5999 1.78579 10.9065C1.88375 11.2131 2.07521 11.4813 2.3333 11.6736L7.23608 15.5277C7.26062 15.547 7.27896 15.5731 7.28883 15.6027C7.29871 15.6324 7.29968 15.6642 7.29164 15.6944L5.60414 21.6736C5.51669 21.978 5.52516 22.3021 5.6284 22.6016C5.73164 22.901 5.92463 23.1615 6.18111 23.3474C6.4376 23.5333 6.74514 23.6357 7.06188 23.6406C7.37863 23.6456 7.6892 23.5528 7.95136 23.375L13.1319 19.9027C13.1574 19.8851 13.1877 19.8757 13.2187 19.8757C13.2497 19.8757 13.28 19.8851 13.3055 19.9027L18.4861 23.375C18.7447 23.5589 19.0542 23.6577 19.3715 23.6577C19.6888 23.6577 19.9983 23.5589 20.2569 23.375C20.5135 23.1908 20.7066 22.9316 20.8099 22.6332C20.9131 22.3347 20.9213 22.0116 20.8333 21.7083L19.1319 15.7083C19.1229 15.6782 19.1234 15.646 19.1333 15.6162C19.1433 15.5863 19.1622 15.5603 19.1875 15.5416L24.1111 11.6527Z" fill="#FFBD00"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_25_64">
+            <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
+            </clipPath>
+            </defs>
+          </svg>
+          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_25_64)">
+            <path d="M24.1111 11.6527C24.3692 11.4605 24.5606 11.1922 24.6586 10.8857C24.7565 10.5791 24.7561 10.2495 24.6573 9.94323C24.5585 9.63692 24.3664 9.36921 24.1077 9.17763C23.8491 8.98605 23.537 8.88021 23.2152 8.87496L16.9652 8.63885C16.9345 8.63672 16.9051 8.62576 16.8804 8.60728C16.8558 8.5888 16.837 8.56359 16.8264 8.53468L14.6666 2.70135C14.5581 2.40457 14.361 2.1483 14.1021 1.96725C13.8431 1.78619 13.5347 1.68909 13.2187 1.68909C12.9027 1.68909 12.5944 1.78619 12.3354 1.96725C12.0764 2.1483 11.8793 2.40457 11.7708 2.70135L9.61802 8.55551C9.60738 8.58442 9.58861 8.60963 9.56397 8.62811C9.53933 8.6466 9.50987 8.65756 9.47914 8.65968L3.22914 8.89579C2.90734 8.90105 2.59525 9.00688 2.33663 9.19846C2.07802 9.39004 1.88585 9.65775 1.78706 9.96406C1.68828 10.2704 1.68783 10.5999 1.78579 10.9065C1.88375 11.2131 2.07521 11.4813 2.3333 11.6736L7.23608 15.5277C7.26062 15.547 7.27896 15.5731 7.28883 15.6027C7.29871 15.6324 7.29968 15.6642 7.29164 15.6944L5.60414 21.6736C5.51669 21.978 5.52516 22.3021 5.6284 22.6016C5.73164 22.901 5.92463 23.1615 6.18111 23.3474C6.4376 23.5333 6.74514 23.6357 7.06188 23.6406C7.37863 23.6456 7.6892 23.5528 7.95136 23.375L13.1319 19.9027C13.1574 19.8851 13.1877 19.8757 13.2187 19.8757C13.2497 19.8757 13.28 19.8851 13.3055 19.9027L18.4861 23.375C18.7447 23.5589 19.0542 23.6577 19.3715 23.6577C19.6888 23.6577 19.9983 23.5589 20.2569 23.375C20.5135 23.1908 20.7066 22.9316 20.8099 22.6332C20.9131 22.3347 20.9213 22.0116 20.8333 21.7083L19.1319 15.7083C19.1229 15.6782 19.1234 15.646 19.1333 15.6162C19.1433 15.5863 19.1622 15.5603 19.1875 15.5416L24.1111 11.6527Z" fill="#FFBD00"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_25_64">
+            <rect width="25" height="25" fill="white" transform="translate(0.5)"/>
+            </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <p>Rated 4.9/5 by 10,000+ Happy Customers</p>
       </div>
-      <p>Rated 4.9/5 by 10,000+ Happy Customers</p>
-    </div>
+    </a>
   </div>
   <div class="container">
     <div class="frame item1">
@@ -621,6 +824,522 @@
     </div>
   </div>
 </div>
+
+<div class="benefits-section">
+  <div class="benefit-container">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/ezgif-1-f5f885796a_1000x_8818865a-4345-4ab5-a22d-d6738196d90f.webp?v=1692115019"
+      width="1"
+      height="1"
+    >
+    <div class="text-box align-text-right">
+      <div class="text">
+        <h3>Healthier Teeth and Gums</h3>
+        <p>
+          With Flossmo, you'll love how it easily clears away plaque with its gentle water flow. It reaches between your
+          teeth and along your gumline, leaving your mouth feeling refreshingly clean and healthy.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="benefit-container">
+    <div class="text-box align-text-left">
+      <div class="text">
+        <h3>Chew More Comfortably</h3>
+        <p>
+          Hey, whether you have braces, implants, crowns, or bridges, Flossmo is your go-to! Its gentle cleaning action
+          ensures your gums stay healthy, so you can enjoy your favorite meals without any any discomfort.
+        </p>
+      </div>
+    </div>
+    <img width="1" height="1">
+  </div>
+  <div class="benefit-container">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/sudoku87_Flossmo-website-graphics_Waterproof_800x800px_NK_04-MAR-2022_V1_r1.jpg?v=1653186456"
+      width="1"
+      height="1"
+    >
+    <div class="text-box align-text-right">
+      <div class="text">
+        <h3>Stronger and Durable Teeth</h3>
+        <p>
+          With Flossmo, say goodbye to plaque and hello to stronger teeth! By stopping cavities in their tracks, it
+          keeps your tooth enamel robust and reduces the need for frequent dental treatments. So, your smile stays
+          strong and bright for the long haul.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="benefit-container">
+    <div class="text-box align-text-left">
+      <div class="text">
+        <h3>Boost your Confidence</h3>
+        <p>
+          Flossmo's got your back for fresh breath and a sparkling smile! By getting rid of food bits and germs, it
+          leaves your mouth feeling fresh and your smile beaming.
+        </p>
+      </div>
+    </div>
+    <img width="1" height="1">
+  </div>
+</div>
+
+<div class="features-section">
+  <div class="features-container">
+    <h1>Innovative design & features:</h1>
+    <div class="feature">
+      <h3>1. 360° Rotatable Nozzle</h3>
+      <p>The 360° tip rotation allows you to reach every point of your mouth and gum for a comprehensive cleaning</p>
+    </div>
+    <div class="feature">
+      <h3>2. Four Pressure Setting</h3>
+      <p>Normal, soft, pulse and DIY - Choose the most comfortable mode that suits your needs.</p>
+    </div>
+    <div class="feature">
+      <h3>3. 360mL Water Tank</h3>
+      <p>The water tank is completely retractable and removable, making it super easy to clean and refill.</p>
+    </div>
+  </div>
+  <img
+    src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/features.png?v=1707832460"
+    width="1"
+    height="1"
+  >
+</div>
+
+{% comment %} <div>
+  <div
+    style="display:flex;flex-basis:auto;flex-shrink:0;width:100%;justify-content:center;align-items:center"
+    class="rmq-9be8222e rmq-46cb5fcc rmq-f1a67779 rmq-27e54ec4"
+    data-rid="1"
+    data-radium="true"
+  >
+    <div
+      data-rid="d458fab8-1067-49fe-ad47-18844ca5e6f0"
+      data-replo-repeated-index=".0.0.0.0"
+      style="width:100%;row-gap:0;display:grid;max-width:900px;column-gap:0;align-items:center;justify-content:center;grid-template-columns:repeat(4, minmax(0, 1fr));flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+      class="rmq-5bdba27e rmq-aa5fdf60 rmq-c1936f55 rmq-cc200de8"
+      data-radium="true"
+    >
+      <div
+        data-rid="d37f6d00-da19-4ec3-82fe-52ff93f29965"
+        data-replo-repeated-index=".0.0.0.0.0"
+        style="display:flex;flex-grow:1;max-width:100%;align-self:stretch;align-items:flex-start;padding-top:80px;flex-direction:column;grid-column-end:span 2;border-top-color:#5E0683FF;border-top-style:solid;border-top-width:1px;justify-content:flex-start;background-color:#E8F9FFFF;border-left-color:#57B9E4FF;border-left-style:solid;border-left-width:1px;border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow:hidden;flex-shrink:1;flex-basis:0;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+        class="rmq-aa9bba01 rmq-24efb66c rmq-6843f6f1 rmq-76807d4c"
+        data-radium="true"
+      >
+        <div
+          data-rid="ec326544-74a3-4c74-9cf5-1a5db2eb0439"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:flex-start;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="0a98d0d0-cffd-4e93-a558-0580706b54ef"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            class="rmq-d0a8ba2b rmq-cf021ec2 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
+            style="color:#000000;flex-grow:1;font-size:20px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:24px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            data-radium="true"
+          >
+            <span contenteditable="false" style="width:100%" data-radium="true"><p>Takes 30 seconds</p></span>
+          </div>
+        </div>
+        <div
+          data-rid="f6de43f9-ec6c-483b-8207-8872da6f6ca8"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:flex-start;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="c7082a0c-a040-4024-bcab-f9d5713b7cb5"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            class="rmq-d0a8ba2b rmq-cf021ec2 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
+            style="color:#000000;flex-grow:1;font-size:20px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:24px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            data-radium="true"
+          >
+            <span contenteditable="false" style="width:100%" data-radium="true"><p>Gentle on your gums</p></span>
+          </div>
+        </div>
+        <div
+          data-rid="853e03a7-c2a5-4165-9b19-c60727c1bc2f"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:flex-start;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="dfa130be-821d-4285-915a-51117fcaed07"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            class="rmq-d0a8ba2b rmq-cf021ec2 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
+            style="color:#000000;flex-grow:1;font-size:20px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:24px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            data-radium="true"
+          >
+            <span contenteditable="false" style="width:100%" data-radium="true">
+              <p>Removes up to 99% of plaque</p>
+            </span>
+          </div>
+        </div>
+        <div
+          data-rid="cbe0981d-9718-48d4-bfe8-60fa2fd5511b"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:flex-start;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="bee47e40-e738-4526-a12f-dd097ff1dec6"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            class="rmq-d0a8ba2b rmq-cf021ec2 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
+            style="color:#000000;flex-grow:1;font-size:20px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:24px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            data-radium="true"
+          >
+            <span contenteditable="false" style="width:100%" data-radium="true">
+              <p>Ideal for people with braces</p>
+            </span>
+          </div>
+        </div>
+        <div
+          data-rid="06ef52a9-602f-4169-a8c8-39a2bfdde4f2"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:flex-start;border-bottom-color:#57B9E4FF;border-bottom-style:solid;border-bottom-width:1px;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="f3792bfc-36f4-474e-8d68-f79b85a3242f"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            class="rmq-d0a8ba2b rmq-cf021ec2 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
+            style="color:#000000;flex-grow:1;font-size:20px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:24px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            data-radium="true"
+          >
+            <span contenteditable="false" style="width:100%" data-radium="true"><p>Clinically proven</p></span>
+          </div>
+        </div>
+      </div>
+      <div
+        data-rid="0fc6270c-4553-454c-b3a9-f0dc94d5c41c"
+        data-replo-repeated-index=".0.0.0.0.0"
+        style="row-gap:0;z-index:2;display:flex;flex-grow:1;max-width:100%;align-self:stretch;column-gap:0;align-items:flex-start;flex-direction:column;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:space-between;background-color:#FFFFFFFF;border-left-color:#57B9E4FF;border-left-style:solid;border-left-width:1px;border-right-color:#57B9E4FF;border-right-style:solid;border-right-width:1px;border-bottom-color:#57B9E4FF;border-bottom-style:solid;border-bottom-width:1px;border-top-left-radius:8px;grid-template-columns:repeat(1, minmax(0, 1fr));border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow:hidden;flex-shrink:1;flex-basis:0;transform:scale3d(110%, 110%, 100%);position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+        class="rmq-e40760d5 rmq-dca84d18 rmq-6843f6f1 rmq-76807d4c"
+        data-radium="true"
+      >
+        <div
+          data-rid="198abe3f-597d-4a1f-a295-5bcaa939ad40"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;flex-direction:column;padding-bottom:20px;justify-content:center;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-8ed5cd10 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <picture
+            data-rid="e2eb0c48-ec62-4b88-99cf-14cce2edddb7"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            style="overflow-x:auto;overflow-y:hidden;display:flex;align-items:center;min-width:0;min-height:0;max-width:140px;object-fit:cover;flex-shrink:0;flex-basis:auto"
+            class="rmq-2ad8f6c0 rmq-3136bb4a rmq-1f47714 rmq-4a86ea09"
+            data-radium="true"
+          >
+            <source
+              srcset="https://cdn.shopify.com/s/files/1/0668/7414/7051/files/xpZHmdHM.png?v=1686491675&amp;width=820"
+              media="(max-width: 640px)">
+            <source
+              srcset="https://cdn.shopify.com/s/files/1/0668/7414/7051/files/xpZHmdHM.png?v=1686491675&amp;width=1024"
+              media="(min-width: 641px) and (max-width: 820px)">
+            <source
+              srcset="https://cdn.shopify.com/s/files/1/0668/7414/7051/files/xpZHmdHM.png?v=1686491675&amp;width=1800"
+              media="(min-width: 821px) and (max-width: 1024px)">
+            <source
+              srcset="https://cdn.shopify.com/s/files/1/0668/7414/7051/files/xpZHmdHM.png?v=1686491675&amp;width=2048"
+              media="(min-width: 1025px)">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0668/7414/7051/files/xpZHmdHM.png?v=1686491675"
+              style="display:block;padding:0;margin:0;object-fit:cover;min-width:100%;max-width:100%;min-height:100%;max-height:100%;height:100%"
+              class="rmq-1997b991 rmq-8a1ca093 rmq-553db1c6 rmq-e8e4959b"
+              loading="eager"
+              data-radium="true"
+          ></picture>
+        </div>
+        <div
+          data-rid="396e8ef9-83f7-473f-841c-2f32ced306db"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:70px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;justify-content:center;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="65fc99e0-d22f-4e78-8668-4402e2b9dbb4"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            style="line-height:100%;color:#FE9920FF;width:30px;height:30px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            class="rmq-49774d36 rmq-4ea94e36 rmq-1f47714 rmq-4a86ea09"
+            data-radium="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              style="width:var(--rsw, 100%);height:100%"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          data-rid="5f7bf60a-5b4a-425d-85b9-f9bbca6f611a"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:70px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;justify-content:center;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="6bbc2b17-6006-43a9-964f-bbb269261dc3"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            style="line-height:100%;color:#FE9920FF;width:30px;height:30px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            class="rmq-49774d36 rmq-4ea94e36 rmq-1f47714 rmq-4a86ea09"
+            data-radium="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              style="width:var(--rsw, 100%);height:100%"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          data-rid="c95d85a0-3685-42ba-98be-566bd8c9a5a5"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:70px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;justify-content:center;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="cef0c722-6caf-460e-b31c-70a961902804"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            style="line-height:100%;color:#FE9920FF;width:30px;height:30px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            class="rmq-49774d36 rmq-4ea94e36 rmq-1f47714 rmq-4a86ea09"
+            data-radium="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              style="width:var(--rsw, 100%);height:100%"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          data-rid="a16dfc27-0fde-4154-8bb1-9f91dbaa7e68"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:70px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;justify-content:center;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="139adf1c-2c01-4047-b411-ddc0f4722288"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            style="line-height:100%;color:#FE9920FF;width:30px;height:30px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            class="rmq-49774d36 rmq-4ea94e36 rmq-1f47714 rmq-4a86ea09"
+            data-radium="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              style="width:var(--rsw, 100%);height:100%"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          data-rid="d3443e67-1777-43a7-bb85-d2f580942ccf"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:70px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;justify-content:center;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-383cc363 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="606aaafe-48e1-4882-b982-fbd40799b76c"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            style="line-height:100%;color:#FE9920FF;width:30px;height:30px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            class="rmq-49774d36 rmq-4ea94e36 rmq-1f47714 rmq-4a86ea09"
+            data-radium="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              style="width:var(--rsw, 100%);height:100%"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        data-rid="b9330dc6-a0f1-45d9-ad48-d77de7ea88dd"
+        data-replo-repeated-index=".0.0.0.0.0"
+        style="row-gap:0;display:flex;flex-grow:1;max-width:100%;align-self:stretch;column-gap:0;align-items:flex-start;flex-direction:column;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:space-between;background-color:#E8F9FFFF;border-right-color:#57B9E4FF;border-right-style:solid;border-right-width:1px;border-bottom-color:#5E0683FF;border-bottom-style:solid;border-bottom-width:1px;grid-template-columns:repeat(1, minmax(0, 1fr));border-top-right-radius:8px;border-bottom-right-radius:8px;overflow:hidden;flex-shrink:1;flex-basis:0;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+        class="rmq-e40760d5 rmq-dca84d18 rmq-6843f6f1 rmq-76807d4c"
+        data-radium="true"
+      >
+        <div
+          data-rid="aa5481ae-8f59-483d-911f-663acc69133f"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;justify-content:center;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="91c5a01d-0d5c-4e4c-84fb-03fa5c84b0e1"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            class="rmq-196f5390 rmq-ad4c3799 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
+            style="color:#000000FF;flex-grow:1;font-size:18px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:22px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            data-radium="true"
+          >
+            <span contenteditable="false" style="width:100%" data-radium="true"><p>Traditional Flossing</p></span>
+          </div>
+        </div>
+        <div
+          data-rid="81ba94ac-a484-4d53-9ac9-3622e2fb2ffd"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;flex-grow:1;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:center;flex-shrink:1;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-fc52f14 rmq-29c6a209"
+          data-radium="true"
+        >
+          <div
+            data-rid="05052a0f-7457-4a34-b8c7-65b964364d96"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            style="line-height:100%;color:#FF0205FF;width:45px;height:45px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            class="rmq-49774d36 rmq-47ce1836 rmq-1f47714 rmq-4a86ea09"
+            data-radium="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              style="width:var(--rsw, 100%);height:100%"
+            >
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          data-rid="67030b6d-4555-4471-8504-93268668635f"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;flex-grow:1;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:center;flex-shrink:1;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-fc52f14 rmq-29c6a209"
+          data-radium="true"
+        >
+          <div
+            data-rid="148a4b1e-07c6-4cde-a452-eb1f4dab9319"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            style="line-height:100%;color:#FF0205FF;width:45px;height:45px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            class="rmq-49774d36 rmq-47ce1836 rmq-1f47714 rmq-4a86ea09"
+            data-radium="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              style="width:var(--rsw, 100%);height:100%"
+            >
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          data-rid="89d5854a-58f3-4884-be58-20d8aab566b3"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;flex-grow:1;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:center;flex-shrink:1;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-fc52f14 rmq-29c6a209"
+          data-radium="true"
+        >
+          <div
+            data-rid="adcda428-57a4-4fb4-a836-4f29eb2b9adc"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            style="line-height:100%;color:#FF0205FF;width:45px;height:45px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            class="rmq-49774d36 rmq-47ce1836 rmq-1f47714 rmq-4a86ea09"
+            data-radium="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              style="width:var(--rsw, 100%);height:100%"
+            >
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          data-rid="adaa3d62-1c79-4048-a4ef-f5bc1cecec62"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:center;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="44df4dbc-a653-4311-a9dd-2a0c937c4a49"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            style="line-height:100%;color:#FF0205FF;width:45px;height:45px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            class="rmq-49774d36 rmq-47ce1836 rmq-1f47714 rmq-4a86ea09"
+            data-radium="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              style="width:var(--rsw, 100%);height:100%"
+            >
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          data-rid="28a3470f-0231-4523-8e35-8ee11b8cedd8"
+          data-replo-repeated-index=".0.0.0.0.0.0"
+          style="height:80px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:20px;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:center;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          class="rmq-89bec1e3 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
+          data-radium="true"
+        >
+          <div
+            data-rid="b46abc9f-304d-4e6b-a390-1a623b53c46d"
+            data-replo-repeated-index=".0.0.0.0.0.0.0"
+            class="rmq-44279447 rmq-ee191701 rmq-1f47714 rmq-4a86ea09 alchemy-rte"
+            style="font-size:18px;font-family:&quot;DIN Next&quot;, sans-serif;line-height:24px;flex-shrink:0;flex-basis:auto;overflow-wrap:break-word"
+            data-radium="true"
+          >
+            <span contenteditable="false" style="width:100%" data-radium="true"><p>Not proven</p></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> {% endcomment %}
 
 {% schema %}
 {
