@@ -8,12 +8,6 @@
   src: url("Linotype_-_DIN_Next_LT_Pro_Regular.ttf") format("truetype"),
 }
 
-
-h1,h2,h3,h4.h5,h6{
-  font-family: "DinNext-Bold" !important;
-}
-
-
 .product-templatev2 .flosser-size .swatch-element {
   width: calc((100% / 2) - 12px);
   border: 1px solid #e7e7ee;

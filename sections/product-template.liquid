@@ -1,4 +1,43 @@
 <style>
+  .short-benefits-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .short-benefit {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .short-benefit svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .trust-seals-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+  }
+
+  .trust-seal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .trust-seal svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Social Proof Section */
+
   .social-proof {
     align-self: stretch;
     padding-top: 50px;
@@ -13,7 +52,6 @@
 
   .headline-social-proof {
     align-self: stretch;
-    height: 79px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -21,14 +59,8 @@
     display: flex;
   }
 
-  .everyone-loves-their-flossmo {
-    align-self: stretch;
+  .headline-social-proof h1 {
     text-align: center;
-    color: black;
-    font-size: 36px;
-    font-family: Montserrat;
-    font-weight: 500;
-    word-wrap: break-word;
   }
 
   .social-proof-stars {
@@ -62,23 +94,11 @@
     position: relative;
   }
 
-  .rated-by-happy-customers {
-    text-align: center;
-    color: black;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-weight: 300;
-    word-wrap: break-word;
-  }
-
   .social-proof .container {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding: 4px 25px;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     row-gap: 30px;
     display: flex;
     flex-direction: row;
@@ -86,16 +106,17 @@
 
   .frame {
     position: relative;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     display: inline-flex;
   }
 
-  .image {
+  .social-proof img {
     width: 135px;
     height: 172px;
+    object-fit: cover;
     border-radius: 12px;
     border: 5px #3ecaf2 solid;
   }
@@ -112,14 +133,11 @@
 
   .review {
     position: absolute;
-    width: 400px;
-    bottom: 50px;
+    z-index: 10;
+    width: 220px;
+    bottom: 0px;
     /* height: 122px; */
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    transform: rotate(1deg);
+    padding: 8px 14px;
     transform-origin: 0 0;
     background: white;
     border-radius: 12px;
@@ -133,12 +151,7 @@
   }
 
   .review-text {
-    align-self: stretch;
-    color: black;
     font-size: 14px;
-    font-family: Montserrat;
-    font-weight: 500;
-    word-wrap: break-word;
   }
 
   .rating-name {
@@ -153,10 +166,151 @@
     flex: 1 1 0;
     text-align: right;
     color: #068ec9;
-    font-size: 18px;
-    font-family: Montserrat;
+  }
+
+  .item1 {
+    order: 0;
+  }
+
+  .item1 .review {
+    width: 230px;
+    left: -25px;
+    transform: rotate(1deg);
+  }
+
+  .item2 {
+    order: 1;
+  }
+
+  .item3 {
+    order: 2;
+  }
+
+  .item4 {
+    order: 3;
+  }
+
+  .item4 .review {
+    width: 250px;
+    right: -25px;
+    transform: rotate(-1deg);
+  }
+
+  .item5 {
+    order: 4;
+    padding-bottom: 75px;
+  }
+
+  .item5 .review {
+    width: 270px;
+    transform: rotate(1deg);
+  }
+
+  @media screen and (min-width: 495px) {
+    .social-proof-stars {
+      flex-direction: row;
+    }
+
+    .social-proof .container {
+      padding: 4px 75px;
+      gap: 45px;
+    }
+
+    .item3 {
+      order: 3;
+    }
+
+    .item4 {
+      order: 2;
+    }
+
+    .item4 .review {
+      right: auto;
+    }
+
+    .stars svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .social-proof img {
+      width: 250px;
+      height: 312px;
+    }
+
+    .frame {
+      padding-bottom: 75px;
+    }
+
+    .frame .review {
+      width: 400px;
+    }
+
+    .frame .review-text {
+      font-size: 16px;
+    }
+
+    .item1 .review {
+      left: auto;
+    }
+  }
+
+  /* Steps Section */
+
+  .steps {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 50px 10px;
+  }
+
+  .steps h3 {
     font-weight: 600;
-    word-wrap: break-word;
+    margin: 0;
+  }
+
+  .steps .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 75px;
+    padding: 12px;
+  }
+
+  .step-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .step-box img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+  .steps h1 {
+    font-size: 32px;
+  }
+  .steps h3 {
+      font-size: 28px;
+    }
   }
 </style>
 
@@ -179,85 +333,83 @@
 {% endcomment %}
 
 <section class="shopify-section-wrapper section">
-  <div class="container">
-    {% render 'product__structured-data' %}
+  {% render 'product__structured-data' %}
 
-    <div class="breadcrumb__wrapper one-whole column">
-      <div class="breadcrumb-collection breadcrumb-collection--product">
-        {% if collection.previous_product or collection.next_product %}
-          <div class="nav_arrows breadcrumb_text">
-            {% if collection.previous_product %}
-              <a
-                href="{{ collection.previous_product }}"
-                title="{{ 'products.general.previous_product_html' | t }}"
-                class="breadcrumb_link"
-                ><span class="icon-left-arrow"> {{ 'products.general.previous_product_html' | t }}</span></a
-              >
-            {% endif %}
-            {% if collection.previous_product and collection.next_product -%}
-              <span class="breadcrumb-divider"> | </span>
-            {%- endif %}
+  <div class="breadcrumb__wrapper one-whole column">
+    <div class="breadcrumb-collection breadcrumb-collection--product">
+      {% if collection.previous_product or collection.next_product %}
+        <div class="nav_arrows breadcrumb_text">
+          {% if collection.previous_product %}
+            <a
+              href="{{ collection.previous_product }}"
+              title="{{ 'products.general.previous_product_html' | t }}"
+              class="breadcrumb_link"
+              ><span class="icon-left-arrow"> {{ 'products.general.previous_product_html' | t }}</span></a
+            >
+          {% endif %}
+          {% if collection.previous_product and collection.next_product -%}
+            <span class="breadcrumb-divider"> | </span>
+          {%- endif %}
 
-            {% if collection.next_product %}
-              <a
-                href="{{collection.next_product}}"
-                title="{{ 'products.general.next_product_html' | t }}"
-                class="breadcrumb_link"
-              >
-                {{- 'products.general.next_product_html' | t }}
-                <span class="icon-right-arrow"></span
-              ></a>
-            {% endif %}
-          </div>
-        {% endif %}
+          {% if collection.next_product %}
+            <a
+              href="{{collection.next_product}}"
+              title="{{ 'products.general.next_product_html' | t }}"
+              class="breadcrumb_link"
+            >
+              {{- 'products.general.next_product_html' | t }}
+              <span class="icon-right-arrow"></span
+            ></a>
+          {% endif %}
+        </div>
+      {% endif %}
 
-        {% render 'product__breadcrumb' %}
-      </div>
+      {% render 'product__breadcrumb' %}
     </div>
-
-    <div
-      class="rivo-reviews-star-rating"
-      data-product-id="{{ product.id }}"
-      data-rating="{{ product.metafields.ba_rev.review_data.stars }}{% unless product.metafields.ba_rev.review_data.stars == 0 %}0{% endunless %}"
-      data-count="{{ product.metafields.ba_rev.review_data.reviews_count }}{% unless product.metafields.ba_rev.review_data.stars != n %}0{% endunless %}"
-    >
-      <div class="rivo-star-wrapper"></div>
-      <div class="rivo-reviews-rating-count"></div>
-    </div>
-
-    <section
-      class="
-        product-container
-        is-flex
-        is-flex-wrap
-      "
-    >
-      {% render 'productV2',
-        context: 'product',
-        product: product,
-        variant: product.selected_or_first_available_variant,
-        gallery_thumbnails: section.settings.product_thumbs,
-        gallery_click_to_zoom: section.settings.enable_product_lightbox,
-        gallery_hover_zoom: section.settings.activate_zoom,
-        gallery_arrows: section.settings.gallery_arrows,
-        gallery_thumbnail_position: section.settings.thumbnail_position,
-        gallery_thumbnail_slider: section.settings.enable_thumbnail_slider,
-        gallery_slideshow_speed: section.settings.slideshow_speed,
-        gallery_slideshow_transition: section.settings.slideshow_animation,
-        media_position: section.settings.media_position,
-        set_product_height: section.settings.set_product_height,
-        product_height: section.settings.product_height,
-        video_looping: section.settings.video_looping,
-        show_dynamic_checkout_button: settings.show_dynamic_checkout_button,
-        enable_shopify_review_comments: settings.enable_shopify_review_comments
-      %}
-    </section>
   </div>
+
+  <div
+    class="rivo-reviews-star-rating"
+    data-product-id="{{ product.id }}"
+    data-rating="{{ product.metafields.ba_rev.review_data.stars }}{% unless product.metafields.ba_rev.review_data.stars == 0 %}0{% endunless %}"
+    data-count="{{ product.metafields.ba_rev.review_data.reviews_count }}{% unless product.metafields.ba_rev.review_data.stars != n %}0{% endunless %}"
+  >
+    <div class="rivo-star-wrapper"></div>
+    <div class="rivo-reviews-rating-count"></div>
+  </div>
+
+  <section
+    class="
+      product-container
+      is-flex
+      is-flex-wrap
+    "
+  >
+    {% render 'productV2',
+      context: 'product',
+      product: product,
+      variant: product.selected_or_first_available_variant,
+      gallery_thumbnails: section.settings.product_thumbs,
+      gallery_click_to_zoom: section.settings.enable_product_lightbox,
+      gallery_hover_zoom: section.settings.activate_zoom,
+      gallery_arrows: section.settings.gallery_arrows,
+      gallery_thumbnail_position: section.settings.thumbnail_position,
+      gallery_thumbnail_slider: section.settings.enable_thumbnail_slider,
+      gallery_slideshow_speed: section.settings.slideshow_speed,
+      gallery_slideshow_transition: section.settings.slideshow_animation,
+      media_position: section.settings.media_position,
+      set_product_height: section.settings.set_product_height,
+      product_height: section.settings.product_height,
+      video_looping: section.settings.video_looping,
+      show_dynamic_checkout_button: settings.show_dynamic_checkout_button,
+      enable_shopify_review_comments: settings.enable_shopify_review_comments
+    %}
+  </section>
 </section>
 
 <div class="social-proof">
   <div class="headline-social-proof">
-    <div class="everyone-loves-their-flossmo">Everyone loves their Flossmo!</div>
+    <h1>Everyone loves their Flossmo!</h1>
     <div class="social-proof-stars">
       <div class="stars headline-stars">
         <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -311,13 +463,18 @@
           </defs>
         </svg>
       </div>
-      <div class="rated-by-happy-customers">Rated 4.8/5 by 10,000+ Happy Customers</div>
+      <p>Rated 4.9/5 by 10,000+ Happy Customers</p>
     </div>
   </div>
   <div class="container">
-    <div class="frame">
-      <img class="image image-tilt-left" src="https://via.placeholder.com/250x312" width="1" height="1">
-      <div class="review" style="width: 220px;">
+    <div class="frame item1">
+      <img
+        class="image image-tilt-left"
+        src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/review1.jpg?v=1707817942"
+        width="1"
+        height="1"
+      >
+      <div class="review">
         <div class="review-text">
           Never owned a water flosser before but decided to give this one a go as it seemed good value for money. So
           glad I did! ***
@@ -344,13 +501,28 @@
         </div>
       </div>
     </div>
-    <img class="image image-tilt-left" src="https://via.placeholder.com/250x312" width="1" height="1">
+    <img
+      class="image image-tilt-left item2"
+      src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/review1_flosser.jpg?v=1707817943"
+      width="1"
+      height="1"
+    >
 
-    <img class="image image-tilt-right" src="https://via.placeholder.com/250x312" width="1" height="1">
+    <img
+      class="image image-tilt-right item3"
+      src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/review2_flosser.jpg?v=1707817943"
+      width="1"
+      height="1"
+    >
 
-    <div class="frame">
-      <img class="image image-tilt-right" src="https://via.placeholder.com/250x312" width="1" height="1">
-      <div class="review" style="width: 250px;">
+    <div class="frame item4">
+      <img
+        class="image-tilt-right"
+        src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/review2.jpg?v=1707817943"
+        width="1"
+        height="1"
+      >
+      <div class="review">
         <div class="review-text">
           Never owned a water flosser before but decided to give this one a go as it seemed good value for money. So
           glad I did! Both my husband & I love it!
@@ -378,9 +550,14 @@
       </div>
     </div>
 
-    <div class="frame">
-      <img class="image image-tilt-right" src="https://via.placeholder.com/250x312" width="1" height="1">
-      <div class="review" style="width: 270px;">
+    <div class="frame item5">
+      <img
+        class="image image-tilt-right"
+        src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/review3.jpg?v=1707817943"
+        width="1"
+        height="1"
+      >
+      <div class="review">
         <div class="review-text">
           I was advised to get one by my dentist. I love it, it makes my dental routine so much better.
         </div>
@@ -404,6 +581,42 @@
           </div>
           <div class="name">- Jordan</div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="steps">
+  <h1>As easy as 1-2-3.</h1>
+  <div class="container">
+    <div class="step-box">
+      <img src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/step1.png?v=1707824229" width="1" height="1">
+      <div class="text-box">
+        <h3>Fill it up...</h3>
+        <p>
+          Open the water tank and fill it<br>
+          to the top.
+        </p>
+      </div>
+    </div>
+    <div class="step-box">
+      <img src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/step2.jpg?v=1707822576" width="1" height="1">
+      <div class="text-box">
+        <h3>Select your mode...</h3>
+        <p>
+          Choose your desired mode and<br>
+          turn it on.
+        </p>
+      </div>
+    </div>
+    <div class="step-box">
+      <img src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/step3.jpg?v=1707822560" width="1" height="1">
+      <div class="text-box">
+        <h3>Start flossing!</h3>
+        <p>
+          Use for 30 seconds each day for<br>
+          healthy teeth.
+        </p>
       </div>
     </div>
   </div>

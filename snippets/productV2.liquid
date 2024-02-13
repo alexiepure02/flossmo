@@ -235,7 +235,7 @@
               {% endif %}
             {% when 'title' %}
               {% if context == 'product' %}
-                <p>{{ product.title }}</p>
+                <p class="product_title">{{ product.title }}</p>
                 <h1 class="product_name">Clean & Healthy Teeth in 30 seconds per day with Flossmo</h1>
               {% else %}
                 <h2 class="product_name">
@@ -404,17 +404,27 @@
 
             {% when 'trust-seals' %}
               <div class="trust-seals-section">
-                <div class="seal">
-                  <img width="1" height="1">
+                <div class="trust-seal">
+                  <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1.5" y="1" width="58" height="58" rx="29" stroke="#3ECAF2" stroke-width="2"/>
+                    <path d="M32.1076 13.7894V13.2962C32.1076 12.3095 31.3851 11.5 30.4961 11.5C29.6002 11.5 28.8779 12.3095 28.8779 13.2962V13.7894C22.168 14.6451 16.8962 20.7499 16.5004 28.3196C16.4865 28.6587 16.8269 28.8515 17.0631 28.651C17.1186 28.6049 17.1673 28.5664 17.2228 28.5277L26.8913 35.1722H23.3836C22.981 35.1722 22.6544 35.5346 22.6544 35.9817V47.6907C22.6544 48.1378 22.981 48.5 23.3836 48.5H37.6158C38.0187 48.5 38.3452 48.1378 38.3452 47.6907V35.9817C38.3452 35.5347 38.0187 35.1722 37.6158 35.1722H34.2264L44.0271 28.6897C44.2563 28.7823 44.5133 28.6126 44.4995 28.3197C44.1103 20.75 38.8247 14.6449 32.1079 13.7895L32.1076 13.7894ZM34.886 28.9596L31.2741 35.1726H29.8015L26.2661 28.8517C28.7527 26.863 32.4339 26.8552 34.8858 28.9596L34.886 28.9596ZM17.8688 28.0577C20.2373 26.547 23.2658 26.7937 25.419 28.8132L28.9752 35.1725H28.2251L17.8688 28.0577ZM32.4203 41.3163C32.4203 41.4629 32.2675 41.5475 32.1703 41.455L30.6421 40.1831C30.5865 40.1369 30.5101 40.1369 30.4546 40.1831L28.8293 41.4706C28.7251 41.5553 28.5861 41.4706 28.5861 41.3317L28.5862 36.7145H32.4202L32.4203 41.3163ZM32.858 35.1726H32.1078L36.0112 28.4586C38.1991 26.7088 41.1235 26.6319 43.3809 28.212L32.858 35.1726Z" fill="#3ECAF2"/>
+                  </svg>
                   <p>Free Shipping</p>
                 </div>
-                <div class="seal">
-                  <img width="1" height="1">
-                  <p>Free Shipping</p>
+                <div class="trust-seal">
+                  <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1.5" y="1" width="58" height="58" rx="29" stroke="#3ECAF2" stroke-width="2"/>
+                    <path d="M48 19.3929V21.75H13V19.3929C13 18.4552 13.3951 17.5558 14.0983 16.8927C14.8016 16.2296 15.7555 15.8572 16.75 15.8572H18V14.6786C18 14.2575 18.2383 13.8685 18.625 13.6579C19.0117 13.4474 19.4883 13.4474 19.875 13.6579C20.2617 13.8685 20.5 14.2575 20.5 14.6786V15.8572H40.5V14.6786C40.5 14.2575 40.7383 13.8685 41.125 13.6579C41.5117 13.4474 41.9883 13.4474 42.375 13.6579C42.7617 13.8685 43 14.2575 43 14.6786V15.8572H44.25C45.2445 15.8572 46.1984 16.2297 46.9017 16.8927C47.605 17.5558 48 18.4552 48 19.3929ZM13 24.1072H48V42.9643C48 43.902 47.6049 44.8014 46.9017 45.4645C46.1984 46.1275 45.2445 46.5 44.25 46.5H16.75C15.7555 46.5 14.8016 46.1275 14.0983 45.4645C13.395 44.8014 13 43.902 13 42.9643V24.1072ZM36.75 30C36.75 30.3126 36.8816 30.6124 37.1161 30.8334C37.3505 31.0545 37.6685 31.1786 38 31.1786H40.5C40.9466 31.1786 41.3592 30.9539 41.5826 30.5893C41.8059 30.2247 41.8059 29.7754 41.5826 29.4107C41.3593 29.0461 40.9466 28.8215 40.5 28.8215H38C37.6685 28.8215 37.3505 28.9456 37.1161 29.1667C36.8816 29.3876 36.75 29.6874 36.75 30ZM36.75 34.7143C36.75 35.0269 36.8816 35.3267 37.1161 35.5477C37.3505 35.7688 37.6685 35.8929 38 35.8929H40.5C40.9466 35.8929 41.3592 35.6682 41.5826 35.3036C41.8059 34.939 41.8059 34.4897 41.5826 34.125C41.3593 33.7604 40.9466 33.5357 40.5 33.5357H38C37.6685 33.5357 37.3505 33.6599 37.1161 33.8809C36.8816 34.1019 36.75 34.4017 36.75 34.7143ZM36.75 39.4286C36.75 39.7411 36.8816 40.0409 37.1161 40.2619C37.3505 40.483 37.6685 40.6072 38 40.6072H40.5C40.9466 40.6072 41.3592 40.3825 41.5826 40.0179C41.8059 39.6532 41.8059 39.2039 41.5826 38.8393C41.3593 38.4747 40.9466 38.25 40.5 38.25H38C37.6685 38.25 37.3505 38.3741 37.1161 38.5952C36.8816 38.8162 36.75 39.116 36.75 39.4286ZM28 30C28 30.3126 28.1316 30.6124 28.3661 30.8334C28.6005 31.0545 28.9185 31.1786 29.25 31.1786H31.75C32.1966 31.1786 32.6092 30.9539 32.8326 30.5893C33.0559 30.2247 33.0559 29.7754 32.8326 29.4107C32.6093 29.0461 32.1966 28.8215 31.75 28.8215H29.25C28.9185 28.8215 28.6005 28.9456 28.3661 29.1667C28.1316 29.3876 28 29.6874 28 30ZM28 34.7143C28 35.0269 28.1316 35.3267 28.3661 35.5477C28.6005 35.7688 28.9185 35.8929 29.25 35.8929H31.75C32.1966 35.8929 32.6092 35.6682 32.8326 35.3036C33.0559 34.939 33.0559 34.4897 32.8326 34.125C32.6093 33.7604 32.1966 33.5357 31.75 33.5357H29.25C28.9185 33.5357 28.6005 33.6599 28.3661 33.8809C28.1316 34.1019 28 34.4017 28 34.7143ZM28 39.4286C28 39.7411 28.1316 40.0409 28.3661 40.2619C28.6005 40.483 28.9185 40.6072 29.25 40.6072H31.75C32.1966 40.6072 32.6092 40.3825 32.8326 40.0179C33.0559 39.6532 33.0559 39.2039 32.8326 38.8393C32.6093 38.4747 32.1966 38.25 31.75 38.25H29.25C28.9185 38.25 28.6005 38.3741 28.3661 38.5952C28.1316 38.8162 28 39.116 28 39.4286ZM19.25 30C19.25 30.3126 19.3816 30.6124 19.6161 30.8334C19.8505 31.0545 20.1685 31.1786 20.5 31.1786H23C23.4466 31.1786 23.8592 30.9539 24.0826 30.5893C24.3059 30.2247 24.3059 29.7754 24.0826 29.4107C23.8593 29.0461 23.4466 28.8215 23 28.8215H20.5C20.1685 28.8215 19.8505 28.9456 19.6161 29.1667C19.3816 29.3876 19.25 29.6874 19.25 30ZM19.25 34.7143C19.25 35.0269 19.3816 35.3267 19.6161 35.5477C19.8505 35.7688 20.1685 35.8929 20.5 35.8929H23C23.4466 35.8929 23.8592 35.6682 24.0826 35.3036C24.3059 34.939 24.3059 34.4897 24.0826 34.125C23.8593 33.7604 23.4466 33.5357 23 33.5357H20.5C20.1685 33.5357 19.8505 33.6599 19.6161 33.8809C19.3816 34.1019 19.25 34.4017 19.25 34.7143ZM19.25 39.4286C19.25 39.7411 19.3816 40.0409 19.6161 40.2619C19.8505 40.483 20.1685 40.6072 20.5 40.6072H23C23.4466 40.6072 23.8592 40.3825 24.0826 40.0179C24.3059 39.6532 24.3059 39.2039 24.0826 38.8393C23.8593 38.4747 23.4466 38.25 23 38.25H20.5C20.1685 38.25 19.8505 38.3741 19.6161 38.5952C19.3816 38.8162 19.25 39.116 19.25 39.4286Z" fill="#3ECAF2"/>
+                  </svg>
+                  <p>30-Day Guarantee</p>
                 </div>
-                <div class="seal">
-                  <img width="1" height="1">
-                  <p>Free Shipping</p>
+                <div class="trust-seal">
+                  <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1.5" y="1" width="58" height="58" rx="29" stroke="#3ECAF2" stroke-width="2"/>
+                    <path d="M34.9657 30.9685C35.2859 30.7025 35.7029 30.558 36.1259 30.558C37.117 30.558 37.9266 31.327 37.9388 32.2751H42.9907C43.1105 32.1605 43.1791 32.0949 43.2989 31.9803V19.7347C43.2989 18.2257 42.048 17 40.507 17H31.1771V25.732C31.1771 26.2071 30.6116 26.4794 30.2129 26.1964L27.5127 24.2801C27.2988 24.1283 27.0065 24.1283 26.7927 24.2801L24.0924 26.1964C23.6936 26.4794 23.1281 26.2071 23.1281 25.732V17H13.7919C12.2509 17 11.0001 18.2257 11.0001 19.7347V40.2769C11.0001 41.7801 12.2509 43 13.7919 43H40.5073C42.0482 43 43.2992 41.7801 43.2992 40.2769V39.878H37.9391C37.9271 40.8261 37.1173 41.5951 36.1262 41.5951C35.6971 41.5951 35.2863 41.4506 34.9599 41.1846L30.2467 37.4036C29.8297 37.074 29.5941 36.5883 29.5941 36.0738C29.5941 35.5592 29.8299 35.0794 30.2467 34.7439L34.9657 30.9685ZM34.656 22.5545C34.656 22.1348 35.0039 21.7972 35.4324 21.7972H38.614C39.0425 21.7972 39.3904 22.1348 39.3904 22.5545V26.5585C39.3904 26.9782 39.0425 27.3159 38.614 27.3159H35.4324C35.0039 27.3159 34.656 26.9782 34.656 26.5585V22.5545ZM19.617 35.7323C19.617 36.8321 18.7672 37.7768 17.6712 37.9062V39.4036H18.8676C19.0307 39.4036 19.1697 39.5366 19.1697 39.6926C19.1697 39.8545 19.0307 39.9816 18.8676 39.9816H15.8643C15.7012 39.9816 15.5622 39.8545 15.5622 39.6926C15.5622 39.5365 15.7012 39.4036 15.8643 39.4036H17.0668V37.9062C15.967 37.7675 15.115 36.7845 15.115 35.6456V33.5122C15.115 33.1365 15.4292 32.83 15.816 32.83H18.9159C19.3027 32.83 19.6169 33.1365 19.6169 33.5122L19.617 35.7323Z" fill="#3ECAF2"/>
+                    <path d="M49.9998 30.379V34.1833C49.9998 36.6924 47.8727 38.7218 45.2562 38.7218H36.7297V39.8608C36.7297 40.3464 36.1314 40.6182 35.7387 40.3002L31.0191 36.5192C30.7291 36.2879 30.7291 35.8659 31.0191 35.6346L35.7387 31.8536C36.1314 31.5356 36.7297 31.8016 36.7297 32.2929V33.432H42.99C43.4191 33.432 43.8419 33.3741 44.241 33.2701C45.0809 33.0503 45.3709 31.9635 44.6822 31.4431C44.6338 31.4084 44.5854 31.3794 44.5311 31.3506V25.8408H45.2562C47.8786 25.8405 49.9998 27.8699 49.9998 30.3793L49.9998 30.379Z" fill="#3ECAF2"/>
+                  </svg>
+                  <p>Easy Returns</p>
                 </div>
               </div>
 
@@ -432,17 +442,23 @@
 
             {% when 'short-benefits' %}
               <div class="short-benefits-section">
-                <div class="benefit">
-                  <img width="1" height="1">
-                  <p>Benefit</p>
+                <div class="short-benefit">
+                  <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 22.75C18.8848 22.75 23.25 18.3848 23.25 13C23.25 10.983 22.6375 9.10906 21.5884 7.55399L13.7717 16.2393C13.079 17.0089 11.9135 17.1226 11.0851 16.5013L7.48333 13.8C7.04151 13.4686 6.95196 12.8418 7.28333 12.4C7.61471 11.9582 8.24151 11.8686 8.68333 12.2L12.2851 14.9013L20.2919 6.00485C18.5362 4.29981 16.1407 3.25 13.5 3.25C8.11522 3.25 3.75 7.61522 3.75 13C3.75 18.3848 8.11522 22.75 13.5 22.75Z" fill="#068EC9"/>
+                  </svg>
+                  <p>Healthy Teeth and Gums</p>
                 </div>
-                <div class="benefit">
-                  <img width="1" height="1">
-                  <p>Benefit</p>
+                <div class="short-benefit">
+                  <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 22.75C18.8848 22.75 23.25 18.3848 23.25 13C23.25 10.983 22.6375 9.10906 21.5884 7.55399L13.7717 16.2393C13.079 17.0089 11.9135 17.1226 11.0851 16.5013L7.48333 13.8C7.04151 13.4686 6.95196 12.8418 7.28333 12.4C7.61471 11.9582 8.24151 11.8686 8.68333 12.2L12.2851 14.9013L20.2919 6.00485C18.5362 4.29981 16.1407 3.25 13.5 3.25C8.11522 3.25 3.75 7.61522 3.75 13C3.75 18.3848 8.11522 22.75 13.5 22.75Z" fill="#068EC9"/>
+                  </svg>
+                  <p>Chew More Comfortably</p>
                 </div>
-                <div class="benefit">
-                  <img width="1" height="1">
-                  <p>Benefit</p>
+                <div class="short-benefit">
+                  <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 22.75C18.8848 22.75 23.25 18.3848 23.25 13C23.25 10.983 22.6375 9.10906 21.5884 7.55399L13.7717 16.2393C13.079 17.0089 11.9135 17.1226 11.0851 16.5013L7.48333 13.8C7.04151 13.4686 6.95196 12.8418 7.28333 12.4C7.61471 11.9582 8.24151 11.8686 8.68333 12.2L12.2851 14.9013L20.2919 6.00485C18.5362 4.29981 16.1407 3.25 13.5 3.25C8.11522 3.25 3.75 7.61522 3.75 13C3.75 18.3848 8.11522 22.75 13.5 22.75Z" fill="#068EC9"/>
+                  </svg>
+                  <p>Fresh Breath and Sparkling Smile</p>
                 </div>
               </div>
 
@@ -601,753 +617,756 @@
   </style>
 {% endcomment %}
 
-{% comment %} <div
-  class="Hero"
-  style="align-self: stretch; padding-top: 25px; padding-bottom: 50px; justify-content: center; align-items: flex-start; gap: 25px; display: inline-flex"
->
-  <div
-    class="Left"
-    style="padding: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex"
-  >
-    <img
-      class="Image22"
-      style="width: 500px; height: 500px; border-radius: 8px"
-      src="https://via.placeholder.com/500x500"
-    >
-    <div
-      class="Thumbs"
-      style="width: 500px; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex"
-    >
-      <img
-        class="Thumb"
-        style="width: 100px; height: 100px; position: relative; border-radius: 8px; border: 2px #068EC9 solid"
-        src="https://via.placeholder.com/100x100"
-      >
-      <img
-        class="Thumb"
-        style="width: 100px; height: 100px; position: relative; border-radius: 8px"
-        src="https://via.placeholder.com/100x100"
-      >
-      <img
-        class="Thumb"
-        style="width: 100px; height: 100px; position: relative; border-radius: 8px"
-        src="https://via.placeholder.com/100x100"
-      >
-      <img
-        class="Thumb"
-        style="width: 100px; height: 100px; position: relative; border-radius: 8px"
-        src="https://via.placeholder.com/100x100"
-      >
-    </div>
-  </div>
-  <div
-    class="Right"
-    style="width: 490px; padding: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 22px; display: inline-flex"
-  >
-    <div
-      class="ProductNameSocialProof"
-      style="align-self: stretch; height: 126px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex"
-    >
-      <div
-        class="FlossmoWaterFlosser"
-        style="align-self: stretch; color: black; font-size: 18px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-      >
-        Flossmo Water Flosser
-      </div>
-      <div
-        class="CleanHealthyTeethIn30SecondsPerDayWithFlossmo"
-        style="align-self: stretch; color: black; font-size: 26px; font-family: Montserrat; font-weight: 600; word-wrap: break-word"
-      >
-        Clean & Healthy Teeth in 30 seconds per day with Flossmo
-      </div>
-      <div
-        class="SocialProof"
-        style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 4px; display: inline-flex"
-      >
-        <div class="Stars" style="justify-content: center; align-items: center; gap: 1px; display: flex">
-          <div class="ClarityStarSolid" style="width: 18px; height: 18px; position: relative">
-            <div
-              class="Vector"
-              style="width: 16.57px; height: 15.82px; left: 0.87px; top: 1.22px; position: absolute; background: #FFBD00"
-            ></div>
-            <div class="Vector" style="width: 18px; height: 18px; left: 0px; top: 0px; position: absolute"></div>
-          </div>
-          <div class="ClarityStarSolid" style="width: 18px; height: 18px; position: relative">
-            <div
-              class="Vector"
-              style="width: 16.57px; height: 15.82px; left: 0.87px; top: 1.22px; position: absolute; background: #FFBD00"
-            ></div>
-            <div class="Vector" style="width: 18px; height: 18px; left: 0px; top: 0px; position: absolute"></div>
-          </div>
-          <div class="ClarityStarSolid" style="width: 18px; height: 18px; position: relative">
-            <div
-              class="Vector"
-              style="width: 16.57px; height: 15.82px; left: 0.87px; top: 1.22px; position: absolute; background: #FFBD00"
-            ></div>
-            <div class="Vector" style="width: 18px; height: 18px; left: 0px; top: 0px; position: absolute"></div>
-          </div>
-          <div class="ClarityStarSolid" style="width: 18px; height: 18px; position: relative">
-            <div
-              class="Vector"
-              style="width: 16.57px; height: 15.82px; left: 0.87px; top: 1.22px; position: absolute; background: #FFBD00"
-            ></div>
-            <div class="Vector" style="width: 18px; height: 18px; left: 0px; top: 0px; position: absolute"></div>
-          </div>
-          <div class="ClarityStarSolid" style="width: 18px; height: 18px; position: relative">
-            <div
-              class="Vector"
-              style="width: 16.57px; height: 15.82px; left: 0.87px; top: 1.22px; position: absolute; background: #FFBD00"
-            ></div>
-            <div class="Vector" style="width: 18px; height: 18px; left: 0px; top: 0px; position: absolute"></div>
-          </div>
-        </div>
-        <div
-          class="111Reviews"
-          style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; word-wrap: break-word"
-        >
-          (111 Reviews)
-        </div>
-      </div>
-    </div>
-    <div
-      class="IfYouReTiredOfBleedingGumsAndDiscomfortOurWaterFlosserIsForYou"
-      style="align-self: stretch; color: black; font-size: 18px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-    >
-      If you’re tired of bleeding gums and discomfort, our water flosser is for you!
-    </div>
-    <div
-      class="BenefitsVertical"
-      style="align-self: stretch; height: 86px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 4px; display: flex"
-    >
-      <div class="Benefit" style="justify-content: center; align-items: center; gap: 4px; display: inline-flex">
-        <div
-          class="DoneRingRoundFill"
-          style="width: 26px; height: 26px; padding: 3.25px; justify-content: center; align-items: center; display: flex"
-        >
-          <img class="Subtract" style="width: 19.50px; height: 19.50px" src="https://via.placeholder.com/19x19">
-        </div>
-        <div
-          class="HealthyTeethAndGums"
-          style="color: black; font-size: 16px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          Healthy Teeth and Gums
-        </div>
-      </div>
-      <div class="Benefit" style="justify-content: center; align-items: center; gap: 4px; display: inline-flex">
-        <div
-          class="DoneRingRoundFill"
-          style="width: 26px; height: 26px; padding: 3.25px; justify-content: center; align-items: center; display: flex"
-        >
-          <img class="Subtract" style="width: 19.50px; height: 19.50px" src="https://via.placeholder.com/19x19">
-        </div>
-        <div
-          class="ChewMoreComfortably"
-          style="color: black; font-size: 16px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          Chew More Comfortably
-        </div>
-      </div>
-      <div class="Benefit" style="justify-content: center; align-items: center; gap: 4px; display: inline-flex">
-        <div
-          class="DoneRingRoundFill"
-          style="width: 26px; height: 26px; padding: 3.25px; justify-content: center; align-items: center; display: flex"
-        >
-          <img class="Subtract" style="width: 19.50px; height: 19.50px" src="https://via.placeholder.com/19x19">
-        </div>
-        <div
-          class="FreshBreathAndSparklingSmile"
-          style="color: black; font-size: 16px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          Fresh Breath and Sparkling Smile
-        </div>
-      </div>
-    </div>
-    <div
-      class="Bundles"
-      style="align-self: stretch; height: 299px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; display: flex"
-    >
-      <div
-        class="PerfectGiftForYourFriendsOrFamily"
-        style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-      >
-        Perfect gift for your friends or family:
-      </div>
-      <div
-        class="Option"
-        style="align-self: stretch; padding-top: 16px; padding-bottom: 16px; padding-left: 20px; padding-right: 52px; border-radius: 10px; overflow: hidden; border: 1.50px rgba(106, 199, 238, 0.70) solid; justify-content: space-between; align-items: center; display: inline-flex"
-      >
-        <div class="Left" style="justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-          <div
-            class="SelectRadio"
-            style="width: 16px; height: 16px; position: relative; background: white; border-radius: 50px; border: 1px #068EC9 solid"
-          ></div>
-          <div
-            class="Text"
-            style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 7px; display: inline-flex"
-          >
-            <div
-              class="Flossmo"
-              style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-            >
-              1 Flossmo
-            </div>
-            <div
-              class="Save30"
-              style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; word-wrap: break-word"
-            >
-              Save $30
-            </div>
-          </div>
-        </div>
-        <div
-          class="Price"
-          style="flex-direction: column; justify-content: center; align-items: center; gap: 7px; display: inline-flex"
-        >
-          <div
-            class="6999"
-            style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-          >
-            $69.99
-          </div>
-          <div
-            class="9999"
-            style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; text-decoration: line-through; word-wrap: break-word"
-          >
-            $99.99
-          </div>
-        </div>
-      </div>
-      <div
-        class="MostPopularLabel"
-        style="padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; background: #068EC9; border-radius: 4px; overflow: hidden; justify-content: center; align-items: center; gap: 4px; display: inline-flex"
-      >
-        <img class="Image1" style="width: 18px; height: 18px" src="https://via.placeholder.com/18x18">
-        <div
-          class="MostPopular"
-          style="text-align: center; color: white; font-size: 11px; font-family: Montserrat; font-weight: 600; word-wrap: break-word"
-        >
-          MOST POPULAR
-        </div>
-      </div>
-      <div
-        class="Option"
-        style="align-self: stretch; padding-top: 16px; padding-bottom: 16px; padding-left: 20px; padding-right: 52px; background: rgba(106, 199, 238, 0.30); border-radius: 10px; overflow: hidden; border: 3px #3ECAF2 solid; justify-content: space-between; align-items: center; display: inline-flex"
-      >
-        <div class="Left" style="justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-          <div
-            class="SelectRadio"
-            style="width: 16px; height: 16px; position: relative; background: #068EC9; border-radius: 50px; border: 1px white solid"
-          ></div>
-          <div
-            class="Text"
-            style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 7px; display: inline-flex"
-          >
-            <div
-              class="Flossmo"
-              style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-            >
-              2 Flossmo
-            </div>
-            <div
-              class="Save70"
-              style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; word-wrap: break-word"
-            >
-              Save $70
-            </div>
-          </div>
-        </div>
-        <div
-          class="Price"
-          style="flex-direction: column; justify-content: center; align-items: center; gap: 7px; display: inline-flex"
-        >
-          <div
-            class="12999"
-            style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-          >
-            $129.99
-          </div>
-          <div
-            class="19999"
-            style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; text-decoration: line-through; word-wrap: break-word"
-          >
-            $199.99
-          </div>
-        </div>
-      </div>
-      <div
-        class="Option"
-        style="align-self: stretch; padding-top: 16px; padding-bottom: 16px; padding-left: 20px; padding-right: 52px; border-radius: 10px; overflow: hidden; border: 1.50px rgba(106, 199, 238, 0.70) solid; justify-content: space-between; align-items: center; display: inline-flex"
-      >
-        <div class="Left" style="justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-          <div
-            class="SelectRadio"
-            style="width: 16px; height: 16px; position: relative; background: white; border-radius: 50px; border: 1px #068EC9 solid"
-          ></div>
-          <div
-            class="Text"
-            style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 7px; display: inline-flex"
-          >
-            <div
-              class="Flossmo"
-              style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-            >
-              3 Flossmo
-            </div>
-            <div
-              class="Save130"
-              style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; word-wrap: break-word"
-            >
-              Save $130
-            </div>
-          </div>
-        </div>
-        <div
-          class="Price"
-          style="flex-direction: column; justify-content: center; align-items: center; gap: 7px; display: inline-flex"
-        >
-          <div
-            class="16999"
-            style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-          >
-            $169.99
-          </div>
-          <div
-            class="29999"
-            style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; text-decoration: line-through; word-wrap: break-word"
-          >
-            $299.99
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="Frame13"
-      style="align-self: stretch; height: 84px; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: flex"
-    >
-      <div
-        class="DeliveryPrompt"
-        style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 6px; display: inline-flex"
-      >
-        <div
-          class="MaterialSymbolsLocalShipping"
-          style="width: 26px; height: 26px; padding-left: 1.08px; padding-right: 1.08px; padding-top: 4.33px; padding-bottom: 4.33px; justify-content: center; align-items: center; display: flex"
-        >
-          <div class="Vector" style="width: 23.83px; height: 17.33px; background: #068EC9"></div>
-        </div>
-        <div class="OrderNowAndGetFlossmoByThursday" style="text-align: center">
-          <span style="color: black; font-size: 14px; font-family: Montserrat; font-weight: 300; word-wrap: break-word"
-            >Order Now and Get Flossmo by </span
-          ><span style="color: black; font-size: 14px; font-family: Montserrat; font-weight: 600; word-wrap: break-word"
-            >Thursday</span
-          >
-        </div>
-      </div>
-      <div
-        class="CtaButton"
-        style="align-self: stretch; height: 50px; padding: 10px; background: #068EC9; border-radius: 10px; overflow: hidden; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
-      >
-        <div class="BuyNow12999" style="text-align: center">
-          <span style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 600; word-wrap: break-word"
-            >BUY NOW - </span
-          ><span style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word"
-            >$129.99</span
-          >
-        </div>
-      </div>
-    </div>
-    <div
-      class="Seals"
-      style="align-self: stretch; justify-content: center; align-items: flex-start; gap: 36px; display: inline-flex"
-    >
-      <div
-        class="Seal"
-        style="width: 130px; padding-left: 10px; padding-right: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
-      >
-        <div
-          class="NounAirDelivery33096182"
-          style="width: 60px; height: 60px; padding: 10px; border-radius: 50px; overflow: hidden; border: 2px #3ECAF2 solid; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
-        >
-          <div class="Vector" style="width: 28px; height: 37px; background: #3ECAF2"></div>
-        </div>
-        <div
-          class="FreeShipping"
-          style="text-align: center; color: black; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          Free Shipping
-        </div>
-      </div>
-      <div
-        class="Seal"
-        style="width: 130px; padding-left: 10px; padding-right: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
-      >
-        <div
-          class="NounCalendar63804822"
-          style="width: 60px; height: 60px; padding: 5px; border-radius: 50px; overflow: hidden; border: 2px #3ECAF2 solid; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
-        >
-          <div class="Vector" style="width: 35px; height: 33px; background: #3ECAF2"></div>
-        </div>
-        <div
-          class="DayGuarantee"
-          style="text-align: center; color: black; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          30-Day Guarantee
-        </div>
-      </div>
-      <div
-        class="Seal"
-        style="width: 130px; padding-left: 10px; padding-right: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
-      >
-        <div
-          class="NounReturnDelivery32158522"
-          style="width: 60px; height: 60px; padding-left: 3px; padding-right: 3px; padding-top: 13px; padding-bottom: 13px; border-radius: 50px; overflow: hidden; border: 2px #3ECAF2 solid; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex"
-        >
-          <div class="Group" style="width: 39px; height: 26px; position: relative">
-            <div
-              class="Vector"
-              style="width: 32.30px; height: 26px; left: 0px; top: 0px; position: absolute; background: #3ECAF2"
-            ></div>
-            <div
-              class="Vector"
-              style="width: 19.20px; height: 14.60px; left: 19.80px; top: 8.84px; position: absolute; background: #3ECAF2"
-            ></div>
-          </div>
-        </div>
-        <div
-          class="EasyReturns"
-          style="text-align: center; color: black; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          Easy Returns
-        </div>
-      </div>
-    </div>
-  </div>
-</div> {% endcomment %}
-
 {% comment %}
-<div
-  class="HowItWorks"
-  style="align-self: stretch; height: 564px; padding-left: 10px; padding-right: 10px; padding-top: 50px; padding-bottom: 50px; flex-direction: column; justify-content: center; align-items: center; gap: 50px; display: flex"
->
   <div
-    class="AsEasyAs123"
-    style="color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-  >
-    As easy as 1-2-3.
-  </div>
-  <div
-    class="Container"
-    style="padding-left: 10px; padding-right: 10px; justify-content: center; align-items: center; gap: 125px; display: inline-flex"
+    class="Hero"
+    style="align-self: stretch; padding-top: 25px; padding-bottom: 50px; justify-content: center; align-items: flex-start; gap: 25px; display: inline-flex"
   >
     <div
-      class="Step"
-      style="flex-direction: column; justify-content: center; align-items: center; gap: 25px; display: inline-flex"
+      class="Left"
+      style="padding: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: inline-flex"
     >
       <img
-        class="Image8"
-        style="width: 250px; height: 250px; border-radius: 12px"
-        src="https://via.placeholder.com/250x250"
-      >
-      <div
-        class="Text"
-        style="flex-direction: column; justify-content: center; align-items: center; gap: 12px; display: flex"
-      >
-        <div
-          class="FillItUp"
-          style="color: black; font-size: 32px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-        >
-          Fill it up...
-        </div>
-        <div
-          class="OpenTheWaterTankAndFillItToTheTop"
-          style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          Open the water tank and fill it<br>
-          to the top.
-        </div>
-      </div>
-    </div>
-    <div
-      class="Step"
-      style="flex-direction: column; justify-content: center; align-items: center; gap: 25px; display: inline-flex"
-    >
-      <img
-        class="Image8"
-        style="width: 250px; height: 250px; border-radius: 12px"
-        src="https://via.placeholder.com/250x250"
-      >
-      <div
-        class="Text"
-        style="flex-direction: column; justify-content: center; align-items: center; gap: 12px; display: flex"
-      >
-        <div
-          class="SelectYourMode"
-          style="color: black; font-size: 32px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-        >
-          Select your mode...
-        </div>
-        <div
-          class="ChooseYourDesiredModeAndTurnItOn"
-          style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          Choose your desired mode and<br>
-          turn it on.
-        </div>
-      </div>
-    </div>
-    <div
-      class="Step"
-      style="flex-direction: column; justify-content: center; align-items: center; gap: 25px; display: inline-flex"
-    >
-      <img
-        class="Image8"
-        style="width: 250px; height: 250px; border-radius: 12px"
-        src="https://via.placeholder.com/250x250"
-      >
-      <div
-        class="Text"
-        style="flex-direction: column; justify-content: center; align-items: center; gap: 12px; display: flex"
-      >
-        <div
-          class="StartFlossing"
-          style="color: black; font-size: 32px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-        >
-          Start flossing!
-        </div>
-        <div
-          class="UseFor30SecondsEachDayForHealthyTeeth"
-          style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          Use for 30 seconds each day for<br>
-          healthy teeth.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div
-  class="Benefits"
-  style="align-self: stretch; height: 2350px; padding-left: 25px; padding-right: 25px; padding-top: 100px; padding-bottom: 100px; flex-direction: column; justify-content: center; align-items: center; gap: 50px; display: flex"
->
-  <div
-    class="BenefitContainer"
-    style="align-self: stretch; justify-content: center; align-items: center; display: inline-flex"
-  >
-    <div
-      class="Image"
-      style="width: 500px; height: 500px; background: #D8D8D8; border-radius: 12px; overflow: hidden; justify-content: center; align-items: center; display: flex"
-    >
-      <img class="Image20" style="width: 500px; height: 888px" src="https://via.placeholder.com/500x888">
-    </div>
-    <div
-      class="TextBox"
-      style="flex: 1 1 0; padding-left: 75px; padding-right: 75px; padding-top: 50px; padding-bottom: 50px; flex-direction: column; justify-content: center; align-items: flex-end; gap: 10px; display: inline-flex"
-    >
-      <div
-        class="Text"
-        style="height: 166px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 26px; display: flex"
-      >
-        <div
-          class="HealthierTeethAndGums"
-          style="align-self: stretch; color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-        >
-          Healthier Teeth and Gums
-        </div>
-        <div
-          class="WithFlossmoYouLlLoveHowItEasilyClearsAwayPlaqueWithItsGentleWaterFlowItReachesBetweenYourTeethAndAlongYourGumlineLeavingYourMouthFeelingRefreshinglyCleanAndHealthy"
-          style="align-self: stretch; color: black; font-size: 20px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          With Flossmo, you'll love how it easily clears away plaque with its gentle water flow. It reaches between your
-          teeth and along your gumline, leaving your mouth feeling refreshingly clean and healthy.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="BenefitContainer"
-    style="align-self: stretch; justify-content: center; align-items: center; display: inline-flex"
-  >
-    <div
-      class="TextBox"
-      style="flex: 1 1 0; padding-left: 75px; padding-right: 75px; padding-top: 50px; padding-bottom: 50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; display: inline-flex"
-    >
-      <div
-        class="Text"
-        style="height: 166px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 26px; display: flex"
-      >
-        <div
-          class="ChewMoreComfortably"
-          style="align-self: stretch; color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-        >
-          Chew More Comfortably
-        </div>
-        <div
-          class="HeyWhetherYouHaveBracesImplantsCrownsOrBridgesFlossmoIsYourGoToItsGentleCleaningActionEnsuresYourGumsStayHealthySoYouCanEnjoyYourFavoriteMealsWithoutAnyAnyDiscomfort"
-          style="align-self: stretch; color: black; font-size: 20px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          Hey, whether you have braces, implants, crowns, or bridges, Flossmo is your go-to! Its gentle cleaning action
-          ensures your gums stay healthy, so you can enjoy your favorite meals without any any discomfort.
-        </div>
-      </div>
-    </div>
-    <div
-      class="Image"
-      style="width: 500px; height: 500px; position: relative; background: #D8D8D8; border-radius: 12px"
-    ></div>
-  </div>
-  <div
-    class="BenefitContainer"
-    style="align-self: stretch; justify-content: center; align-items: center; display: inline-flex"
-  >
-    <div
-      class="Image"
-      style="width: 500px; height: 500px; background: #D8D8D8; justify-content: center; align-items: center; display: flex"
-    >
-      <img
-        class="Image17"
-        style="width: 500px; height: 500px; border-radius: 12px"
+        class="Image22"
+        style="width: 500px; height: 500px; border-radius: 8px"
         src="https://via.placeholder.com/500x500"
       >
+      <div
+        class="Thumbs"
+        style="width: 500px; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex"
+      >
+        <img
+          class="Thumb"
+          style="width: 100px; height: 100px; position: relative; border-radius: 8px; border: 2px #068EC9 solid"
+          src="https://via.placeholder.com/100x100"
+        >
+        <img
+          class="Thumb"
+          style="width: 100px; height: 100px; position: relative; border-radius: 8px"
+          src="https://via.placeholder.com/100x100"
+        >
+        <img
+          class="Thumb"
+          style="width: 100px; height: 100px; position: relative; border-radius: 8px"
+          src="https://via.placeholder.com/100x100"
+        >
+        <img
+          class="Thumb"
+          style="width: 100px; height: 100px; position: relative; border-radius: 8px"
+          src="https://via.placeholder.com/100x100"
+        >
+      </div>
     </div>
     <div
-      class="TextBox"
-      style="flex: 1 1 0; padding-left: 75px; padding-right: 75px; padding-top: 50px; padding-bottom: 50px; flex-direction: column; justify-content: center; align-items: flex-end; gap: 10px; display: inline-flex"
+      class="Right"
+      style="width: 490px; padding: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 22px; display: inline-flex"
     >
       <div
-        class="Text"
-        style="height: 190px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 26px; display: flex"
+        class="ProductNameSocialProof"
+        style="align-self: stretch; height: 126px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex"
       >
         <div
-          class="StrongerAndDurableTeeth"
-          style="align-self: stretch; color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+          class="FlossmoWaterFlosser"
+          style="align-self: stretch; color: black; font-size: 18px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
         >
-          Stronger and Durable Teeth
+          Flossmo Water Flosser
         </div>
         <div
-          class="WithFlossmoSayGoodbyeToPlaqueAndHelloToStrongerTeethByStoppingCavitiesInTheirTracksItKeepsYourToothEnamelRobustAndReducesTheNeedForFrequentDentalTreatmentsSoYourSmileStaysStrongAndBrightForTheLongHaul"
-          style="align-self: stretch; color: black; font-size: 20px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          class="CleanHealthyTeethIn30SecondsPerDayWithFlossmo"
+          style="align-self: stretch; color: black; font-size: 26px; font-family: Montserrat; font-weight: 600; word-wrap: break-word"
         >
-          With Flossmo, say goodbye to plaque and hello to stronger teeth! By stopping cavities in their tracks, it
-          keeps your tooth enamel robust and reduces the need for frequent dental treatments. So, your smile stays
-          strong and bright for the long haul.
+          Clean & Healthy Teeth in 30 seconds per day with Flossmo
+        </div>
+        <div
+          class="SocialProof"
+          style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 4px; display: inline-flex"
+        >
+          <div class="Stars" style="justify-content: center; align-items: center; gap: 1px; display: flex">
+            <div class="ClarityStarSolid" style="width: 18px; height: 18px; position: relative">
+              <div
+                class="Vector"
+                style="width: 16.57px; height: 15.82px; left: 0.87px; top: 1.22px; position: absolute; background: #FFBD00"
+              ></div>
+              <div class="Vector" style="width: 18px; height: 18px; left: 0px; top: 0px; position: absolute"></div>
+            </div>
+            <div class="ClarityStarSolid" style="width: 18px; height: 18px; position: relative">
+              <div
+                class="Vector"
+                style="width: 16.57px; height: 15.82px; left: 0.87px; top: 1.22px; position: absolute; background: #FFBD00"
+              ></div>
+              <div class="Vector" style="width: 18px; height: 18px; left: 0px; top: 0px; position: absolute"></div>
+            </div>
+            <div class="ClarityStarSolid" style="width: 18px; height: 18px; position: relative">
+              <div
+                class="Vector"
+                style="width: 16.57px; height: 15.82px; left: 0.87px; top: 1.22px; position: absolute; background: #FFBD00"
+              ></div>
+              <div class="Vector" style="width: 18px; height: 18px; left: 0px; top: 0px; position: absolute"></div>
+            </div>
+            <div class="ClarityStarSolid" style="width: 18px; height: 18px; position: relative">
+              <div
+                class="Vector"
+                style="width: 16.57px; height: 15.82px; left: 0.87px; top: 1.22px; position: absolute; background: #FFBD00"
+              ></div>
+              <div class="Vector" style="width: 18px; height: 18px; left: 0px; top: 0px; position: absolute"></div>
+            </div>
+            <div class="ClarityStarSolid" style="width: 18px; height: 18px; position: relative">
+              <div
+                class="Vector"
+                style="width: 16.57px; height: 15.82px; left: 0.87px; top: 1.22px; position: absolute; background: #FFBD00"
+              ></div>
+              <div class="Vector" style="width: 18px; height: 18px; left: 0px; top: 0px; position: absolute"></div>
+            </div>
+          </div>
+          <div
+            class="111Reviews"
+            style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; word-wrap: break-word"
+          >
+            (111 Reviews)
+          </div>
+        </div>
+      </div>
+      <div
+        class="IfYouReTiredOfBleedingGumsAndDiscomfortOurWaterFlosserIsForYou"
+        style="align-self: stretch; color: black; font-size: 18px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+      >
+        If you’re tired of bleeding gums and discomfort, our water flosser is for you!
+      </div>
+      <div
+        class="BenefitsVertical"
+        style="align-self: stretch; height: 86px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 4px; display: flex"
+      >
+        <div class="Benefit" style="justify-content: center; align-items: center; gap: 4px; display: inline-flex">
+          <div
+            class="DoneRingRoundFill"
+            style="width: 26px; height: 26px; padding: 3.25px; justify-content: center; align-items: center; display: flex"
+          >
+            <img class="Subtract" style="width: 19.50px; height: 19.50px" src="https://via.placeholder.com/19x19">
+          </div>
+          <div
+            class="HealthyTeethAndGums"
+            style="color: black; font-size: 16px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            Healthy Teeth and Gums
+          </div>
+        </div>
+        <div class="Benefit" style="justify-content: center; align-items: center; gap: 4px; display: inline-flex">
+          <div
+            class="DoneRingRoundFill"
+            style="width: 26px; height: 26px; padding: 3.25px; justify-content: center; align-items: center; display: flex"
+          >
+            <img class="Subtract" style="width: 19.50px; height: 19.50px" src="https://via.placeholder.com/19x19">
+          </div>
+          <div
+            class="ChewMoreComfortably"
+            style="color: black; font-size: 16px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            Chew More Comfortably
+          </div>
+        </div>
+        <div class="Benefit" style="justify-content: center; align-items: center; gap: 4px; display: inline-flex">
+          <div
+            class="DoneRingRoundFill"
+            style="width: 26px; height: 26px; padding: 3.25px; justify-content: center; align-items: center; display: flex"
+          >
+            <img class="Subtract" style="width: 19.50px; height: 19.50px" src="https://via.placeholder.com/19x19">
+          </div>
+          <div
+            class="FreshBreathAndSparklingSmile"
+            style="color: black; font-size: 16px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            Fresh Breath and Sparkling Smile
+          </div>
+        </div>
+      </div>
+      <div
+        class="Bundles"
+        style="align-self: stretch; height: 299px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; display: flex"
+      >
+        <div
+          class="PerfectGiftForYourFriendsOrFamily"
+          style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+        >
+          Perfect gift for your friends or family:
+        </div>
+        <div
+          class="Option"
+          style="align-self: stretch; padding-top: 16px; padding-bottom: 16px; padding-left: 20px; padding-right: 52px; border-radius: 10px; overflow: hidden; border: 1.50px rgba(106, 199, 238, 0.70) solid; justify-content: space-between; align-items: center; display: inline-flex"
+        >
+          <div class="Left" style="justify-content: flex-start; align-items: center; gap: 16px; display: flex">
+            <div
+              class="SelectRadio"
+              style="width: 16px; height: 16px; position: relative; background: white; border-radius: 50px; border: 1px #068EC9 solid"
+            ></div>
+            <div
+              class="Text"
+              style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 7px; display: inline-flex"
+            >
+              <div
+                class="Flossmo"
+                style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+              >
+                1 Flossmo
+              </div>
+              <div
+                class="Save30"
+                style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; word-wrap: break-word"
+              >
+                Save $30
+              </div>
+            </div>
+          </div>
+          <div
+            class="Price"
+            style="flex-direction: column; justify-content: center; align-items: center; gap: 7px; display: inline-flex"
+          >
+            <div
+              class="6999"
+              style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+            >
+              $69.99
+            </div>
+            <div
+              class="9999"
+              style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; text-decoration: line-through; word-wrap: break-word"
+            >
+              $99.99
+            </div>
+          </div>
+        </div>
+        <div
+          class="MostPopularLabel"
+          style="padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; background: #068EC9; border-radius: 4px; overflow: hidden; justify-content: center; align-items: center; gap: 4px; display: inline-flex"
+        >
+          <img class="Image1" style="width: 18px; height: 18px" src="https://via.placeholder.com/18x18">
+          <div
+            class="MostPopular"
+            style="text-align: center; color: white; font-size: 11px; font-family: Montserrat; font-weight: 600; word-wrap: break-word"
+          >
+            MOST POPULAR
+          </div>
+        </div>
+        <div
+          class="Option"
+          style="align-self: stretch; padding-top: 16px; padding-bottom: 16px; padding-left: 20px; padding-right: 52px; background: rgba(106, 199, 238, 0.30); border-radius: 10px; overflow: hidden; border: 3px #3ECAF2 solid; justify-content: space-between; align-items: center; display: inline-flex"
+        >
+          <div class="Left" style="justify-content: flex-start; align-items: center; gap: 16px; display: flex">
+            <div
+              class="SelectRadio"
+              style="width: 16px; height: 16px; position: relative; background: #068EC9; border-radius: 50px; border: 1px white solid"
+            ></div>
+            <div
+              class="Text"
+              style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 7px; display: inline-flex"
+            >
+              <div
+                class="Flossmo"
+                style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+              >
+                2 Flossmo
+              </div>
+              <div
+                class="Save70"
+                style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; word-wrap: break-word"
+              >
+                Save $70
+              </div>
+            </div>
+          </div>
+          <div
+            class="Price"
+            style="flex-direction: column; justify-content: center; align-items: center; gap: 7px; display: inline-flex"
+          >
+            <div
+              class="12999"
+              style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+            >
+              $129.99
+            </div>
+            <div
+              class="19999"
+              style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; text-decoration: line-through; word-wrap: break-word"
+            >
+              $199.99
+            </div>
+          </div>
+        </div>
+        <div
+          class="Option"
+          style="align-self: stretch; padding-top: 16px; padding-bottom: 16px; padding-left: 20px; padding-right: 52px; border-radius: 10px; overflow: hidden; border: 1.50px rgba(106, 199, 238, 0.70) solid; justify-content: space-between; align-items: center; display: inline-flex"
+        >
+          <div class="Left" style="justify-content: flex-start; align-items: center; gap: 16px; display: flex">
+            <div
+              class="SelectRadio"
+              style="width: 16px; height: 16px; position: relative; background: white; border-radius: 50px; border: 1px #068EC9 solid"
+            ></div>
+            <div
+              class="Text"
+              style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 7px; display: inline-flex"
+            >
+              <div
+                class="Flossmo"
+                style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+              >
+                3 Flossmo
+              </div>
+              <div
+                class="Save130"
+                style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; word-wrap: break-word"
+              >
+                Save $130
+              </div>
+            </div>
+          </div>
+          <div
+            class="Price"
+            style="flex-direction: column; justify-content: center; align-items: center; gap: 7px; display: inline-flex"
+          >
+            <div
+              class="16999"
+              style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+            >
+              $169.99
+            </div>
+            <div
+              class="29999"
+              style="text-align: center; color: black; font-size: 16px; font-family: Montserrat; font-weight: 300; text-decoration: line-through; word-wrap: break-word"
+            >
+              $299.99
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Frame13"
+        style="align-self: stretch; height: 84px; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: flex"
+      >
+        <div
+          class="DeliveryPrompt"
+          style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 6px; display: inline-flex"
+        >
+          <div
+            class="MaterialSymbolsLocalShipping"
+            style="width: 26px; height: 26px; padding-left: 1.08px; padding-right: 1.08px; padding-top: 4.33px; padding-bottom: 4.33px; justify-content: center; align-items: center; display: flex"
+          >
+            <div class="Vector" style="width: 23.83px; height: 17.33px; background: #068EC9"></div>
+          </div>
+          <div class="OrderNowAndGetFlossmoByThursday" style="text-align: center">
+            <span style="color: black; font-size: 14px; font-family: Montserrat; font-weight: 300; word-wrap: break-word"
+              >Order Now and Get Flossmo by </span
+            ><span style="color: black; font-size: 14px; font-family: Montserrat; font-weight: 600; word-wrap: break-word"
+              >Thursday</span
+            >
+          </div>
+        </div>
+        <div
+          class="CtaButton"
+          style="align-self: stretch; height: 50px; padding: 10px; background: #068EC9; border-radius: 10px; overflow: hidden; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
+        >
+          <div class="BuyNow12999" style="text-align: center">
+            <span style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 600; word-wrap: break-word"
+              >BUY NOW - </span
+            ><span style="color: white; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word"
+              >$129.99</span
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="Seals"
+        style="align-self: stretch; justify-content: center; align-items: flex-start; gap: 36px; display: inline-flex"
+      >
+        <div
+          class="Seal"
+          style="width: 130px; padding-left: 10px; padding-right: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
+        >
+          <div
+            class="NounAirDelivery33096182"
+            style="width: 60px; height: 60px; padding: 10px; border-radius: 50px; overflow: hidden; border: 2px #3ECAF2 solid; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
+          >
+            <div class="Vector" style="width: 28px; height: 37px; background: #3ECAF2"></div>
+          </div>
+          <div
+            class="FreeShipping"
+            style="text-align: center; color: black; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            Free Shipping
+          </div>
+        </div>
+        <div
+          class="Seal"
+          style="width: 130px; padding-left: 10px; padding-right: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
+        >
+          <div
+            class="NounCalendar63804822"
+            style="width: 60px; height: 60px; padding: 5px; border-radius: 50px; overflow: hidden; border: 2px #3ECAF2 solid; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
+          >
+            <div class="Vector" style="width: 35px; height: 33px; background: #3ECAF2"></div>
+          </div>
+          <div
+            class="DayGuarantee"
+            style="text-align: center; color: black; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            30-Day Guarantee
+          </div>
+        </div>
+        <div
+          class="Seal"
+          style="width: 130px; padding-left: 10px; padding-right: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex"
+        >
+          <div
+            class="NounReturnDelivery32158522"
+            style="width: 60px; height: 60px; padding-left: 3px; padding-right: 3px; padding-top: 13px; padding-bottom: 13px; border-radius: 50px; overflow: hidden; border: 2px #3ECAF2 solid; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex"
+          >
+            <div class="Group" style="width: 39px; height: 26px; position: relative">
+              <div
+                class="Vector"
+                style="width: 32.30px; height: 26px; left: 0px; top: 0px; position: absolute; background: #3ECAF2"
+              ></div>
+              <div
+                class="Vector"
+                style="width: 19.20px; height: 14.60px; left: 19.80px; top: 8.84px; position: absolute; background: #3ECAF2"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="EasyReturns"
+            style="text-align: center; color: black; font-size: 14px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            Easy Returns
+          </div>
         </div>
       </div>
     </div>
   </div>
+{% endcomment %}
+
+{% comment %}
   <div
-    class="BenefitContainer"
-    style="align-self: stretch; justify-content: center; align-items: center; display: inline-flex"
+    class="HowItWorks"
+    style="align-self: stretch; height: 564px; padding-left: 10px; padding-right: 10px; padding-top: 50px; padding-bottom: 50px; flex-direction: column; justify-content: center; align-items: center; gap: 50px; display: flex"
   >
     <div
-      class="TextBox"
-      style="flex: 1 1 0; padding-left: 75px; padding-right: 75px; padding-top: 50px; padding-bottom: 50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; display: inline-flex"
-    >
-      <div
-        class="Text"
-        style="height: 142px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 26px; display: flex"
-      >
-        <div
-          class="BoostYourConfidence"
-          style="align-self: stretch; color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-        >
-          Boost your Confidence
-        </div>
-        <div
-          class="FlossmoSGotYourBackForFreshBreathAndASparklingSmileByGettingRidOfFoodBitsAndGermsItLeavesYourMouthFeelingFreshAndYourSmileBeaming"
-          style="align-self: stretch; color: black; font-size: 20px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
-        >
-          Flossmo's got your back for fresh breath and a sparkling smile! By getting rid of food bits and germs, it
-          leaves your mouth feeling fresh and your smile beaming.
-        </div>
-      </div>
-    </div>
-    <div
-      class="Image"
-      style="width: 500px; height: 500px; position: relative; background: #D8D8D8; border-radius: 12px"
-    ></div>
-  </div>
-</div>
-<div
-  class="Features"
-  style="align-self: stretch; background: #3ECAF2; justify-content: space-between; align-items: center; display: inline-flex"
->
-  <div
-    class="TextBox"
-    style="flex: 1 1 0; padding-left: 50px; padding-right: 50px; flex-direction: column; justify-content: center; align-items: center; gap: 35px; display: inline-flex"
-  >
-    <div
-      class="InnovativeDesignFeatures"
-      style="align-self: stretch; color: white; font-size: 34px; font-family: Montserrat; font-weight: 700; word-wrap: break-word"
-    >
-      Innovative design & features:
-    </div>
-    <div
-      class="Feature"
-      style="align-self: stretch; height: 92px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex"
-    >
-      <div
-        class="360RotatableNozzle"
-        style="align-self: stretch; color: white; font-size: 28px; font-family: Montserrat; font-weight: 700; word-wrap: break-word"
-      >
-        1. 360° Rotatable Nozzle
-      </div>
-      <div
-        class="The360TipRotationAllowsYouToReachEveryPointOfYourMouthAndGumForAComprehensiveCleaning"
-        style="align-self: stretch; color: white; font-size: 20px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-      >
-        The 360° tip rotation allows you to reach every point of your mouth and gum for a comprehensive cleaning
-      </div>
-    </div>
-    <div
-      class="Feature"
-      style="align-self: stretch; height: 92px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex"
-    >
-      <div
-        class="FourPressureSetting"
-        style="align-self: stretch; color: white; font-size: 28px; font-family: Montserrat; font-weight: 700; word-wrap: break-word"
-      >
-        2. Four Pressure Setting
-      </div>
-      <div
-        class="NormalSoftPulseAndDiyChooseTheMostComfortableModeThatSuitsYourNeeds"
-        style="align-self: stretch; color: white; font-size: 20px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-      >
-        Normal, soft, pulse and DIY - Choose the most comfortable mode that suits your needs.
-      </div>
-    </div>
-    <div
-      class="Feature"
-      style="align-self: stretch; height: 92px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex"
-    >
-      <div
-        class="360mlWaterTank"
-        style="align-self: stretch; color: white; font-size: 28px; font-family: Montserrat; font-weight: 700; word-wrap: break-word"
-      >
-        3. 360mL Water Tank
-      </div>
-      <div
-        class="TheWaterTankIsCompletelyRetractableAndRemovableMakingItSuperEasyToCleanAndRefill"
-        style="align-self: stretch; color: white; font-size: 20px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
-      >
-        The water tank is completely retractable and removable, making it super easy to clean and refill.
-      </div>
-    </div>
-  </div>
-  <img class="Image9" style="width: 600px; height: 600px" src="https://via.placeholder.com/600x600">
-</div>
-<div
-  class="Comparison"
-  style="align-self: stretch; height: 751px; padding-top: 100px; padding-bottom: 50px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 10px; display: flex"
->
-  <div
-    class="ComparisonTable"
-    style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 25px; display: flex"
-  >
-    <div
-      class="WhatMakesFlossmoSpecial"
+      class="AsEasyAs123"
       style="color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
     >
-      What makes Flossmo special
+      As easy as 1-2-3.
     </div>
-    <img class="Image10" style="width: 903px; height: 532px" src="https://via.placeholder.com/903x532">
+    <div
+      class="Container"
+      style="padding-left: 10px; padding-right: 10px; justify-content: center; align-items: center; gap: 125px; display: inline-flex"
+    >
+      <div
+        class="Step"
+        style="flex-direction: column; justify-content: center; align-items: center; gap: 25px; display: inline-flex"
+      >
+        <img
+          class="Image8"
+          style="width: 250px; height: 250px; border-radius: 12px"
+          src="https://via.placeholder.com/250x250"
+        >
+        <div
+          class="Text"
+          style="flex-direction: column; justify-content: center; align-items: center; gap: 12px; display: flex"
+        >
+          <div
+            class="FillItUp"
+            style="color: black; font-size: 32px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+          >
+            Fill it up...
+          </div>
+          <div
+            class="OpenTheWaterTankAndFillItToTheTop"
+            style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            Open the water tank and fill it<br>
+            to the top.
+          </div>
+        </div>
+      </div>
+      <div
+        class="Step"
+        style="flex-direction: column; justify-content: center; align-items: center; gap: 25px; display: inline-flex"
+      >
+        <img
+          class="Image8"
+          style="width: 250px; height: 250px; border-radius: 12px"
+          src="https://via.placeholder.com/250x250"
+        >
+        <div
+          class="Text"
+          style="flex-direction: column; justify-content: center; align-items: center; gap: 12px; display: flex"
+        >
+          <div
+            class="SelectYourMode"
+            style="color: black; font-size: 32px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+          >
+            Select your mode...
+          </div>
+          <div
+            class="ChooseYourDesiredModeAndTurnItOn"
+            style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            Choose your desired mode and<br>
+            turn it on.
+          </div>
+        </div>
+      </div>
+      <div
+        class="Step"
+        style="flex-direction: column; justify-content: center; align-items: center; gap: 25px; display: inline-flex"
+      >
+        <img
+          class="Image8"
+          style="width: 250px; height: 250px; border-radius: 12px"
+          src="https://via.placeholder.com/250x250"
+        >
+        <div
+          class="Text"
+          style="flex-direction: column; justify-content: center; align-items: center; gap: 12px; display: flex"
+        >
+          <div
+            class="StartFlossing"
+            style="color: black; font-size: 32px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+          >
+            Start flossing!
+          </div>
+          <div
+            class="UseFor30SecondsEachDayForHealthyTeeth"
+            style="text-align: center; color: black; font-size: 18px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            Use for 30 seconds each day for<br>
+            healthy teeth.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div> {% endcomment %}
+  <div
+    class="Benefits"
+    style="align-self: stretch; height: 2350px; padding-left: 25px; padding-right: 25px; padding-top: 100px; padding-bottom: 100px; flex-direction: column; justify-content: center; align-items: center; gap: 50px; display: flex"
+  >
+    <div
+      class="BenefitContainer"
+      style="align-self: stretch; justify-content: center; align-items: center; display: inline-flex"
+    >
+      <div
+        class="Image"
+        style="width: 500px; height: 500px; background: #D8D8D8; border-radius: 12px; overflow: hidden; justify-content: center; align-items: center; display: flex"
+      >
+        <img class="Image20" style="width: 500px; height: 888px" src="https://via.placeholder.com/500x888">
+      </div>
+      <div
+        class="TextBox"
+        style="flex: 1 1 0; padding-left: 75px; padding-right: 75px; padding-top: 50px; padding-bottom: 50px; flex-direction: column; justify-content: center; align-items: flex-end; gap: 10px; display: inline-flex"
+      >
+        <div
+          class="Text"
+          style="height: 166px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 26px; display: flex"
+        >
+          <div
+            class="HealthierTeethAndGums"
+            style="align-self: stretch; color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+          >
+            Healthier Teeth and Gums
+          </div>
+          <div
+            class="WithFlossmoYouLlLoveHowItEasilyClearsAwayPlaqueWithItsGentleWaterFlowItReachesBetweenYourTeethAndAlongYourGumlineLeavingYourMouthFeelingRefreshinglyCleanAndHealthy"
+            style="align-self: stretch; color: black; font-size: 20px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            With Flossmo, you'll love how it easily clears away plaque with its gentle water flow. It reaches between your
+            teeth and along your gumline, leaving your mouth feeling refreshingly clean and healthy.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="BenefitContainer"
+      style="align-self: stretch; justify-content: center; align-items: center; display: inline-flex"
+    >
+      <div
+        class="TextBox"
+        style="flex: 1 1 0; padding-left: 75px; padding-right: 75px; padding-top: 50px; padding-bottom: 50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; display: inline-flex"
+      >
+        <div
+          class="Text"
+          style="height: 166px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 26px; display: flex"
+        >
+          <div
+            class="ChewMoreComfortably"
+            style="align-self: stretch; color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+          >
+            Chew More Comfortably
+          </div>
+          <div
+            class="HeyWhetherYouHaveBracesImplantsCrownsOrBridgesFlossmoIsYourGoToItsGentleCleaningActionEnsuresYourGumsStayHealthySoYouCanEnjoyYourFavoriteMealsWithoutAnyAnyDiscomfort"
+            style="align-self: stretch; color: black; font-size: 20px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            Hey, whether you have braces, implants, crowns, or bridges, Flossmo is your go-to! Its gentle cleaning action
+            ensures your gums stay healthy, so you can enjoy your favorite meals without any any discomfort.
+          </div>
+        </div>
+      </div>
+      <div
+        class="Image"
+        style="width: 500px; height: 500px; position: relative; background: #D8D8D8; border-radius: 12px"
+      ></div>
+    </div>
+    <div
+      class="BenefitContainer"
+      style="align-self: stretch; justify-content: center; align-items: center; display: inline-flex"
+    >
+      <div
+        class="Image"
+        style="width: 500px; height: 500px; background: #D8D8D8; justify-content: center; align-items: center; display: flex"
+      >
+        <img
+          class="Image17"
+          style="width: 500px; height: 500px; border-radius: 12px"
+          src="https://via.placeholder.com/500x500"
+        >
+      </div>
+      <div
+        class="TextBox"
+        style="flex: 1 1 0; padding-left: 75px; padding-right: 75px; padding-top: 50px; padding-bottom: 50px; flex-direction: column; justify-content: center; align-items: flex-end; gap: 10px; display: inline-flex"
+      >
+        <div
+          class="Text"
+          style="height: 190px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 26px; display: flex"
+        >
+          <div
+            class="StrongerAndDurableTeeth"
+            style="align-self: stretch; color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+          >
+            Stronger and Durable Teeth
+          </div>
+          <div
+            class="WithFlossmoSayGoodbyeToPlaqueAndHelloToStrongerTeethByStoppingCavitiesInTheirTracksItKeepsYourToothEnamelRobustAndReducesTheNeedForFrequentDentalTreatmentsSoYourSmileStaysStrongAndBrightForTheLongHaul"
+            style="align-self: stretch; color: black; font-size: 20px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            With Flossmo, say goodbye to plaque and hello to stronger teeth! By stopping cavities in their tracks, it
+            keeps your tooth enamel robust and reduces the need for frequent dental treatments. So, your smile stays
+            strong and bright for the long haul.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="BenefitContainer"
+      style="align-self: stretch; justify-content: center; align-items: center; display: inline-flex"
+    >
+      <div
+        class="TextBox"
+        style="flex: 1 1 0; padding-left: 75px; padding-right: 75px; padding-top: 50px; padding-bottom: 50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; display: inline-flex"
+      >
+        <div
+          class="Text"
+          style="height: 142px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 26px; display: flex"
+        >
+          <div
+            class="BoostYourConfidence"
+            style="align-self: stretch; color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+          >
+            Boost your Confidence
+          </div>
+          <div
+            class="FlossmoSGotYourBackForFreshBreathAndASparklingSmileByGettingRidOfFoodBitsAndGermsItLeavesYourMouthFeelingFreshAndYourSmileBeaming"
+            style="align-self: stretch; color: black; font-size: 20px; font-family: Montserrat; font-weight: 400; word-wrap: break-word"
+          >
+            Flossmo's got your back for fresh breath and a sparkling smile! By getting rid of food bits and germs, it
+            leaves your mouth feeling fresh and your smile beaming.
+          </div>
+        </div>
+      </div>
+      <div
+        class="Image"
+        style="width: 500px; height: 500px; position: relative; background: #D8D8D8; border-radius: 12px"
+      ></div>
+    </div>
+  </div>
+  <div
+    class="Features"
+    style="align-self: stretch; background: #3ECAF2; justify-content: space-between; align-items: center; display: inline-flex"
+  >
+    <div
+      class="TextBox"
+      style="flex: 1 1 0; padding-left: 50px; padding-right: 50px; flex-direction: column; justify-content: center; align-items: center; gap: 35px; display: inline-flex"
+    >
+      <div
+        class="InnovativeDesignFeatures"
+        style="align-self: stretch; color: white; font-size: 34px; font-family: Montserrat; font-weight: 700; word-wrap: break-word"
+      >
+        Innovative design & features:
+      </div>
+      <div
+        class="Feature"
+        style="align-self: stretch; height: 92px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex"
+      >
+        <div
+          class="360RotatableNozzle"
+          style="align-self: stretch; color: white; font-size: 28px; font-family: Montserrat; font-weight: 700; word-wrap: break-word"
+        >
+          1. 360° Rotatable Nozzle
+        </div>
+        <div
+          class="The360TipRotationAllowsYouToReachEveryPointOfYourMouthAndGumForAComprehensiveCleaning"
+          style="align-self: stretch; color: white; font-size: 20px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+        >
+          The 360° tip rotation allows you to reach every point of your mouth and gum for a comprehensive cleaning
+        </div>
+      </div>
+      <div
+        class="Feature"
+        style="align-self: stretch; height: 92px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex"
+      >
+        <div
+          class="FourPressureSetting"
+          style="align-self: stretch; color: white; font-size: 28px; font-family: Montserrat; font-weight: 700; word-wrap: break-word"
+        >
+          2. Four Pressure Setting
+        </div>
+        <div
+          class="NormalSoftPulseAndDiyChooseTheMostComfortableModeThatSuitsYourNeeds"
+          style="align-self: stretch; color: white; font-size: 20px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+        >
+          Normal, soft, pulse and DIY - Choose the most comfortable mode that suits your needs.
+        </div>
+      </div>
+      <div
+        class="Feature"
+        style="align-self: stretch; height: 92px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex"
+      >
+        <div
+          class="360mlWaterTank"
+          style="align-self: stretch; color: white; font-size: 28px; font-family: Montserrat; font-weight: 700; word-wrap: break-word"
+        >
+          3. 360mL Water Tank
+        </div>
+        <div
+          class="TheWaterTankIsCompletelyRetractableAndRemovableMakingItSuperEasyToCleanAndRefill"
+          style="align-self: stretch; color: white; font-size: 20px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+        >
+          The water tank is completely retractable and removable, making it super easy to clean and refill.
+        </div>
+      </div>
+    </div>
+    <img class="Image9" style="width: 600px; height: 600px" src="https://via.placeholder.com/600x600">
+  </div>
+  <div
+    class="Comparison"
+    style="align-self: stretch; height: 751px; padding-top: 100px; padding-bottom: 50px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 10px; display: flex"
+  >
+    <div
+      class="ComparisonTable"
+      style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 25px; display: flex"
+    >
+      <div
+        class="WhatMakesFlossmoSpecial"
+        style="color: black; font-size: 36px; font-family: Montserrat; font-weight: 500; word-wrap: break-word"
+      >
+        What makes Flossmo special
+      </div>
+      <img class="Image10" style="width: 903px; height: 532px" src="https://via.placeholder.com/903x532">
+    </div>
+  </div>
+{% endcomment %}

@@ -579,8 +579,7 @@ Description: Shopify Theme (https://www.shopify.com/&ref=out-of-the-sandbox)
 
 /* Handles the background color and margins depending on what width has been chosen */
 .section {
-  max-width: 1200px;
-  width: 95%;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -610,6 +609,12 @@ Description: Shopify Theme (https://www.shopify.com/&ref=out-of-the-sandbox)
 }
 .shopify-section-wrapper .shopify-section.shopify-section--search .is-width-wide {
   background-color: #ffffff;
+}
+
+@media only screen and (max-width: 798px) {
+  .section {
+    width: 100%;
+  }
 }
 
 /* Parent container for column elements - uses flexbox, so this container can be made smaller and the columns will shrink in relation */
@@ -3339,13 +3344,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 /* #Basic Styles
 ================================================== */
 body {
-  font-family: "DIN Next", sans-serif;
+    font-family: Montserrat,sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 18px;
   text-transform: none;
   color: #000000;
-  line-height: 1.6em;
   overflow: auto;
   background-color: #ffffff;
 }body.blocked-scroll {
@@ -3356,6 +3360,12 @@ body {
   top: 0;
   left: 0;
   pointer-events: none;
+}
+
+@media screen and (max-width: 799px) {
+  body {
+    font-size: 16px;
+  }
 }
 
 body.blocked-overflow {
@@ -3437,19 +3447,17 @@ img[data-sizes="100vw"] {
 
 /*  Headings  */
 h1 {
-  font-family: "DIN Next", sans-serif;
+  font-family: Montserrat,sans-serif;
   font-weight: 400;
   font-style: normal;
   text-transform: none;
-  line-height: 1.5;
   color: #000000;
   display: block;
-  letter-spacing: 2px;
   text-rendering: optimizeLegibility;
-  font-size: 42px;
-  margin: 0 auto 15px;
+  font-size: 32px;
+  margin: 0;
   clear: both;
-  font-weight: 400;
+  font-weight: 600;
   padding-top: 4px;
 }
 h1 a:link, h1 a:visited {
@@ -3464,6 +3472,12 @@ h1.collection_title_tags {
   border-right: solid 1px #69c7ed;
 }
 
+@media screen and (max-width: 799px) {
+  h1.product_name {
+    font-size: 23px;
+  }
+}
+
 h2,
 .h2,
 h2.title {
@@ -3471,13 +3485,10 @@ h2.title {
   font-weight: 400;
   font-style: normal;
   text-transform: none;
-  line-height: 1.5;
   color: #000000;
   display: block;
-  letter-spacing: 2px;
   text-rendering: optimizeLegibility;
-  font-size: 37px;
-  margin-bottom: 0.75em;
+  font-size: 32px;
 }
 h2 a,
 .h2 a,
@@ -3506,13 +3517,11 @@ h3,
   font-weight: 400;
   font-style: normal;
   text-transform: none;
-  line-height: 1.5;
   color: #000000;
   display: block;
-  letter-spacing: 2px;
   text-rendering: optimizeLegibility;
-  font-size: 33px;
-  margin: 0 auto 15px 0;
+  font-size: 26px;
+  margin: 0;
 }
 h3 a,
 h3 a:visited,
@@ -3550,13 +3559,10 @@ h4,
   font-weight: 400;
   font-style: normal;
   text-transform: none;
-  line-height: 1.5;
   color: #000000;
   display: block;
-  letter-spacing: 2px;
   text-rendering: optimizeLegibility;
-  font-size: 29px;
-  margin: 0 0 0.5em 0;
+  font-size: 22px;
   padding: 7px 0;
 }
 h4 a,
@@ -3576,13 +3582,10 @@ h5,
   font-weight: 400;
   font-style: normal;
   text-transform: none;
-  line-height: 1.5;
   color: #000000;
   display: block;
-  letter-spacing: 2px;
   text-rendering: optimizeLegibility;
-  font-size: 27px;
-  margin: 0 0 0.5em 0;
+  font-size: 20px;
   padding: 7px 0;
 }
 h5 a,
@@ -3605,12 +3608,10 @@ h6,
   font-weight: 400;
   font-style: normal;
   text-transform: none;
-  line-height: 1.5;
   color: #000000;
   display: block;
-  letter-spacing: 2px;
   text-rendering: optimizeLegibility;
-  font-size: 25px;
+  font-size: 18px;
   letter-spacing: 1px;
   margin: 0 0 0.5em 0;
   padding: 7px 0;
@@ -3635,7 +3636,6 @@ h6.title,
   font-weight: 400;
   font-style: normal;
   text-transform: none;
-  line-height: 1.5;
   color: #000000;
   display: block;
   letter-spacing: 2px;
@@ -3671,10 +3671,8 @@ div.collection_title_tags {
   font-weight: 400;
   font-style: normal;
   text-transform: none;
-  line-height: 1.5;
   color: #000000;
   display: block;
-  letter-spacing: 2px;
   text-rendering: optimizeLegibility;
   font-size: 42px;
 }
@@ -3685,9 +3683,8 @@ div.collection_title_tags {
 
 /*  Content  */
 p {
-  margin: 0 0 15px;
+  margin: 0;
   font-style: normal;
-  line-height: 1.6em;
 }
 
 p img {
@@ -7418,10 +7415,6 @@ a.continue:hover {
 
 .product-main {
   width: 100%;
-}
-
-.product_section .description {
-  margin-bottom: 15px;
 }
 
 .modal_price {
@@ -13178,7 +13171,7 @@ img[data-flickity-lazyload] {
 }
 @media only screen and (max-width: 798px) {
   .product_gallery {
-    margin-bottom: 30px;
+    margin-bottom: 12px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -13270,6 +13263,11 @@ img[data-flickity-lazyload] {
   cursor: zoom-in;
 }
 
+.product_gallery_nav .gallery-cell.custom-dimensions {
+  width: 75px;
+  height: 75px;
+}
+
 @media only screen and (min-width: 799px) {
   .gallery-thumbnails--right .multi-image {
     width: 83%;
@@ -13283,6 +13281,11 @@ img[data-flickity-lazyload] {
   .gallery-thumbnails--right .product_gallery_nav .gallery-cell {
     width: 100%;
     margin: 0 0 10px 0;
+  }
+
+  .product_gallery_nav .gallery-cell.custom-dimensions {
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -14300,7 +14303,6 @@ h6,
 .collection_title,
 .empty_cart {
     font-size: 200%;
-    line-height: 1.5em;
   }
 
   h1,
@@ -15274,6 +15276,17 @@ footer .social_icons a:hover {
 
 .size_chart {
   display: inline-block;
+}
+
+.product__details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.product_title {
+  margin-bottom: 8px;
 }
 
 /* # Product media
