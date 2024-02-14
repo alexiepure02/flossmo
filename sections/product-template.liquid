@@ -345,8 +345,8 @@
 
   .benefit-container img {
     order: 0;
-    width: 90%;
-    max-width: 390px;
+    width: 100%;
+    max-width: 440px;
     height: auto;
     background-color: gray;
     border-radius: 12px;
@@ -472,6 +472,7 @@
       flex-direction: row;
       justify-content: space-between;
       gap: 15px;
+      padding: 0;
     }
 
     .features-section img {
@@ -511,6 +512,49 @@
     .features-container .feature p {
       font-size: 20px;
       color: white !important;
+    }
+  }
+
+  /* Comparison Section */
+
+  .comparison-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 65px;
+    padding: 50px 15px;
+  }
+
+  .comparison-section h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .comparison-section {
+      padding: 75px 15px;
+    }
+
+    .comparison-section h1 {
+      font-size: 36px;
+    }
+
+    .rmq-d0a8ba2b {
+      font-size: 18px !important;
+    }
+
+    .rmq-196f5390 {
+      font-size: 18px !important;
+    }
+
+    .rmq-44279447 {
+      font-size: 18px !important;
+    }
+
+    .rmq-49774d36 {
+      width: 50px !important;
+      height: 50px !important;
     }
   }
 </style>
@@ -665,7 +709,7 @@
             </defs>
           </svg>
         </div>
-        <p>Rated 4.9/5 by 10,000+ Happy Customers</p>
+        <p>Rated 4.9/5 by 1,000+ Happy Customers</p>
       </div>
     </a>
   </div>
@@ -908,7 +952,8 @@
   >
 </div>
 
-{% comment %} <div>
+<div class="comparison-section">
+  <h1>This is what makes Flossmo special!</h1>
   <div
     style="display:flex;flex-basis:auto;flex-shrink:0;width:100%;justify-content:center;align-items:center"
     class="rmq-9be8222e rmq-46cb5fcc rmq-f1a67779 rmq-27e54ec4"
@@ -925,7 +970,7 @@
       <div
         data-rid="d37f6d00-da19-4ec3-82fe-52ff93f29965"
         data-replo-repeated-index=".0.0.0.0.0"
-        style="display:flex;flex-grow:1;max-width:100%;align-self:stretch;align-items:flex-start;padding-top:80px;flex-direction:column;grid-column-end:span 2;border-top-color:#5E0683FF;border-top-style:solid;border-top-width:1px;justify-content:flex-start;background-color:#E8F9FFFF;border-left-color:#57B9E4FF;border-left-style:solid;border-left-width:1px;border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow:hidden;flex-shrink:1;flex-basis:0;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+        style="display:flex;flex-grow:1;max-width:100%;align-self:stretch;align-items:flex-start;padding-top:80px;flex-direction:column;grid-column-end:span 2;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:flex-start;background-color:#E8F9FFFF;border-left-color:#57B9E4FF;border-left-style:solid;border-left-width:1px;border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow:hidden;flex-shrink:1;flex-basis:0;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
         class="rmq-aa9bba01 rmq-24efb66c rmq-6843f6f1 rmq-76807d4c"
         data-radium="true"
       >
@@ -940,7 +985,7 @@
             data-rid="0a98d0d0-cffd-4e93-a558-0580706b54ef"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
             class="rmq-d0a8ba2b rmq-cf021ec2 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
-            style="color:#000000;flex-grow:1;font-size:20px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:24px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            style="color:#000000;flex-grow:1;font-size:16px;text-align:center;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
             data-radium="true"
           >
             <span contenteditable="false" style="width:100%" data-radium="true"><p>Takes 30 seconds</p></span>
@@ -957,7 +1002,7 @@
             data-rid="c7082a0c-a040-4024-bcab-f9d5713b7cb5"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
             class="rmq-d0a8ba2b rmq-cf021ec2 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
-            style="color:#000000;flex-grow:1;font-size:20px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:24px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            style="color:#000000;flex-grow:1;font-size:16px;text-align:center;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
             data-radium="true"
           >
             <span contenteditable="false" style="width:100%" data-radium="true"><p>Gentle on your gums</p></span>
@@ -974,7 +1019,7 @@
             data-rid="dfa130be-821d-4285-915a-51117fcaed07"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
             class="rmq-d0a8ba2b rmq-cf021ec2 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
-            style="color:#000000;flex-grow:1;font-size:20px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:24px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            style="color:#000000;flex-grow:1;font-size:16px;text-align:center;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
             data-radium="true"
           >
             <span contenteditable="false" style="width:100%" data-radium="true">
@@ -993,7 +1038,7 @@
             data-rid="bee47e40-e738-4526-a12f-dd097ff1dec6"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
             class="rmq-d0a8ba2b rmq-cf021ec2 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
-            style="color:#000000;flex-grow:1;font-size:20px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:24px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            style="color:#000000;flex-grow:1;font-size:16px;text-align:center;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
             data-radium="true"
           >
             <span contenteditable="false" style="width:100%" data-radium="true">
@@ -1012,7 +1057,7 @@
             data-rid="f3792bfc-36f4-474e-8d68-f79b85a3242f"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
             class="rmq-d0a8ba2b rmq-cf021ec2 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
-            style="color:#000000;flex-grow:1;font-size:20px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:24px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            style="color:#000000;flex-grow:1;font-size:16px;text-align:center;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
             data-radium="true"
           >
             <span contenteditable="false" style="width:100%" data-radium="true"><p>Clinically proven</p></span>
@@ -1022,14 +1067,14 @@
       <div
         data-rid="0fc6270c-4553-454c-b3a9-f0dc94d5c41c"
         data-replo-repeated-index=".0.0.0.0.0"
-        style="row-gap:0;z-index:2;display:flex;flex-grow:1;max-width:100%;align-self:stretch;column-gap:0;align-items:flex-start;flex-direction:column;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:space-between;background-color:#FFFFFFFF;border-left-color:#57B9E4FF;border-left-style:solid;border-left-width:1px;border-right-color:#57B9E4FF;border-right-style:solid;border-right-width:1px;border-bottom-color:#57B9E4FF;border-bottom-style:solid;border-bottom-width:1px;border-top-left-radius:8px;grid-template-columns:repeat(1, minmax(0, 1fr));border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow:hidden;flex-shrink:1;flex-basis:0;transform:scale3d(110%, 110%, 100%);position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+        style="row-gap:3px;z-index:2;display:flex;flex-grow:1;max-width:100%;align-self:stretch;column-gap:0;align-items:flex-start;flex-direction:column;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:flex-start;background-color:#FFFFFFFF;border-left-color:#57B9E4FF;border-left-style:solid;border-left-width:1px;border-right-color:#57B9E4FF;border-right-style:solid;border-right-width:1px;border-bottom-color:#57B9E4FF;border-bottom-style:solid;border-bottom-width:1px;border-top-left-radius:8px;grid-template-columns:repeat(1, minmax(0, 1fr));border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;overflow:hidden;flex-shrink:1;flex-basis:0;transform:scale3d(110%, 110%, 100%);position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
         class="rmq-e40760d5 rmq-dca84d18 rmq-6843f6f1 rmq-76807d4c"
         data-radium="true"
       >
         <div
           data-rid="198abe3f-597d-4a1f-a295-5bcaa939ad40"
           data-replo-repeated-index=".0.0.0.0.0.0"
-          style="height:80px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:20px;padding-left:20px;padding-right:20px;flex-direction:column;padding-bottom:20px;justify-content:center;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+          style="height:95px;display:flex;max-width:100%;align-self:stretch;align-items:center;padding-top:30px;padding-left:8px;padding-right:8px;flex-direction:column;padding-bottom:20px;justify-content:center;flex-shrink:0;flex-basis:auto;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
           class="rmq-8ed5cd10 rmq-57a7d2be rmq-c1936f55 rmq-cc200de8"
           data-radium="true"
         >
@@ -1070,19 +1115,12 @@
           <div
             data-rid="65fc99e0-d22f-4e78-8668-4402e2b9dbb4"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
-            style="line-height:100%;color:#FE9920FF;width:30px;height:30px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            style="line-height:100%;color:#FE9920FF;width:40px;height:40px;flex-shrink:0;flex-basis:auto;--rsw:100%"
             class="rmq-49774d36 rmq-4ea94e36 rmq-1f47714 rmq-4a86ea09"
             data-radium="true"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              style="width:var(--rsw, 100%);height:100%"
-            >
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+            <svg viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 22.75C18.8848 22.75 23.25 18.3848 23.25 13C23.25 10.983 22.6375 9.10906 21.5884 7.55399L13.7717 16.2393C13.079 17.0089 11.9135 17.1226 11.0851 16.5013L7.48333 13.8C7.04151 13.4686 6.95196 12.8418 7.28333 12.4C7.61471 11.9582 8.24151 11.8686 8.68333 12.2L12.2851 14.9013L20.2919 6.00485C18.5362 4.29981 16.1407 3.25 13.5 3.25C8.11522 3.25 3.75 7.61522 3.75 13C3.75 18.3848 8.11522 22.75 13.5 22.75Z" fill="#068EC9"/>
             </svg>
           </div>
         </div>
@@ -1096,19 +1134,12 @@
           <div
             data-rid="6bbc2b17-6006-43a9-964f-bbb269261dc3"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
-            style="line-height:100%;color:#FE9920FF;width:30px;height:30px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            style="line-height:100%;color:#FE9920FF;width:40px;height:40px;flex-shrink:0;flex-basis:auto;--rsw:100%"
             class="rmq-49774d36 rmq-4ea94e36 rmq-1f47714 rmq-4a86ea09"
             data-radium="true"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              style="width:var(--rsw, 100%);height:100%"
-            >
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+            <svg viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 22.75C18.8848 22.75 23.25 18.3848 23.25 13C23.25 10.983 22.6375 9.10906 21.5884 7.55399L13.7717 16.2393C13.079 17.0089 11.9135 17.1226 11.0851 16.5013L7.48333 13.8C7.04151 13.4686 6.95196 12.8418 7.28333 12.4C7.61471 11.9582 8.24151 11.8686 8.68333 12.2L12.2851 14.9013L20.2919 6.00485C18.5362 4.29981 16.1407 3.25 13.5 3.25C8.11522 3.25 3.75 7.61522 3.75 13C3.75 18.3848 8.11522 22.75 13.5 22.75Z" fill="#068EC9"/>
             </svg>
           </div>
         </div>
@@ -1122,19 +1153,12 @@
           <div
             data-rid="cef0c722-6caf-460e-b31c-70a961902804"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
-            style="line-height:100%;color:#FE9920FF;width:30px;height:30px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            style="line-height:100%;color:#FE9920FF;width:40px;height:40px;flex-shrink:0;flex-basis:auto;--rsw:100%"
             class="rmq-49774d36 rmq-4ea94e36 rmq-1f47714 rmq-4a86ea09"
             data-radium="true"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              style="width:var(--rsw, 100%);height:100%"
-            >
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+            <svg viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 22.75C18.8848 22.75 23.25 18.3848 23.25 13C23.25 10.983 22.6375 9.10906 21.5884 7.55399L13.7717 16.2393C13.079 17.0089 11.9135 17.1226 11.0851 16.5013L7.48333 13.8C7.04151 13.4686 6.95196 12.8418 7.28333 12.4C7.61471 11.9582 8.24151 11.8686 8.68333 12.2L12.2851 14.9013L20.2919 6.00485C18.5362 4.29981 16.1407 3.25 13.5 3.25C8.11522 3.25 3.75 7.61522 3.75 13C3.75 18.3848 8.11522 22.75 13.5 22.75Z" fill="#068EC9"/>
             </svg>
           </div>
         </div>
@@ -1148,19 +1172,12 @@
           <div
             data-rid="139adf1c-2c01-4047-b411-ddc0f4722288"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
-            style="line-height:100%;color:#FE9920FF;width:30px;height:30px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            style="line-height:100%;color:#FE9920FF;width:40px;height:40px;flex-shrink:0;flex-basis:auto;--rsw:100%"
             class="rmq-49774d36 rmq-4ea94e36 rmq-1f47714 rmq-4a86ea09"
             data-radium="true"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              style="width:var(--rsw, 100%);height:100%"
-            >
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+            <svg viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 22.75C18.8848 22.75 23.25 18.3848 23.25 13C23.25 10.983 22.6375 9.10906 21.5884 7.55399L13.7717 16.2393C13.079 17.0089 11.9135 17.1226 11.0851 16.5013L7.48333 13.8C7.04151 13.4686 6.95196 12.8418 7.28333 12.4C7.61471 11.9582 8.24151 11.8686 8.68333 12.2L12.2851 14.9013L20.2919 6.00485C18.5362 4.29981 16.1407 3.25 13.5 3.25C8.11522 3.25 3.75 7.61522 3.75 13C3.75 18.3848 8.11522 22.75 13.5 22.75Z" fill="#068EC9"/>
             </svg>
           </div>
         </div>
@@ -1174,19 +1191,12 @@
           <div
             data-rid="606aaafe-48e1-4882-b982-fbd40799b76c"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
-            style="line-height:100%;color:#FE9920FF;width:30px;height:30px;flex-shrink:0;flex-basis:auto;--rsw:100%"
+            style="line-height:100%;color:#FE9920FF;width:40px;height:40px;flex-shrink:0;flex-basis:auto;--rsw:100%"
             class="rmq-49774d36 rmq-4ea94e36 rmq-1f47714 rmq-4a86ea09"
             data-radium="true"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              style="width:var(--rsw, 100%);height:100%"
-            >
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+            <svg viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 22.75C18.8848 22.75 23.25 18.3848 23.25 13C23.25 10.983 22.6375 9.10906 21.5884 7.55399L13.7717 16.2393C13.079 17.0089 11.9135 17.1226 11.0851 16.5013L7.48333 13.8C7.04151 13.4686 6.95196 12.8418 7.28333 12.4C7.61471 11.9582 8.24151 11.8686 8.68333 12.2L12.2851 14.9013L20.2919 6.00485C18.5362 4.29981 16.1407 3.25 13.5 3.25C8.11522 3.25 3.75 7.61522 3.75 13C3.75 18.3848 8.11522 22.75 13.5 22.75Z" fill="#068EC9"/>
             </svg>
           </div>
         </div>
@@ -1194,7 +1204,7 @@
       <div
         data-rid="b9330dc6-a0f1-45d9-ad48-d77de7ea88dd"
         data-replo-repeated-index=".0.0.0.0.0"
-        style="row-gap:0;display:flex;flex-grow:1;max-width:100%;align-self:stretch;column-gap:0;align-items:flex-start;flex-direction:column;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:space-between;background-color:#E8F9FFFF;border-right-color:#57B9E4FF;border-right-style:solid;border-right-width:1px;border-bottom-color:#5E0683FF;border-bottom-style:solid;border-bottom-width:1px;grid-template-columns:repeat(1, minmax(0, 1fr));border-top-right-radius:8px;border-bottom-right-radius:8px;overflow:hidden;flex-shrink:1;flex-basis:0;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
+        style="row-gap:0;display:flex;flex-grow:1;max-width:100%;align-self:stretch;column-gap:0;align-items:flex-start;flex-direction:column;border-top-color:#57B9E4FF;border-top-style:solid;border-top-width:1px;justify-content:space-between;background-color:#E8F9FFFF;border-right-color:#57B9E4FF;border-right-style:solid;border-right-width:1px;border-bottom-color:#57B9E4FF;border-bottom-style:solid;border-bottom-width:1px;grid-template-columns:repeat(1, minmax(0, 1fr));border-top-right-radius:8px;border-bottom-right-radius:8px;overflow:hidden;flex-shrink:1;flex-basis:0;position:relative;min-width:var(--rmw, auto);min-height:var(--rmh, auto);--rmw:auto;--rmh:auto"
         class="rmq-e40760d5 rmq-dca84d18 rmq-6843f6f1 rmq-76807d4c"
         data-radium="true"
       >
@@ -1209,7 +1219,7 @@
             data-rid="91c5a01d-0d5c-4e4c-84fb-03fa5c84b0e1"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
             class="rmq-196f5390 rmq-ad4c3799 rmq-ff3d0d37 rmq-15a7c1ca alchemy-rte"
-            style="color:#000000FF;flex-grow:1;font-size:18px;text-align:center;font-family:&quot;DIN Next&quot;, sans-serif;font-weight:600;line-height:22px;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
+            style="color:#000000FF;flex-grow:1;font-size:14px;text-align:center;text-align-last:center;flex-shrink:1;flex-basis:0;overflow-wrap:break-word"
             data-radium="true"
           >
             <span contenteditable="false" style="width:100%" data-radium="true"><p>Traditional Flossing</p></span>
@@ -1330,7 +1340,7 @@
             data-rid="b46abc9f-304d-4e6b-a390-1a623b53c46d"
             data-replo-repeated-index=".0.0.0.0.0.0.0"
             class="rmq-44279447 rmq-ee191701 rmq-1f47714 rmq-4a86ea09 alchemy-rte"
-            style="font-size:18px;font-family:&quot;DIN Next&quot;, sans-serif;line-height:24px;flex-shrink:0;flex-basis:auto;overflow-wrap:break-word"
+            style="font-size:14px;flex-shrink:0;flex-basis:auto;overflow-wrap:break-word"
             data-radium="true"
           >
             <span contenteditable="false" style="width:100%" data-radium="true"><p>Not proven</p></span>
@@ -1339,7 +1349,7 @@
       </div>
     </div>
   </div>
-</div> {% endcomment %}
+</div>
 
 {% schema %}
 {
