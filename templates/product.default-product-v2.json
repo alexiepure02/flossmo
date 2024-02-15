@@ -95,7 +95,8 @@
             "aggregated": false,
             "limit": 20,
             "hide_thumbnails": false,
-            "maxwidth": 1080
+            "maxwidth": 1080,
+            "is_sample": true
           }
         }
       },
@@ -104,12 +105,71 @@
       ],
       "settings": {
       }
+    },
+    "collapsible_content_3N4bQR": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_4q3TFC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 1",
+            "row_content": "<p>Answer 1<\/p>",
+            "page": "",
+            "faq": false
+          }
+        },
+        "collapsible_row_DmqzJa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 2",
+            "row_content": "<p>Answer 2<\/p>",
+            "page": "",
+            "faq": false
+          }
+        },
+        "collapsible_row_t7AUtx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 3",
+            "row_content": "<p>Answer 3<\/p>",
+            "page": "",
+            "faq": false
+          }
+        },
+        "collapsible_row_7Gt8FK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question 4",
+            "row_content": "<p>Answer 4<\/p>",
+            "page": "",
+            "faq": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_4q3TFC",
+        "collapsible_row_DmqzJa",
+        "collapsible_row_t7AUtx",
+        "collapsible_row_7Gt8FK"
+      ],
+      "settings": {
+        "heading": "Questions? We’ve Got You Covered",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "sidebar",
     "main",
     "recommendations",
-    "loox-product-reviews-app-section"
+    "loox-product-reviews-app-section",
+    "collapsible_content_3N4bQR"
   ]
 }

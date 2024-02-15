@@ -859,7 +859,7 @@ Description: Shopify Theme (https://www.shopify.com/&ref=out-of-the-sandbox)
 .shopify-section-wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 40px;
+  /* padding-top: 40px; */
 }
 .shopify-section-wrapper .is-width-wide {
   left: 50%;
@@ -4110,7 +4110,8 @@ body.is-active #header {
   z-index: 1;
 }
 #header .top-bar a.mobile_nav {
-  display: flex;
+  display: none;
+  /* display: flex; */
   align-items: center;
   z-index: 1;
 }
@@ -4407,7 +4408,8 @@ p.cart-message a {
 }
 
 .top-bar {
-  display: flex;
+  display: none;
+  /* display: flex; */
   justify-content: space-between;
   background-color: {{ settings.top_bar_bg_color }};
 }
@@ -13762,14 +13764,14 @@ img[data-flickity-lazyload] {
 }
 
 .product_gallery {
-  margin-bottom: 30px;
+  margin-bottom: 8px;
   position: relative;
   opacity: 0;
   transition: opacity 0.2s;
 }
 @media only screen and (max-width: 798px) {
   .product_gallery {
-    margin-bottom: 30px;
+    margin-bottom: 8px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -13806,7 +13808,7 @@ img[data-flickity-lazyload] {
 }
 .product_gallery_nav {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 8px;
 }
 .product_gallery_nav.product_gallery_nav--bottom-thumbnails .gallery-cell {
   width: auto;
@@ -17911,6 +17913,86 @@ footer .social_icons a:hover {
 .surface-pick-up-embed__location-availability {
   text-transform: none;
   letter-spacing: normal;
+}
+
+/* Collapsible Content */
+
+.collapsible-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.collapsible-content__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+}
+
+.collapsible-content details {
+  position: relative;
+}
+
+.collapsible-content summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background-color: #068EC9;
+  color: white;
+}
+
+.collapsible-content h2 {
+  font-size: 15px;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.collapsible-content svg {
+  width: 22px;
+  height: 22px;
+}
+
+.collapsible-content .chevron-up,
+.collapsible-content .chevron-down {
+  pointer-events: none;
+  background-color: #068EC9;
+  position: absolute;
+  top: 12px;
+  right: 18px;
+}
+
+.collapsible-content .chevron-up {
+  z-index: 1;
+}
+
+.collapsible-content .accordion-content {
+  padding: 12px 24px 20px 24px;
+}
+
+@media screen and (min-width: 750px) {
+  .collapsible-content h2 {
+    font-size: 20px;  
+  }
+
+  .collapsible-content svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .collapsible-content .chevron-up,
+.collapsible-content .chevron-down {
+    right: 24px;
+ 
+  }
 }
 
 /* #Font-Face

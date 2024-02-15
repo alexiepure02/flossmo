@@ -583,14 +583,21 @@
 
 {% if set_product_height %}
   {% style %}
-    .gallery-wrap model-viewer {
-      min-height: {{ product_height }}px;
-    }
+      .gallery-wrap model-viewer {
+        min-height: {{ product_height }}px;
+      }
 
-    .gallery-wrap .product_gallery img,
-    .gallery-wrap .product_gallery .plyr--html5 video,
-    .gallery-wrap .product_gallery .plyr--youtube {
-      max-height: {{ product_height }}px;
+      .gallery-wrap .product_gallery img,
+      .gallery-wrap .product_gallery .plyr--html5 video,
+      .gallery-wrap .product_gallery .plyr--youtube {
+        max-height: {{ product_height }}px;
+      }
+
+      @media only screen and (max-width: 798px) {
+        .gallery-wrap .product_gallery img {
+          max-height: 300px;
+        }
+
     }
   {% endstyle %}
 {% endif %}
