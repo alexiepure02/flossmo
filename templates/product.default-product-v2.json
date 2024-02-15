@@ -106,62 +106,46 @@
       "settings": {
       }
     },
-    "collapsible_content_3N4bQR": {
+    "collapsible_content_Pe8cnC": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_4q3TFC": {
+        "collapsible_row_tWXaKn": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Question 1",
-            "row_content": "<p>Answer 1<\/p>",
-            "page": "",
-            "faq": false
+            "row_content": "<p>Answer 1<\/p>"
           }
         },
-        "collapsible_row_DmqzJa": {
+        "collapsible_row_6MtUVk": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Question 2",
-            "row_content": "<p>Answer 2<\/p>",
-            "page": "",
-            "faq": false
+            "row_content": "<p>Answer 2<\/p>"
           }
         },
-        "collapsible_row_t7AUtx": {
+        "collapsible_row_7KjVfm": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Question 3",
-            "row_content": "<p>Answer 3<\/p>",
-            "page": "",
-            "faq": false
+            "row_content": "<p>Answer 3<\/p>"
           }
         },
-        "collapsible_row_7Gt8FK": {
+        "collapsible_row_UHhYzE": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Question 4",
-            "row_content": "<p>Answer 4<\/p>",
-            "page": "",
-            "faq": false
+            "row_content": "<p>Answer 4<\/p>"
           }
         }
       },
       "block_order": [
-        "collapsible_row_4q3TFC",
-        "collapsible_row_DmqzJa",
-        "collapsible_row_t7AUtx",
-        "collapsible_row_7Gt8FK"
+        "collapsible_row_tWXaKn",
+        "collapsible_row_6MtUVk",
+        "collapsible_row_7KjVfm",
+        "collapsible_row_UHhYzE"
       ],
       "settings": {
-        "heading": "Questions? We’ve Got You Covered",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "Questions? We’ve Got You Covered"
       }
     }
   },
@@ -170,6 +154,6 @@
     "main",
     "recommendations",
     "loox-product-reviews-app-section",
-    "collapsible_content_3N4bQR"
+    "collapsible_content_Pe8cnC"
   ]
 }
