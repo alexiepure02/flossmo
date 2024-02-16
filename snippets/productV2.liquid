@@ -161,19 +161,18 @@
         {% capture i %}{% cycle "1", "2" %}{% endcapture %}
         {{ 'product-' | append: i | placeholder_svg_tag: 'placeholder-svg placeholder-svg--product' }}
       {% else %}
-        {%
-          render 'product-images',
+        {% render 'product-images',
           product: product,
           gallery_thumbnails: gallery_thumbnails,
           gallery_thumbnail_slider: gallery_thumbnail_slider,
           gallery_click_to_zoom: gallery_click_to_zoom,
           gallery_hover_zoom: gallery_hover_zoom,
           gallery_arrows: gallery_arrows,
-          set_product_height: set_product_height
+          set_product_height: set_product_height,
           gallery_slideshow_transition: gallery_slideshow_transition,
           gallery_slideshow_speed: gallery_slideshow_speed,
           gallery_thumbnail_position: gallery_thumbnail_position,
-          video_looping: video_looping,
+          video_looping: video_looping
         %}
       {% endif %}
     </div>
@@ -195,7 +194,6 @@
         product__details--product-page
       "
     >
-      <div id="product--variants"></div>
       {% assign collection_handles = product.collections | map: 'handle' %}
       {% comment %}
         {%
@@ -337,12 +335,11 @@
                         {%- endcapture -%}
                       {% endif %}
 
-                      {%-
-                        render 'price-ui-templates',
+                      {%- render 'price-ui-templates',
                         template: 'price-ui',
                         compare_at_price: compare_at_price,
                         price: price,
-                        unit_pricing: false,
+                        unit_pricing: false
                       -%}
                     </div>
                     {% comment %}Inject @pixelunion/shopify-price-ui/price-ui end{% endcomment %}

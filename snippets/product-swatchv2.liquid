@@ -1,5 +1,150 @@
+<style>
+  .swatch--item-container-custom {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .swatch_options input:checked + .swatch-element-custom {
+    background-color: rgba(106, 199, 238, 0.3);
+    outline: 2.3px solid #068ec9;
+  }
+
+  .swatch_options input:checked + .swatch-element-custom .left-side .checked {
+    background-color: #068ec9;
+    outline-color: white;
+  }
+
+  .swatch-element-custom {
+    outline: 1.5px solid #6ac7ee;
+    border-radius: 10px;
+  }
+
+  .swatch-element-custom label {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 42px 16px 20px;
+  }
+
+  .most-popular-label {
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    background-color: #068ec9;
+    padding: 3px 6px;
+    border-radius: 4px;
+  }
+
+  .most-popular-label p {
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .left-side {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .left-side svg {
+    display: block;
+  }
+
+  .left-side .checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    outline: 1.5px solid #068ec9;
+  }
+
+  .left-side .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .variant-name {
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .price-savings {
+    font-size: 15px;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .price-actual {
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .price-original {
+    font-size: 15px;
+    text-decoration: line-through;
+  }
+
+  @media screen and (min-width: 750px) {
+    .most-popular-label svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .most-popular-label p {
+      font-size: 12px;
+    }
+
+    .variant-name {
+      font-size: 18px;
+    }
+
+    .price-savings {
+      font-size: 16px;
+    }
+
+    .price-actual {
+      font-size: 18px;
+    }
+
+    .price-original {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .most-popular-label {
+      padding: 4px 8px;
+    }
+
+    .most-popular-label svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .most-popular-label p {
+      font-size: 14px;
+    }
+  }
+</style>
+
 {% comment %}
-Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
+  Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
 {% endcomment %}
 
 {%- assign file_extension = 'png' -%}
@@ -22,7 +167,7 @@ Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
 
 <div class="{{ swatch | downcase | handleize }} swatch" data-option-index="{{ option_index }}">
   <div class="option_title">{{ swatch }}</div>
-  <div class="is-flex is-flex-wrap swatch--item-container">
+  <div class="swatch--item-container-custom">
     {%- assign values = '' -%}
 
     {% for variant in product.variants %}
@@ -33,60 +178,156 @@ Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
         {%- assign values = values | append: ',' | append: value -%}
         {%- assign values = values | split: ',' -%}
 
-        <input id="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}" type="radio" name="option-{{ option_index }}" aria-label="{{ value | escape }}" tabindex="0" value="{{ value | escape }}"{% if forloop.first %} checked{% endif %} />
+        <input
+          id="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}"
+          type="radio"
+          name="option-{{ option_index }}"
+          aria-label="{{ value | escape }}"
+          tabindex="0"
+          value="{{ value | escape }}"
+          {% if forloop.index == 2 %}
+            checked
+          {% endif %}
+        >
+        <div
+          tabindex="0"
+          value="{{ value | escape }}"
+          data-value="{{ value | escape }}"
+          data-id="{{ variant.id }}"
+          class="swatch-element-custom {% if is_color %}color{% endif %} {{ value | handle }}-swatch {% if variant.available %}available{% else %}soldout{% endif %}"
+        >
+          {% comment %}
+            <div class="left-side">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="1" y="1" width="15" height="15" rx="7.5" fill="white"/>
+                  <rect x="1" y="1" width="15" height="15" rx="7.5" stroke="#068EC9"/>
+                </svg>
+                <div class="text-box">
+                  <p class="variant-name">1 Flossmo</p>
+                  <p class="price-savings">Save $30</p>
+                </div>
+              </div>
+              <div class="right-side">
+                <p class="price-actual">$69.99</p>
+                <p class="price-original">$99.99</p>
+              </div>
+            </div>
 
-        <div tabindex="0"  value="{{ value | escape }}" data-value="{{ value | escape }}" data-id="{{ variant.id }}" class="swatch-element {% if is_color %}color{% endif %} {{ value | handle }}-swatch {% if variant.available %}available{% else %}soldout{% endif %}">
+            <div
+              tabindex="0"
+              value="{{ value | escape }}"
+              data-value="{{ value | escape }}"
+              data-id="{{ variant.id }}"
+              class="swatch-element {% if is_color %}color{% endif %} {{ value | handle }}-swatch {% if variant.available %}available{% else %}soldout{% endif %}"
+            >
+          {% endcomment %}
           {% if is_color %}
             <div class="tooltip">{{ value }}</div>
           {% endif %}
 
           {% if is_color %}
-            <label {% if variant.featured_image %}data-image="{{ variant.featured_image | product_img_url: '600x' }}"{% endif %} for="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}" style="background-image: url({{ value | handle | append: '.' | append: file_extension | asset_img_url: '50x' | prepend: 'https:' }}); background-color: {{ value | split: ' ' | last | handle }};">
-              <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" aria-label="sold out" alt="sold out"/>
+            <label
+              {% if variant.featured_image %}
+                data-image="{{ variant.featured_image | product_img_url: '600x' }}"
+              {% endif %}
+              for="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}"
+              style="background-image: url({{ value | handle | append: '.' | append: file_extension | asset_img_url: '50x' | prepend: 'https:' }}); background-color: {{ value | split: ' ' | last | handle }};"
+            >
+              <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" aria-label="sold out" alt="sold out">
             </label>
           {% else %}
-          
-            <label {% if variant.featured_image %}data-image="{{ variant.featured_image | product_img_url: '600x' }}"{% endif %} for="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}">
-              <div class="value-title-money">
-              <span class="value--name">{{ value }}</span>
-              
-              <span class="money">{{ variant.price | money }}</span>
-              </div>
-              
-              {% if option contains 'Quantity' %}
-                <div class="check-wrapper">
-                  <div class="check-circle" style="border-color: rgb(255, 255, 255); background-color: rgb(255, 255, 255);"><img src="{{ 'checkmark-cards.svg' | asset_url }}" alt="" class="check-white" style="opacity: 1;"></div>
-                </div>
-                <div class="discount-pill" style="background-color: rgb(214, 214, 214); opacity: 1;">
-                  <div class="discount-span"><span data-variant-id="{{ variant.id }}">{{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}</span>%<br>OFF</div>
-                </div>
-                {% if value contains '2 FLOSSMO' %}
-                <div class="badge-best-value">
-                  <div class="best-span">BEST SELLER</div>
-                </div>
-                {% endif %}
-              
-                {% comment %}
-                {% if value contains '3 water flosser' %}
-                <div class="badge-best-value">
-                  <div class="best-span">BEST VALUE</div>
-                </div>
-                {% endif %}
-                {% endcomment %}
-              
+            <label
+              {% if variant.featured_image %}
+                data-image="{{ variant.featured_image | product_img_url: '600x' }}"
               {% endif %}
-              <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" aria-label="sold out" alt="sold out"/>
+              for="swatch-{{ option_index }}-{{ value | replace: ' ', '-' }}-{{ product.id }}{% if section.id %}-{{ section.id }}{% endif %}"
+            >
+              {% if value contains '2' %}
+                <div class="most-popular-label">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.508 2.41209C12.906 0.52209 10.062 1.99806 9 1.99806C7.938 1.99806 5.094 0.52209 3.492 2.41209C1.908 4.32009 1.98 7.39809 2.82597 8.98209C3.67194 10.5661 3.74396 12.9421 3.78 13.9501C3.79799 14.9581 4.41 16.5601 5.4 16.5601C6.39 16.5601 7.686 12.0061 9 12.0061C10.314 12.0061 11.592 16.5601 12.6 16.5601C13.59 16.5601 14.202 14.9761 14.238 13.9681C14.274 12.9601 14.346 10.5841 15.192 9.00009C16.02 7.39809 16.092 4.32009 14.508 2.41209ZM6.03 5.49009C6.01201 5.36411 5.85 5.23808 5.72403 5.25606C5.52605 5.25606 5.43605 5.47203 5.38202 5.65203C5.29202 6.01203 4.73403 5.85002 4.82403 5.50801C4.93202 5.07599 5.27403 4.68002 5.76 4.69801C6.21 4.71599 6.53403 5.07599 6.58799 5.50801C6.64201 5.85008 6.06597 5.8501 6.03 5.49009ZM9.018 9.90009C8.04599 9.90009 7.308 9.03606 7.308 8.10009C7.308 7.72211 7.88397 7.72211 7.88397 8.10009C7.88397 8.71211 8.36994 9.34211 9.018 9.32412C9.68397 9.30613 10.134 8.67614 10.116 8.06412C10.098 7.68614 10.674 7.70412 10.692 8.06412C10.728 9.00009 9.99 9.90012 9.01796 9.90012L9.018 9.90009ZM12.618 5.63409C12.582 5.47208 12.474 5.25611 12.276 5.23812C12.15 5.23812 11.988 5.34611 11.97 5.47215C11.934 5.83215 11.358 5.83215 11.394 5.47215C11.4481 5.04014 11.772 4.68014 12.222 4.66215C12.708 4.64416 13.05 5.04014 13.158 5.47215C13.248 5.85008 12.708 5.99411 12.618 5.63411V5.63409Z" fill="white"/>
+                  </svg>
+
+                  <p>MOST POPULAR</p>
+                </div>
+              {% endif %}
+              <div class="left-side">
+                <div class="checked"></div>
+                <div class="text-box">
+                  <p class="variant-name">{{ value }}</p>
+                  {% assign price_savings = variant.compare_at_price | minus: variant.price | divided_by: 100 %}
+                  <p class="price-savings">
+                    Save
+                    <span
+                      class="money"
+                      data-currency-original="${{ price_savings }}"
+                      data-currency-usd="${{ price_savings }}"
+                      data-currency="USD"
+                      >${{ price_savings -}}
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="right-side">
+                <p class="price-actual">{{ variant.price | money }}</p>
+                <p class="price-original">{{ variant.compare_at_price | money }}</p>
+              </div>
+              {% comment %}
+                <div class="value-title-money">
+                  <span class="value--name">{{ value }}</span>
+
+                  <span class="money">{{ variant.price | money }}</span>
+                </div>
+
+                {% if option contains 'Quantity' %}
+                  <div class="check-wrapper">
+                    <div
+                      class="check-circle"
+                      style="border-color: rgb(255, 255, 255); background-color: rgb(255, 255, 255);"
+                    >
+                      <img src="{{ 'checkmark-cards.svg' | asset_url }}" alt="" class="check-white" style="opacity: 1;">
+                    </div>
+                  </div>
+                  <div class="discount-pill" style="background-color: rgb(214, 214, 214); opacity: 1;">
+                    <div class="discount-span">
+                      <span data-variant-id="{{ variant.id }}">
+                        {{-
+                          variant.compare_at_price
+                          | minus: variant.price
+                          | times: 100.0
+                          | divided_by: variant.compare_at_price
+                          | money_without_currency
+                          | times: 100
+                          | remove: '.0'
+                        -}}</span
+                      >%<br>
+                      OFF
+                    </div>
+                  </div>
+                  {% if value contains '2 FLOSSMO' %}
+                    <div class="badge-best-value">
+                      <div class="best-span">BEST SELLER</div>
+                    </div>
+                  {% endif %}
+
+                  {% comment %}
+                    {% if value contains '3 water flosser' %}
+                    <div class="badge-best-value">
+                      <div class="best-span">BEST VALUE</div>
+                    </div>
+                    {% endif %}
+                  {% endcomment %}
+                {% endif %}
+              {% endcomment %}
+              {% comment %} <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" aria-label="sold out" alt="sold out"> {% endcomment %}
             </label>
           {% endif %}
         </div>
       {% endunless %}
     {% endfor %}
   </div>
-
 </div>
-  <div class="custom--info-disc">
-      <div class="price-sec">
-      </div>
-      <div class="saving-sec">
-      </div>
-  </div>
+<div class="custom--info-disc">
+  <div class="price-sec"></div>
+  <div class="saving-sec"></div>
+</div>

@@ -33,7 +33,6 @@
 
 .product-templatev2 .swatch_options input:checked+.swatch-element {
   background-color: transparent;
-
   box-shadow: unset;
   border-color: #000;
   outline: none;
@@ -61,7 +60,9 @@
   width: calc(33% - 8px);
 }
 
-.product-templatev2 .swatch--item-container{
+.product-templatev2 .swatch--item-container-custom{
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
@@ -326,17 +327,11 @@ button.add_to_cart .text {
   .product-templatev2 span.value--name{
     font-size: 13px;
   }
-  label span, legend span {
-    font-size: 12px;
-  }
 }
 
 @media (max-width: 320px){
   .discount-pill {
     right: 8px;
-  }
-  .discount-span span{
-    font-size: 10px;
   }
   
   .product-templatev2 .swatch label{
