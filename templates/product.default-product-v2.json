@@ -147,6 +147,11 @@
       "settings": {
         "heading": "Questions? We’ve Got You Covered"
       }
+    },
+    "trust_seals_JzgXfV": {
+      "type": "trust-seals",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -154,6 +159,7 @@
     "main",
     "recommendations",
     "loox-product-reviews-app-section",
-    "collapsible_content_Pe8cnC"
+    "collapsible_content_Pe8cnC",
+    "trust_seals_JzgXfV"
   ]
 }

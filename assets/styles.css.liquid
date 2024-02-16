@@ -14924,7 +14924,7 @@ h5,
 h6,
 .collection_title,
 .empty_cart {
-    font-size: 200%;
+    /* font-size: 200%; */
   }
 
   h1,
@@ -17983,8 +17983,12 @@ footer .social_icons a:hover {
     padding: 50px 15px;
   }
   
+  .collapsible-content h1 {
+    font-size: 32px;
+  }
+
   .collapsible-content h2 {
-    font-size: 20px;  
+    font-size: 20px;
   }
 
   .collapsible-content svg {
@@ -17995,7 +17999,62 @@ footer .social_icons a:hover {
   .collapsible-content .chevron-up,
 .collapsible-content .chevron-down {
     right: 24px;
- 
+  }
+}
+
+/* Trust Seals Section */
+
+.main-trust-seals-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 50px 15px 100px 15px;
+}
+
+.main-trust-seals-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.main-trust-seal-box {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.main-trust-seal-box .text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+@media screen and (min-width: 660px) {
+  .main-trust-seals-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 750px) {
+.main-trust-seals-section h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main-trust-seals-container {
+    gap: 75px;
   }
 }
 
