@@ -244,7 +244,7 @@ button.add_to_cart {
   font-weight: 700;
   text-align: center;
   text-decoration: none;
-  justify-content: space-between;
+  justify-content: center;
   cursor: pointer;
 }
 
@@ -258,7 +258,7 @@ button.add_to_cart {
 }
 
 .checkout_box .text{
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 button.add_to_cart .text {

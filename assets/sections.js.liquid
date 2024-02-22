@@ -830,8 +830,8 @@ window.productPage = {
             product: $(this).data('product'), 
             onVariantSelected: (variant, selector) => {
               currentVariant = variant;
-              
-              $('.price_box').html(`<span class="money">${window.Shopify.formatMoney(currentVariant.compare_at_price, $('body').data('money-format'))} </span><span class="savings-details">${window.Shopify.formatMoney(currentVariant.price, $('body').data('money-format'))}</span>`);
+              $('.price_box').html(`<span class="price-actual">${window.Shopify.formatMoney(currentVariant.price, $('body').data('money-format'))}</span>`);
+              // $('.price_box').html(`<span class="money">${window.Shopify.formatMoney(currentVariant.compare_at_price, $('body').data('money-format'))} </span><span class="savings-details">${window.Shopify.formatMoney(currentVariant.price, $('body').data('money-format'))}</span>`);
               window.selectCallback(variant, selector);
             }, 
             enableHistoryState: $(this).data('enable-state')
@@ -990,7 +990,7 @@ window.productPage = {
 
       				        $('.custom--info-disc .saving-sec').html(span2);
 
-                      $('.price_box').html(`<span class="money">${window.Shopify.formatMoney(v.compare_at_price, $('body').data('money-format'))} </span><span class="savings-details">${window.Shopify.formatMoney(v.price, $('body').data('money-format'))}</span>`);
+                      // $('.price_box').html(`<span class="money">${window.Shopify.formatMoney(v.compare_at_price, $('body').data('money-format'))} </span><span class="savings-details">${window.Shopify.formatMoney(v.price, $('body').data('money-format'))}</span>`);
                     }
                   }
 

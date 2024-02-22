@@ -63,6 +63,7 @@
             data-featured-image="{{ v.featured_media }}"
             data-image="{{ v.featured_media | product_img_url: '600x' }}"
             data-sku="{{ v.sku }}"
+            data-price="{{ v.price }}"
           >
             {{ v.title }}
           </option>
@@ -154,13 +155,13 @@
               disabled
             {% endif %}
           "
-          data-label="CHECKOUT"
+          data-label="BUY NOW - "
         >
           <div class="checkout_box">
             <span class="text">
-              {% if product.available %}CHECKOUT{% else %}{{ settings.sold_out_text }}{% endif %}
+              {% if product.available %}BUY NOW - {% else %}{{ settings.sold_out_text }}{% endif %}
             </span>
-            <img src="{{ 'arrow-right-mobile.svg' | asset_url }}" alt="arrow right icon">
+            {% comment %} <img src="{{ 'arrow-right-mobile.svg' | asset_url }}" alt="arrow right icon"> {% endcomment %}
             <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
               <path fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
             </svg>
@@ -170,10 +171,6 @@
         {% if show_payment_button %}
           {{ form | payment_button }}
         {% endif %}
-
-        <div data-payment-terms-reference style="display: none;">
-          {{ form | payment_terms }}
-        </div>
       </div>
     </div>
   {% endform %}
@@ -216,4 +213,17 @@
         console.error('Error:', error);
       });
   }
+</script>
+
+
+<script>
+  const variantSelector = document.getElementById('product-select-{{ product.id }}{{ product-form }}{{ section.id }}{{ block.id }}');
+
+  variantSelector.addEventListener('change', function() {
+    const selectedOption = this.selectedOptions[0];
+    const price = parseFloat(selectedOption.dataset.price);
+
+    const priceBox = document.querySelector('.price_box');
+    priceBox.innerHTML = Shopify.formatMoney(price, "{{ shop.money_format }}");
+  });
 </script>

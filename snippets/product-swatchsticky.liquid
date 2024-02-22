@@ -23,6 +23,9 @@ Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
 <div class="{{ swatch | downcase | handleize }} swatch swatchs" data-option-index="{{ option_index }}">
   <div class="option_title">{{ swatch }}</div>
   <div class="is-flex is-flex-wrap swatch--item-container">
+
+
+  {% comment %} Continue Here !!! {% endcomment %}
     {%- assign values = '' -%}
 
     {% for variant in product.variants %}
