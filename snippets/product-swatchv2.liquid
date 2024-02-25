@@ -166,7 +166,8 @@
 {% endfor %}
 
 <div class="{{ swatch | downcase | handleize }} swatch" data-option-index="{{ option_index }}">
-  <div class="option_title">{{ swatch }}</div>
+  {% comment %} <div class="option_title">{{ swatch }}</div> {% endcomment %}
+  <div class="option_title">Perfect gift for your friends or family:</div>
   <div class="swatch--item-container-custom">
     {%- assign values = '' -%}
 

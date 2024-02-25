@@ -1888,8 +1888,8 @@
       "product-sticky-atc": {
         "type": "product-sticky-atc",
         "settings": {
-          "set_product_height": false,
-          "product_height": 500,
+          "set_product_height": true,
+          "product_height": 100,
           "video_looping": false
         }
       }

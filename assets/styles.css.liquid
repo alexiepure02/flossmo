@@ -7345,7 +7345,7 @@ label,
 legend,
 .option_title {
   display: block;
-  font-size: 13px;
+  font-size: 16px;
   text-align: left;
   margin-bottom: 5px;
   text-transform: {{ settings.regular_font_style }};
@@ -10856,7 +10856,8 @@ div#disqus_thread li {
 
 .swatch .option_title {
     width: 100%;
-    margin: 0.5em 0;
+    margin: 0;
+    margin-bottom: 12px;
   }
 
 /* Hide radio buttons */
@@ -15906,8 +15907,12 @@ footer .social_icons a:hover {
 .product__details {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
   margin-bottom: 25px;
+}
+
+.product-block .loox-rating {
+  margin-top: -12px;
 }
 
 /* # Product media
@@ -18043,6 +18048,19 @@ footer .social_icons a:hover {
   .main-trust-seals-container {
     gap: 75px;
   }
+}
+
+.loox-rating-label {
+  color: black;
+  font-size: 15px;
+}
+
+.loox-rating .loox-icon {
+  color: #FFBD00 !important;
+}
+
+#looxReviews {
+  z-index: 0 !important;
 }
 
 /* #Font-Face

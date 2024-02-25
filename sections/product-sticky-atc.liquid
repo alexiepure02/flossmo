@@ -1,321 +1,378 @@
-
 <div class="section">
-<div class="container">
-    <div class="product-{{ product.id }} is-flex flexx is-flex-row "
-        {% if context == 'product' %}
-            data-rv-handle="{{ product.handle }}"
-          {% endif %}
-        >
-      <div class="one-half flexx is-flex  medium-down--one-whole medium-down--hide">
-        <div class="product-images one-fourth medium-down--one-half">
-                {% render 'product-images',
-                        product: product,
-                        video_looping: section.settings.video_looping,
-                        set_product_height: section.settings.set_product_height
-                %}
+  <div class="container">
+    <div
+      class="product-{{ product.id }} is-flex flexx is-flex-row "
+      {% if context == 'product' %}
+        data-rv-handle="{{ product.handle }}"
+      {% endif %}
+    >
+      <div class="two-thirds flexx is-flex  medium-down--one-whole medium-down--hide">
+        <div class="product-images medium-down--one-half" style="width:100%; max-width:150px;">
+          {% render 'product-images',
+            product: product,
+            video_looping: section.settings.video_looping,
+            set_product_height: section.settings.set_product_height
+          %}
         </div>
-        <div class="three-fourths medium-down--one-half">
-            <a href="#looxReviews"><div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"   data-pattern="[count] reviews by happy customers"></div></a>
+        <div class="medium-down--one-half">
+          <a href="#looxReviews">
+            <div
+              class="loox-rating"
+              data-id="{{ product.id }}"
+              data-rating="{{ product.metafields.loox.avg_rating }}"
+              data-raters="{{ product.metafields.loox.num_reviews }}"
+              data-pattern="Rated 4.9/5 by 1,000+ Happy Customers"
+            ></div>
+          </a>
           <h5 class="product_name noMargin">{{ product.title }}</h5>
-          
         </div>
       </div>
 
-      <div class="one-half medium-down--one-whole">
+      <div class="star-rating-sticky-mobile one-third medium-down--one-whole">
+        <a href="#looxReviews">
+          <div
+            class="loox-rating"
+            data-id="{{ product.id }}"
+            data-rating="{{ product.metafields.loox.avg_rating }}"
+            data-raters="{{ product.metafields.loox.num_reviews }}"
+            data-pattern="Rated 4.9/5 by 1,000+ Happy Customers"
+          ></div>
+        </a>
         <div class="js-product_sections">
-          
-            {%
-                render 'product-form-sticky',
-                product: product,
-                show_payment_button: false,
-                collection_handles: collection_handles
-              %}
-  
+          {% render 'product-form-sticky',
+            product: product,
+            show_payment_button: false,
+            collection_handles: collection_handles
+          %}
+
           {% render 'product-notify-me', product: product %}
         </div>
       </div>
-
     </div>
   </div>
 </div>
-  <style>
 
-
-#shopify-section-product-sticky-atc  .product-{{ product.id }}{
-    width: 100%;
-}
-
-#shopify-section-product-sticky-atc .discount-pill,
-#shopify-section-{{ section.id }} .custom--info-disc{
-    display: none;
-}
-
-#shopify-section-{{ section.id }} .swatch_options{
-    width: 100%;
-    margin-bottom: 0px;
-}
-
-
-#shopify-section-{{ section.id }} span.value--name{
-    font-size: 11px;
-}
-    #shopify-section-{{ section.id }}  .flexx {
-      align-items: center;
-      justify-content: center;
-    }
-    #shopify-section-{{ section.id }}  {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #fff;
-      z-index: 999;
-    }
-    #shopify-section-{{ section.id }}  .product_section .product_form{
-      max-width: 100%;
-      margin-bottom: 0;
-    }
-    
-    #shopify-section-{{ section.id }} .swatch-element.color {
-      padding: 2px;
-    }
-    
-    #shopify-section-{{ section.id }} h5{
-      font-size: 1em;
-      margin: 0;
-    }
-    
-    #shopify-section-{{ section.id }} .product_gallery{
-      margin-bottom: 0;
-    }
-    
-    #shopify-section-{{ section.id }} .shopify-product-form{
-      display: flex;
-      align-items: center;
-    }
-    
-    #shopify-section-{{ section.id }} .purchase-details {
-      width: 100%;
-    }
-    
-     #shopify-section-{{ section.id }} .product-quantity-box{
-      display: none;
-    }
-    
-    #shopify-section-{{ section.id }} .price__container{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    #shopify-section-{{ section.id }}    .swatch {
-      display: flex;
-    }
-  
-    #shopify-section-{{ section.id }} .flickity-button {
-      display: none !important;
-    }
-    
-    #shopify-section-{{ section.id }} .modal_price {
-      margin-bottom: 0;
-      padding: 0;
-      width: 50%;
-      text-align: center;
-    }
-    
-    #shopify-section-{{ section.id }} .swatch .option_title {
-      margin: 0.75em;
-    }
-
-    #shopify-section-{{ section.id }} .swatch label{
-        align-items: center;
-    justify-content: center;
-    padding: 10px;
-    }
-
-    #shopify-section-{{ section.id }} .value-title-money,
-    #shopify-section-{{ section.id }} .swatch--item-container{
-    width: 100%;
-    }
-    #shopify-section-{{ section.id }} .purchase-details .price_box .money {
-      margin-right: 8px;
-      font-weight: normal;
-      text-decoration: line-through;
-  }
-    @media (min-width: 769px){
-        #shopify-section-{{ section.id }} .swatch .swatch-element {
-            width: calc(33.33% - 8px);
-            display: flex; 
-        }
-        #shopify-section-{{ section.id }} .product_form{
-            margin-bottom: 0px;
-        }
-        #shopify-section-{{ section.id }} .swatch {
-          margin-bottom: 0;
-        }
-        #shopify-section-{{ section.id }} .swatch .option_title {
-          width: 20%;
-        }
-
-        #shopify-section-{{ section.id }} .purchase-details button span {
-          font-size: 12px;
+<style>
+  #shopify-section-product-sticky-atc  .product-{{ product.id }}{
+          width: 100%;
       }
 
-        #shopify-section-{{ section.id }} .best-span{
-          font-size:7px;
-        }
-    }
-    
-    @media (max-width: 768px){
-      #shopify-section-{{ section.id }}  .flexx {
-        padding: 1em 0;
-      }
-  
-      #shopify-section-{{ section.id }} .purchase-details {
-         flex-direction: column;
-        align-items: flex-end;
-        width: 60%;
+      #shopify-section-product-sticky-atc .discount-pill,
+      #shopify-section-{{ section.id }} .custom--info-disc{
+          display: none;
       }
 
-      #shopify-section-{{ section.id }} .shopify-product-form{
-        align-items: unset;
-    }
-      
-      
-      #shopify-section-{{ section.id }}  .current_price,
-      #shopify-section-{{ section.id }} .modal_price{
-        font-size: 1rem;
-      }
-  
-      #shopify-section-{{ section.id }} .purchase-details__buttons,
-      #shopify-section-{{ section.id }} .swatch{
-  
-        margin: 0;
-      }
-      
-      #shopify-section-{{ section.id }}  .price__container {
-        flex-direction: row;
-        margin-bottom: 10px;
-      }
-
-      #shopify-section-{{ section.id }} .swatch .swatch-element {
-        width: calc(33.33% - 8px);
-    }
-    #shopify-section-{{ section.id }} .swatch label{
-        padding: 15px;
-    }
-    }
-    
-    @media (max-width: 480px){
-      
-       #shopify-section-{{ section.id }} .container{
-         padding: 0;
-       }
-
-       #shopify-section-{{ section.id }} .product_form{
-        margin-bottom: 0;
-    }
-    #shopify-section-{{ section.id }} .shopify-product-form{
-        flex-direction: column;
-    }
-      #shopify-section-{{ section.id }} .purchase-details {
-        align-items: center;
-        width: 100%;
-      }
-      #shopify-section-{{ section.id }}  .price__container {
-        margin-bottom: 0px;
-        justify-content: center;
-      }
-  
-      #shopify-section-{{ section.id }} h5 {
-        font-size: 0.85em;
-      }
-  
-      #shopify-section-{{ section.id }} .modal_price,
-      #shopify-section-{{ section.id }} .swatch .option_title{
-        display: none !Important;
-      }
-      
-      
-  
-  
-      #shopify-section-{{ section.id }} .swatch-element.color {
-        margin-bottom: 0;
-      }
-  
-     #shopify-section-{{ section.id }} .purchase-details__buttons{
-        margin: 0;
-       width: 100%;
-      }
-      
       #shopify-section-{{ section.id }} .swatch_options{
-        
-        margin-bottom: 1em;
+        display: none;
+        width: 100%;
+        margin-bottom: 0px;
       }
-  
+
+
+      #shopify-section-{{ section.id }} span.value--name{
+          font-size: 11px;
+      }
+          #shopify-section-{{ section.id }}  .flexx {
+            align-items: center;
+            justify-content: center;
+          }
+          #shopify-section-{{ section.id }}  {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            z-index: 999;
+          }
+          #shopify-section-{{ section.id }}  .product_section .product_form{
+            max-width: 100%;
+            margin-bottom: 0;
+          }
+
+          #shopify-section-{{ section.id }} .swatch-element.color {
+            padding: 2px;
+          }
+
+          #shopify-section-{{ section.id }} h5{
+            font-size: 1em;
+            margin: 0;
+          }
+
+          #shopify-section-{{ section.id }} .product_gallery{
+            margin-bottom: 0;
+          }
+
+          #shopify-section-{{ section.id }} .shopify-product-form{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+          }
+
+          @media only screen and (max-width: 798px) {
+            #shopify-section-{{ section.id }} .shopify-product-form{
+              justify-content: center;
+          }
     }
-  </style>
-  
+
+          #shopify-section-{{ section.id }} .purchase-details {
+            width: 100%;
+            max-width: 250px;
+          }
+
+           #shopify-section-{{ section.id }} .product-quantity-box{
+            display: none;
+          }
+
+          #shopify-section-{{ section.id }} .price__container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+          }
+
+          #shopify-section-{{ section.id }}    .swatch {
+            display: flex;
+          }
+
+          #shopify-section-{{ section.id }} .flickity-button {
+            display: none !important;
+          }
+
+          #shopify-section-{{ section.id }} .modal_price {
+            margin-bottom: 0;
+            padding: 0;
+            width: 50%;
+            text-align: center;
+          }
+
+          #shopify-section-{{ section.id }} .swatch .option_title {
+            margin: 0.75em;
+          }
+
+          #shopify-section-{{ section.id }} .swatch label{
+              align-items: center;
+          justify-content: center;
+          padding: 10px;
+          }
+
+          #shopify-section-{{ section.id }} .value-title-money,
+          #shopify-section-{{ section.id }} .swatch--item-container{
+          width: 100%;
+          }
+          #shopify-section-{{ section.id }} .purchase-details .price_box .money {
+            margin-right: 8px;
+            font-weight: normal;
+            text-decoration: line-through;
+        }
+          @media (min-width: 769px){
+              #shopify-section-{{ section.id }} .swatch .swatch-element {
+                  width: calc(33.33% - 8px);
+                  display: flex;
+              }
+              #shopify-section-{{ section.id }} .product_form{
+                  margin-bottom: 0px;
+              }
+              #shopify-section-{{ section.id }} .swatch {
+                margin-bottom: 0;
+              }
+              #shopify-section-{{ section.id }} .swatch .option_title {
+                width: 20%;
+              }
+
+              #shopify-section-{{ section.id }} .purchase-details button span {
+                font-size: 15px;
+            }
+
+              #shopify-section-{{ section.id }} .best-span{
+                font-size:7px;
+              }
+          }
+
+          @media (max-width: 768px){
+            #shopify-section-{{ section.id }}  .flexx {
+              padding: 1em 0;
+            }
+
+            #shopify-section-{{ section.id }} .shopify-product-form{
+              align-items: unset;
+          }
+
+
+            #shopify-section-{{ section.id }}  .current_price,
+            #shopify-section-{{ section.id }} .modal_price{
+              font-size: 1rem;
+            }
+
+            #shopify-section-{{ section.id }} .purchase-details__buttons,
+            #shopify-section-{{ section.id }} .swatch{
+
+              margin: 0;
+            }
+
+            #shopify-section-{{ section.id }}  .price__container {
+              flex-direction: row;
+              margin-bottom: 10px;
+            }
+
+            #shopify-section-{{ section.id }} .swatch .swatch-element {
+              width: calc(33.33% - 8px);
+          }
+          #shopify-section-{{ section.id }} .swatch label{
+              padding: 15px;
+          }
+          }
+
+          @media (max-width: 480px){
+
+             #shopify-section-{{ section.id }} .container{
+               padding: 0;
+             }
+
+             #shopify-section-{{ section.id }} .product_form{
+              margin-bottom: 0;
+          }
+
+            #shopify-section-{{ section.id }} .purchase-details {
+              align-items: center;
+              width: 100%;
+            }
+            #shopify-section-{{ section.id }}  .price__container {
+              margin-bottom: 0px;
+              justify-content: center;
+            }
+
+            #shopify-section-{{ section.id }} h5 {
+              font-size: 0.85em;
+            }
+
+            #shopify-section-{{ section.id }} .modal_price,
+            #shopify-section-{{ section.id }} .swatch .option_title{
+              display: none !Important;
+            }
+
+
+
+
+            #shopify-section-{{ section.id }} .swatch-element.color {
+              margin-bottom: 0;
+            }
+
+           #shopify-section-{{ section.id }} .purchase-details__buttons{
+              margin: 0;
+             width: 100%;
+            }
+
+            #shopify-section-{{ section.id }} .swatch_options{
+
+              margin-bottom: 1em;
+            }
+
+          }
+
+          .star-rating-sticky-mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+          }
+
+          .star-rating-sticky-mobile .js-product_sections {
+            width: 100%;
+          }
+
+          #shopify-section-{{ section.id }} .purchase-details {
+            max-width: 90%;
+          }
+
+          @media only screen and (min-width: 798px) {
+            .star-rating-sticky-mobile a {
+              display: none;
+            }
+          }
+</style>
+
+<script>
+    $(document).scroll(function() {
+      var y = $(this).scrollTop();
+
+      if ($(window).width() < 480) {
+          if (y > 1300) {
+            $('#shopify-section-{{ section.id }}').fadeIn();
+          } else {
+            $('#shopify-section-{{ section.id }}').fadeOut();
+          }
+      }
+      else {
+          if (y > 800) {
+            $('#shopify-section-{{ section.id }}').fadeIn();
+          } else {
+            $('#shopify-section-{{ section.id }}').fadeOut();
+          }
+      }
+
+
+    });
+  {% comment %}
+    $('.swatchs .swatch-elements').on('click', function(e){
+
+      $('.js-product_sections .price_box').text($(this).find('.money').text());
+  }); {% endcomment %}
+</script>
+
+{% if section.settings.set_product_height %}
   <script>
-  $(document).scroll(function() {
-    var y = $(this).scrollTop();
-    
-    if ($(window).width() < 480) {
-        if (y > 1300) {
-          $('#shopify-section-{{ section.id }}').fadeIn();
-        } else {
-          $('#shopify-section-{{ section.id }}').fadeOut();
-        }
-    }
-    else {
-        if (y > 800) {
-          $('#shopify-section-{{ section.id }}').fadeIn();
-        } else {
-          $('#shopify-section-{{ section.id }}').fadeOut();
-        }
-    }
-    
-  
-  });
-{% comment %} 
-  $('.swatchs .swatch-elements').on('click', function(e){
-    
-    $('.js-product_sections .price_box').text($(this).find('.money').text());
-}); {% endcomment %}
+    console.log('aaaa');
   </script>
-  
-  {% schema %}
-    {
-      "name": "Product Sticky ATC",
-      "settings": [
-        {
-          "type": "header",
-          "content": "Media",
-          "info": "Learn more about [media types](https://help.shopify.com/en/manual/products/product-media)"
-        },
-        {
-          "type": "checkbox",
-          "id": "set_product_height",
-          "label": "Set height of product media",
-          "default": false
-        },
-        {
-          "type": "range",
-          "id": "product_height",
-          "label": "Product media height",
-          "min": 200,
-          "max": 800,
-          "step": 10,
-          "default": 500,
-          "unit": "px"
-        },
-        {
-          "type": "checkbox",
-          "id": "video_looping",
-          "label": "Enable video looping",
-          "default": false
+  {% style %}
+      #shopify-section-{{ section.id }} .gallery-wrap model-viewer {
+        min-height: {{ section.settings.product_height }}px;
+      }
+
+      #shopify-section-{{ section.id }} .gallery-wrap .product_gallery img,
+      #shopify-section-{{ section.id }} .gallery-wrap .product_gallery .plyr--html5 video,
+      #shopify-section-{{ section.id }} .gallery-wrap .product_gallery .plyr--youtube {
+        max-height: {{ section.settings.product_height }}px;
+      }
+
+      @media only screen and (max-width: 798px) {
+        #shopify-section-{{ section.id }} .gallery-wrap .product_gallery img {
+          max-height: 300px;
         }
-      ]
+
     }
-  {% endschema %}
-  
+  {% endstyle %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product Sticky ATC",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Media",
+      "info": "Learn more about [media types](https://help.shopify.com/en/manual/products/product-media)"
+    },
+    {
+      "type": "checkbox",
+      "id": "set_product_height",
+      "label": "Set height of product media",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "product_height",
+      "label": "Product media height",
+      "min": 100,
+      "max": 800,
+      "step": 10,
+      "default": 500,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "video_looping",
+      "label": "Enable video looping",
+      "default": false
+    }
+  ]
+}
+{% endschema %}
