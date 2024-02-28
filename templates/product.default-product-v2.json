@@ -112,29 +112,29 @@
         "collapsible_row_tWXaKn": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Question 1",
-            "row_content": "<p>Answer 1<\/p>"
+            "heading": "What is a water flosser and how does it work?",
+            "row_content": "<p>A water flosser is a device that uses a pressurized stream of water to clean between your teeth and remove plaque and debris. The Flossmo Water Flosser uses a 360° rotatable nozzle to gently remove plaque and massage your gums, promoting better oral health.<\/p>"
           }
         },
         "collapsible_row_6MtUVk": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Question 2",
-            "row_content": "<p>Answer 2<\/p>"
+            "heading": "Who can benefit from using a water flosser?",
+            "row_content": "<p>Anyone can benefit from using a water flosser, but they are especially helpful for people with:<\/p><ul><li>Braces or other dental implants<\/li><li>Crowns or bridges<\/li><li>Gum disease or gingivitis<\/li><li>Difficulty flossing with traditional floss<\/li><\/ul>"
           }
         },
         "collapsible_row_7KjVfm": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Question 3",
-            "row_content": "<p>Answer 3<\/p>"
+            "heading": "How often should I use a water flosser?",
+            "row_content": "<p>It is recommended to use a water flosser once or twice a day for minimum 30 seconds, ideally after brushing your teeth.<\/p>"
           }
         },
         "collapsible_row_UHhYzE": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Question 4",
-            "row_content": "<p>Answer 4<\/p>"
+            "heading": "Is a water flosser as effective as traditional flossing?",
+            "row_content": "<p>Studies have shown that water flossers can be just as effective as traditional floss at removing plaque and debris between teeth. In some cases, water flossers may even be more effective, especially for people who find traditional flossing difficult.<\/p>"
           }
         }
       },
