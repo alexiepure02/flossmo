@@ -3,7 +3,7 @@
     "image-with-text-overlay-1": {
       "type": "image-with-text-overlay",
       "settings": {
-        "wide_display": true,
+        "wide_display": false,
         "image": "shopify:\/\/shop_images\/sudoku87_Flossmo_banner_1800x100px_AM_25_Aug_22_V2_abb45667-6c01-4591-9be3-800514e5fdb5.jpg",
         "pretext": "",
         "title": "",
@@ -335,6 +335,7 @@
         "description",
         "form"
       ],
+      "disabled": true,
       "settings": {
         "product": "flossmo-water-flosser",
         "wide_display": true,
