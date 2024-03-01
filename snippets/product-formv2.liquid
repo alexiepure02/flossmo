@@ -138,8 +138,8 @@
         {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
         <button
           type="{% if settings.cart_action == 'ajax' %}button{% else %}submit{% endif %}"
-          id="clear-all-products-from-cart"
           name="add"
+          id="clear-all-products-from-cart1"
           class="
             add_to_cart
             global-button
@@ -181,9 +181,44 @@
 
 
 <script>
-  document.getElementById('clear-all-products-from-cart').addEventListener('click', function () {
-    clearCart();
-  });
+  // var button = document.getElementById('clear-all-products-from-cart');
+  
+  // button.click(function (e) {
+  //   e.preventDefault(); //Added this
+  //   console.log("aaa");
+  //    clearCart();
+  // });
+ 
+  document.getElementById('clear-all-products-from-cart1').addEventListener('click', function (e) {
+    console.log("aaa");
+     clearCart();
+  })
+
+  // $('#clear-all-products-from-cart1').click(function (e) {
+  //   console.log("aaa");
+  //    clearCart();
+  // });
+
+  // var buttons = document.querySelectorAll('.clear-all-products-from-cart1');
+
+  // console.log(buttons);
+
+  // buttons.forEach((button) => {
+  //   button.addEventListener('click', function () {
+  //   console.log("aaaaaaaaaaaaa");
+  //   clearCart();
+  // });
+  // })
+
+  // var button = document.getElementById('clear-all-products-from-cart');
+  
+  // console.log("bbb");
+  // console.log(button);
+
+  // button.addEventListener('click', function () {
+  //   console.log("aaaaaaaaaaaaa");
+  //   await clearCart();
+  // });
 
   async function clearCart() {
     const result = await fetch('/cart.json');
@@ -191,27 +226,27 @@
     let cart = {};
 
     if (result.status === 200) {
-        cart = await result.json();
-    }
+      cart = await result.json();
     
-    const updates = cart.items.reduce((productsSetToZero, item) => {
-      productsSetToZero[item.id] = 0;
-      return productsSetToZero;
-    }, {});
+      const updates = cart.items.reduce((productsSetToZero, item) => {
+        productsSetToZero[item.id] = 0;
+        return productsSetToZero;
+      }, {});
 
-    fetch(window.Shopify.routes.root + 'cart/update.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ updates }),
-    })
-      .then((response) => {
-        return response.json();
+      await fetch(window.Shopify.routes.root + 'cart/update.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ updates }),
       })
-      .catch((error) => {
-        console.error('Error:', error);
+        .then((response) => {
+          return response.json();
+        })
+        .catch((error) => {
+          console.error('Error:', error);
       });
+    }
   }
 </script>
 

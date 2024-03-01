@@ -21,7 +21,7 @@
               data-id="{{ product.id }}"
               data-rating="{{ product.metafields.loox.avg_rating }}"
               data-raters="{{ product.metafields.loox.num_reviews }}"
-              data-pattern="4.9/5 by 1,000+ Happy Customers"
+              data-pattern="4.9/5 by 110+ Happy Customers"
             ></div>
           </a>
           <h5 class="product_name noMargin">{{ product.title }}</h5>
@@ -35,7 +35,7 @@
             data-id="{{ product.id }}"
             data-rating="{{ product.metafields.loox.avg_rating }}"
             data-raters="{{ product.metafields.loox.num_reviews }}"
-            data-pattern="4.9/5 by 1,000+ Happy Customers"
+            data-pattern="4.9/5 by 110+ Happy Customers"
           ></div>
         </a>
         <div class="js-product_sections">
@@ -44,7 +44,11 @@
             show_payment_button: false,
             collection_handles: collection_handles
           %}
-
+          {% comment %} {% render 'product-formv2',
+          product: product,
+          show_payment_button: false,
+          collection_handles: collection_handles
+        %} {% endcomment %}
           {% render 'product-notify-me', product: product %}
         </div>
       </div>
@@ -313,9 +317,6 @@
 </script>
 
 {% if section.settings.set_product_height %}
-  <script>
-    console.log('aaaa');
-  </script>
   {% style %}
       #shopify-section-{{ section.id }} .gallery-wrap model-viewer {
         min-height: {{ section.settings.product_height }}px;

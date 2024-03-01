@@ -138,6 +138,7 @@
         <button
           type="{% if settings.cart_action == 'ajax' %}button{% else %}submit{% endif %}"
           name="add"
+          id="clear-all-products-from-cart2"
           class="
             add_to_cart
             global-button
@@ -180,3 +181,71 @@
   <div class="surface-pick-up surface-pick-up--loading" data-surface-pick-up></div>
   <div class="surface-pick-up__modal" data-surface-pick-up-modal></div>
 </div>
+
+<script>
+  document.getElementById('clear-all-products-from-cart2').addEventListener('click', function (e) {
+    console.log("bbb");
+     clearCart();
+  })
+  
+  // button.click(function (e) {
+  //   e.preventDefault(); //Added this
+  //   console.log("aaa");
+  //    clearCart();
+  // });
+ 
+  // $('#clear-all-products-from-cart2').click(function (e) {
+  //   console.log("bbb");
+  //    clearCart();
+  // });
+
+  // var buttons = document.querySelectorAll('.clear-all-products-from-cart1');
+
+  // console.log(buttons);
+
+  // buttons.forEach((button) => {
+  //   button.addEventListener('click', function () {
+  //   console.log("aaaaaaaaaaaaa");
+  //   clearCart();
+  // });
+  // })
+
+  // var button = document.getElementById('clear-all-products-from-cart');
+  
+  // console.log("bbb");
+  // console.log(button);
+
+  // button.addEventListener('click', function () {
+  //   console.log("aaaaaaaaaaaaa");
+  //   await clearCart();
+  // });
+
+  async function clearCart() {
+    const result = await fetch('/cart.json');
+
+    let cart = {};
+
+    if (result.status === 200) {
+      cart = await result.json();
+    
+      const updates = cart.items.reduce((productsSetToZero, item) => {
+        productsSetToZero[item.id] = 0;
+        return productsSetToZero;
+      }, {});
+
+      await fetch(window.Shopify.routes.root + 'cart/update.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ updates }),
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+      });
+    }
+  }
+</script>
