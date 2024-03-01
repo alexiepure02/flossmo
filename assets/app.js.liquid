@@ -1227,3 +1227,7 @@ $(document)
       $('a.mega-menu-parent[data-dropdown-rel="' + megaMenuParent + '"]').parents('header').removeClass('editor-hover--true');
     }
 });
+
+var heroImage = document.querySelector('img[alt="Water Flosser Hero Homepage"]');
+heroImage.onclick = function() { window.location.href = "/products/flossmo-water-flosser"; };
+heroImage.style.cursor = "pointer";
