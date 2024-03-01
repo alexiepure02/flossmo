@@ -223,7 +223,10 @@
     const selectedOption = this.selectedOptions[0];
     const price = parseFloat(selectedOption.dataset.price);
 
-    const priceBox = document.querySelector('.price_box');
-    priceBox.innerHTML = Shopify.formatMoney(price, "{{ shop.money_format }}");
+    const priceBoxes = document.querySelectorAll('.price_box');
+
+    priceBoxes.forEach((priceBox) => {
+        priceBox.innerHTML = Shopify.formatMoney(price, "{{ shop.money_format }}");
+    })
   });
 </script>
