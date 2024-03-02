@@ -91,23 +91,7 @@
 
                 <p class="modal_price">
                   {% if item.price > 0 %}
-                    <span class="money {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}sale{% endif %}">
-                      {%
-                        render 'price-element',
-                        price: item.final_price
-                      %}
-                    </span>
-
-                    {% if item.price < item.variant.compare_at_price or item.line_level_discount_allocations.size > 0 %}
-                      <span class="money was_price">
-                        {%
-                          render 'price-element',
-                          price: item.variant.compare_at_price
-                        %}
-                      </span>
-                    {% endif %}
-                  {% else %}
-                    {{ settings.free_price_text }}
+                    {{ item.price | money }}
                   {% endif %}
                 </p>
 
@@ -215,7 +199,7 @@
               {%- endif -%}
             {%- endcapture -%}
 
-            <p class="cart-message meta">{{ taxes_shipping_checkout }}</p>
+            {% comment %} <p class="cart-message meta">{{ taxes_shipping_checkout }}</p> {% endcomment %}
 
             {% if section.settings.display_savings and total_saving > 0 or section.settings.display_savings and cart.total_discount > 0 %}
               <p class="cart_savings js-cart_savings sale">
@@ -232,11 +216,11 @@
               </p>
             {% endif %}
 
-            {% unless shop.enabled_currencies.size > 1 %}
+            {% comment %} {% unless shop.enabled_currencies.size > 1 %}
               <p>
                 <small>{{ 'cart.general.orders_processed_in_currency_html' | t: currency: shop.currency }}</small>
               </p>
-            {% endunless %}
+            {% endunless %} {% endcomment %}
 
             {% if section.settings.display_special_instructions %}
               <label for="note">{{ 'cart.general.note' | t: shop_name: shop.name }}:</label>

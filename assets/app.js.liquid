@@ -629,16 +629,18 @@ $(() => {
 
         if (productHasSale === true) {
           // puts the slash through the old item price
-          const itemPrice = `${window.Shopify.formatMoney(productFinalPrice, $('body').data('money-format'))} </span><span class="money was_price">${window.Shopify.formatMoney(productCompareAtPrice, $('body').data('money-format'))}</span>`;
-          cartItemsHTML += `<span class="money sale">${itemPrice}</strong>`;
+          // const itemPrice = `${window.Shopify.formatMoney(productFinalPrice, $('body').data('money-format'))} </span><span class="money was_price">${window.Shopify.formatMoney(productCompareAtPrice, $('body').data('money-format'))}</span>`;
+          const itemPrice = `${window.Shopify.formatMoney(productFinalPrice, $('body').data('money-format'))} </span>`;
+          cartItemsHTML += `<span class="money">${itemPrice}</strong>`;
 
           // Total savings
           saving = (productCompareAtPrice - productFinalPrice) * item.quantity;
           totalSaving = saving + totalSaving;
         } else if (item.price > item.final_price) {
           // puts the slash through the old item price
-          const itemPrice = `${window.Shopify.formatMoney(item.final_price, $('body').data('money-format'))} </span><span class="money was_price">${window.Shopify.formatMoney(item.price, $('body').data('money-format'))}</span>`;
-          cartItemsHTML += `<span class="money sale">${itemPrice}</strong>`;
+          // const itemPrice = `${window.Shopify.formatMoney(item.final_price, $('body').data('money-format'))} </span><span class="money was_price">${window.Shopify.formatMoney(item.price, $('body').data('money-format'))}</span>`;
+          const itemPrice = `${window.Shopify.formatMoney(item.final_price, $('body').data('money-format'))} </span>`;
+          cartItemsHTML += `<span class="money">${itemPrice}</strong>`;
         } else {
           const itemPrice = window.Shopify.formatMoney(item.price, $('body').data('money-format'));
           if (item.price > 0) {
