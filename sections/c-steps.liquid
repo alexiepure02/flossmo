@@ -1,0 +1,167 @@
+<style>
+  /* Steps Section */
+
+  .steps {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 50px 10px;
+  }
+
+  .steps h3 {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .steps .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 12px;
+  }
+
+  .step-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .step-box img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .step-box .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .steps h1 {
+      font-size: 32px;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .steps .container {
+      gap: 75px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .steps h1 {
+      font-size: 32px;
+    }
+
+    .steps h3 {
+      font-size: 28px;
+    }
+  }
+</style>
+
+<div class="steps">
+  <h1>As easy as 1-2-3.</h1>
+  <div class="container">
+    {% for block in section.blocks %}
+      <div class="step-box" {{ block.shopify_attributes }}>
+        <img
+          src="{{ block.settings.image | image_url: width: 400 }}"
+          width="1"
+          height="1"
+        >
+        <div class="text-box">
+          <h3>{{ block.settings.heading }}</h3>
+          {{ block.settings.paragraph }}
+        </div>
+      </div>
+    {% endfor %}
+
+    {% comment %}
+      <div class="step-box">
+        <img src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/step1.png?v=1707824229" width="1" height="1">
+        <div class="text-box">
+          <h3>Fill it up...</h3>
+          <p>
+            Open the water tank and fill it<br>
+            to the top.
+          </p>
+        </div>
+      </div>
+      <div class="step-box">
+        <img src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/step2.jpg?v=1707822576" width="1" height="1">
+        <div class="text-box">
+          <h3>Select your mode...</h3>
+          <p>
+            Choose your desired mode and<br>
+            turn it on.
+          </p>
+        </div>
+      </div>
+      <div class="step-box">
+        <img src="https://cdn.shopify.com/s/files/1/0631/0513/8916/files/step3.jpg?v=1707822560" width="1" height="1">
+        <div class="text-box">
+          <h3>Start flossing!</h3>
+          <p>
+            Use for 30 seconds each day for<br>
+            healthy teeth.
+          </p>
+        </div>
+      </div>
+    {% endcomment %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "C Steps",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Everyone loves their Flossmo!"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Fill it up..."
+        },
+        {
+          "type": "richtext",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "<p>Open the water tank and fill it<br>to the top.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Steps"
+    }
+  ]
+}
+{% endschema %}

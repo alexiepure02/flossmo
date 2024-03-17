@@ -1,0 +1,153 @@
+<style>
+  /* Benefits Section */
+
+  .benefits-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 15px;
+  }
+
+  .benefit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benefit-container img {
+    order: 0;
+    width: 100%;
+    max-width: 440px;
+    height: 440px;
+    object-fit: cover;
+    object-position: top;
+    background-color: gray;
+    border-radius: 12px;
+  }
+
+  .benefit-container .text-box {
+    order: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 25px 0;
+  }
+
+  .benefit-container .text {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .benefit-container h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .benefits-section {
+      padding: 75px 15px;
+    }
+
+    .benefit-container {
+      flex-direction: row;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .benefit-container img {
+      order: 0;
+    }
+
+    .benefit-container .text-box {
+      order: 0;
+      padding: 50px 75px;
+    }
+
+    .benefit-container .text {
+      max-width: 550px;
+      gap: 22px;
+    }
+
+    .align-text-right {
+      align-items: flex-end !important;
+    }
+
+    .align-text-left {
+      align-items: flex-start !important;
+    }
+
+    .benefit-container h3 {
+      font-size: 36px;
+    }
+
+    .c-row-reverse {
+      flex-direction: row-reverse !important;
+    }
+  }
+</style>
+
+<div class="benefits-section">
+  {% for block in section.blocks %}
+    <div class="benefit-container{% cycle "", " c-row-reverse"%}" {{ block.shopify_attributes }}>
+      <img
+        src="{{ block.settings.image | image_url: width: 1000 }}"
+        width="1"
+        height="1"
+      >
+      <div class="text-box align-text-{% cycle "right", "left" %}">
+        <div class="text">
+          <h3>{{ block.settings.heading }}</h3>
+          <p>{{ block.settings.paragraph }}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "C Benefits",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Healthier Teeth and Gums"
+        },
+        {
+          "type": "text",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "With Flossmo, you'll love how it easily clears away plaque with its gentle water flow. It reaches between your teeth and along your gumline, leaving your mouth feeling refreshingly clean and healthy."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Benefits"
+    }
+  ]
+}
+{% endschema %}

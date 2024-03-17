@@ -74,6 +74,191 @@
         "enable_thumbnail_slider": true
       }
     },
+    "c_social_proof_wQC8kN": {
+      "type": "c-social-proof",
+      "blocks": {
+        "item_REMdYb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review1.jpg",
+            "review": "I really find it easy to use daily since it's small and the speed is adjustable. Love it. Want to buy another one to keep at work!",
+            "name": "Ashley"
+          }
+        },
+        "item_DFdWrj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review1_flosser.jpg",
+            "review": "",
+            "name": ""
+          }
+        },
+        "item_AAmGDq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review2_flosser.jpg",
+            "review": "",
+            "name": ""
+          }
+        },
+        "item_ex8ADV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review2.jpg",
+            "review": "Never owned a water flosser before but decided to give this one a go as it seemed good value for money. So glad I did! Both my husband & I love it!",
+            "name": "Jude"
+          }
+        },
+        "item_MVNyXk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review3.jpg",
+            "review": "I was advised to get one by my dentist. I love it, it makes my dental routine so much better.",
+            "name": "Jordan"
+          }
+        }
+      },
+      "block_order": [
+        "item_REMdYb",
+        "item_DFdWrj",
+        "item_AAmGDq",
+        "item_ex8ADV",
+        "item_MVNyXk"
+      ],
+      "settings": {
+        "heading": "Everyone loves their Flossmo!",
+        "social_rating_text": "Rated 4.9\/5 by 110+ Happy Customers"
+      }
+    },
+    "c_steps_PpTjjz": {
+      "type": "c-steps",
+      "blocks": {
+        "item_7efE7X": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/step1.png",
+            "heading": "Fill it up...",
+            "paragraph": "<p>Open the water tank and fill it<br\/>to the top.<\/p>"
+          }
+        },
+        "item_bUMC3Y": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/step2.jpg",
+            "heading": "Select your mode...",
+            "paragraph": "<p>Choose your desired mode and<\/p><p>turn it on.<\/p>"
+          }
+        },
+        "item_EzeYeP": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/step3.jpg",
+            "heading": "Start flossing!",
+            "paragraph": "<p>Use for 30 seconds each day for<\/p><p>healthy teeth.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_7efE7X",
+        "item_bUMC3Y",
+        "item_EzeYeP"
+      ],
+      "settings": {
+        "heading": "Everyone loves their Flossmo!"
+      }
+    },
+    "c_benefits_rmmLE8": {
+      "type": "c-benefits",
+      "blocks": {
+        "item_MF46yF": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ezgif-1-f5f885796a_1000x_8818865a-4345-4ab5-a22d-d6738196d90f.webp",
+            "heading": "Healthier Teeth and Gums",
+            "paragraph": "With Flossmo, you'll love how it easily clears away plaque with its gentle water flow. It reaches between your teeth and along your gumline, leaving your mouth feeling refreshingly clean and healthy."
+          }
+        },
+        "item_gyEpfB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-mikhail-nilov-6740511_1.jpg",
+            "heading": "Chew More Comfortably",
+            "paragraph": "Hey, whether you have braces, implants, crowns, or bridges, Flossmo is your go-to! Its gentle cleaning action ensures your gums stay healthy, so you can enjoy your favorite meals without any any discomfort."
+          }
+        },
+        "item_TMxnXB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sudoku87_Flossmo-website-graphics_Waterproof_800x800px_NK_04-MAR-2022_V1_r1.jpg",
+            "heading": "Stronger and Durable Teeth",
+            "paragraph": "With Flossmo, say goodbye to plaque and hello to stronger teeth! By stopping cavities in their tracks, it keeps your tooth enamel robust and reduces the need for frequent dental treatments. So, your smile stays strong and bright for the long haul."
+          }
+        },
+        "item_6amXmT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-shiny-diamond-3762398_1.jpg",
+            "heading": "Boost your Confidence",
+            "paragraph": "Flossmo's got your back for fresh breath and a sparkling smile! By getting rid of food bits and germs, it leaves your mouth feeling fresh and your smile beaming."
+          }
+        }
+      },
+      "block_order": [
+        "item_MF46yF",
+        "item_gyEpfB",
+        "item_TMxnXB",
+        "item_6amXmT"
+      ],
+      "settings": {
+      }
+    },
+    "c_features_wPkKQK": {
+      "type": "c-features",
+      "blocks": {
+        "item_PqJGaB": {
+          "type": "item",
+          "settings": {
+            "heading": "1. 360° Rotatable Nozzle",
+            "paragraph": "The 360° tip rotation allows you to reach every point of your mouth and gum for a comprehensive cleaning"
+          }
+        },
+        "item_xTbUm8": {
+          "type": "item",
+          "settings": {
+            "heading": "2. Four Pressure Setting",
+            "paragraph": "Normal, soft, pulse and DIY - Choose the most comfortable mode that suits your needs."
+          }
+        },
+        "item_AbMxWK": {
+          "type": "item",
+          "settings": {
+            "heading": "3. 360mL Water Tank",
+            "paragraph": "The water tank is completely retractable and removable, making it super easy to clean and refill."
+          }
+        }
+      },
+      "block_order": [
+        "item_PqJGaB",
+        "item_xTbUm8",
+        "item_AbMxWK"
+      ],
+      "settings": {
+        "heading": "Innovative design & features:",
+        "image": "shopify:\/\/shop_images\/features.png"
+      }
+    },
+    "c_comparison_cRbYbi": {
+      "type": "c-comparison",
+      "settings": {
+        "heading": "Innovative design & features:",
+        "feature1": "Takes 30 seconds",
+        "feature2": "Gentle on your gums",
+        "feature3": "Removes up to 99% of plaque",
+        "feature4": "Ideal for people with braces",
+        "feature5": "Clinically proven",
+        "last_row": "Not proven"
+      }
+    },
     "recommendations": {
       "type": "product-recommendations",
       "disabled": true,
@@ -157,6 +342,11 @@
   "order": [
     "sidebar",
     "main",
+    "c_social_proof_wQC8kN",
+    "c_steps_PpTjjz",
+    "c_benefits_rmmLE8",
+    "c_features_wPkKQK",
+    "c_comparison_cRbYbi",
     "recommendations",
     "collapsible_content_Pe8cnC",
     "trust_seals_JzgXfV",
