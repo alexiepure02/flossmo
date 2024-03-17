@@ -256,16 +256,19 @@
                 <div class="checked"></div>
                 <div class="text-box">
                   <p class="variant-name">{{ value }}</p>
-                  {% assign price_savings = variant.compare_at_price | minus: variant.price | divided_by: 100 %}
+                  {% assign price_savings = variant.compare_at_price | minus: variant.price | times: 100 %}
                   <p class="price-savings">
                     Save
-                    <span
-                      class="money"
-                      data-currency-original="${{ price_savings }}"
-                      data-currency-usd="${{ price_savings }}"
-                      data-currency="USD"
-                      >${{ price_savings -}}
-                    </span>
+                    {{ price_savings | money_without_trailing_zeros -}}
+                    {% comment %}
+                      <span
+                        class="money"
+                        data-currency-original="${{ price_savings }}"
+                        data-currency-usd="${{ price_savings }}"
+                        data-currency="USD"
+                        >{{ price_savings | money_without_trailing_zeros -}}
+                      </span>
+                    {% endcomment %}
                   </p>
                 </div>
               </div>
