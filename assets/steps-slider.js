@@ -1,7 +1,8 @@
 
 
   var swiper = new Swiper(".step-slider", {
-      pagination: {
-        el: ".swiper-pagination",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
     });
