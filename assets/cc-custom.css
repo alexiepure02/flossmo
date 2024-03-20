@@ -356,3 +356,10 @@ button.add_to_cart .text {
     display:none !important;
   }
 }
+
+
+@media only screen and (max-width:750px){
+  .product-gallery__thumbnails{
+    display:none;
+  }
+}
