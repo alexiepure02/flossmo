@@ -58,6 +58,9 @@
         "short_benefits_w9UXmW",
         "trust_seals_8rEAFt"
       ],
+      "custom_css": [
+        ".swatch-element-custom.\\33 -flossmo-swatch.available {display: none;}"
+      ],
       "settings": {
         "product_breadcrumb": false,
         "media_position": "is-flex-row",
