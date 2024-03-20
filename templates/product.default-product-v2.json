@@ -74,62 +74,6 @@
         "enable_thumbnail_slider": true
       }
     },
-    "c_social_proof_wQC8kN": {
-      "type": "c-social-proof",
-      "blocks": {
-        "item_REMdYb": {
-          "type": "item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/review1.jpg",
-            "review": "I really find it easy to use daily since it's small and the speed is adjustable. Love it. Want to buy another one to keep at work!",
-            "name": "Ashley"
-          }
-        },
-        "item_DFdWrj": {
-          "type": "item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/review1_flosser.jpg",
-            "review": "",
-            "name": ""
-          }
-        },
-        "item_AAmGDq": {
-          "type": "item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/review2_flosser.jpg",
-            "review": "",
-            "name": ""
-          }
-        },
-        "item_ex8ADV": {
-          "type": "item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/review2.jpg",
-            "review": "Never owned a water flosser before but decided to give this one a go as it seemed good value for money. So glad I did! Both my husband & I love it!",
-            "name": "Jude"
-          }
-        },
-        "item_MVNyXk": {
-          "type": "item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/review3.jpg",
-            "review": "I was advised to get one by my dentist. I love it, it makes my dental routine so much better.",
-            "name": "Jordan"
-          }
-        }
-      },
-      "block_order": [
-        "item_REMdYb",
-        "item_DFdWrj",
-        "item_AAmGDq",
-        "item_ex8ADV",
-        "item_MVNyXk"
-      ],
-      "settings": {
-        "heading": "Everyone loves their Flossmo!",
-        "social_rating_text": "Rated 4.9\/5 by 110+ Happy Customers"
-      }
-    },
     "c_steps_PpTjjz": {
       "type": "c-steps",
       "blocks": {
@@ -175,11 +119,12 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/ezgif-1-f5f885796a_1000x_8818865a-4345-4ab5-a22d-d6738196d90f.webp",
             "heading": "Healthier Teeth and Gums",
-            "paragraph": "With Flossmo, you'll love how it easily clears away plaque with its gentle water flow. It reaches between your teeth and along your gumline, leaving your mouth feeling refreshingly clean and healthy."
+            "paragraph": "Flossmo reaches between your teeth and along your gumline, leaving your mouth feeling refreshingly clean and healthy."
           }
         },
         "item_gyEpfB": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/pexels-mikhail-nilov-6740511_1.jpg",
             "heading": "Chew More Comfortably",
@@ -257,6 +202,62 @@
         "feature4": "Ideal for people with braces",
         "feature5": "Clinically proven",
         "last_row": "Not proven"
+      }
+    },
+    "c_social_proof_wQC8kN": {
+      "type": "c-social-proof",
+      "blocks": {
+        "item_REMdYb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review1.jpg",
+            "review": "I really find it easy to use daily since it's small and the speed is adjustable. Love it. Want to buy another one to keep at work!",
+            "name": "Ashley"
+          }
+        },
+        "item_DFdWrj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review1_flosser.jpg",
+            "review": "",
+            "name": ""
+          }
+        },
+        "item_AAmGDq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review2_flosser.jpg",
+            "review": "",
+            "name": ""
+          }
+        },
+        "item_ex8ADV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review2.jpg",
+            "review": "Never owned a water flosser before but decided to give this one a go as it seemed good value for money. So glad I did! Both my husband & I love it!",
+            "name": "Jude"
+          }
+        },
+        "item_MVNyXk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review3.jpg",
+            "review": "I was advised to get one by my dentist. I love it, it makes my dental routine so much better.",
+            "name": "Jordan"
+          }
+        }
+      },
+      "block_order": [
+        "item_REMdYb",
+        "item_DFdWrj",
+        "item_AAmGDq",
+        "item_ex8ADV",
+        "item_MVNyXk"
+      ],
+      "settings": {
+        "heading": "Everyone loves their Flossmo!",
+        "social_rating_text": "Rated 4.9\/5 by 110+ Happy Customers"
       }
     },
     "recommendations": {
@@ -342,11 +343,11 @@
   "order": [
     "sidebar",
     "main",
-    "c_social_proof_wQC8kN",
     "c_steps_PpTjjz",
     "c_benefits_rmmLE8",
     "c_features_wPkKQK",
     "c_comparison_cRbYbi",
+    "c_social_proof_wQC8kN",
     "recommendations",
     "collapsible_content_Pe8cnC",
     "trust_seals_JzgXfV",
