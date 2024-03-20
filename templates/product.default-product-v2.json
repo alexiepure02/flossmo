@@ -141,6 +141,7 @@
         },
         "item_6amXmT": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/pexels-shiny-diamond-3762398_1.jpg",
             "heading": "Boost your Confidence",
@@ -155,6 +156,18 @@
         "item_6amXmT"
       ],
       "settings": {
+      }
+    },
+    "c_comparison_cRbYbi": {
+      "type": "c-comparison",
+      "settings": {
+        "heading": "Innovative design & features:",
+        "feature1": "Takes 30 seconds",
+        "feature2": "Gentle on your gums",
+        "feature3": "Removes up to 99% of plaque",
+        "feature4": "Ideal for people with braces",
+        "feature5": "Clinically proven",
+        "last_row": "Not proven"
       }
     },
     "c_features_wPkKQK": {
@@ -190,18 +203,6 @@
       "settings": {
         "heading": "Innovative design & features:",
         "image": "shopify:\/\/shop_images\/features.png"
-      }
-    },
-    "c_comparison_cRbYbi": {
-      "type": "c-comparison",
-      "settings": {
-        "heading": "Innovative design & features:",
-        "feature1": "Takes 30 seconds",
-        "feature2": "Gentle on your gums",
-        "feature3": "Removes up to 99% of plaque",
-        "feature4": "Ideal for people with braces",
-        "feature5": "Clinically proven",
-        "last_row": "Not proven"
       }
     },
     "c_social_proof_wQC8kN": {
@@ -345,8 +346,8 @@
     "main",
     "c_steps_PpTjjz",
     "c_benefits_rmmLE8",
-    "c_features_wPkKQK",
     "c_comparison_cRbYbi",
+    "c_features_wPkKQK",
     "c_social_proof_wQC8kN",
     "recommendations",
     "collapsible_content_Pe8cnC",
