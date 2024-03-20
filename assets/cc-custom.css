@@ -342,6 +342,10 @@ button.add_to_cart .text {
 
 
 
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
 
 .w-full{
   width:100% !important;
