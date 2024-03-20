@@ -72,7 +72,7 @@
         "enable_product_lightbox": true,
         "activate_zoom": true,
         "slideshow_speed": 0,
-        "slideshow_animation": "fade",
+        "slideshow_animation": "slide",
         "thumbnail_position": "bottom",
         "enable_thumbnail_slider": true
       }
