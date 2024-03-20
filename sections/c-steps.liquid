@@ -100,9 +100,9 @@
 
 <div class="swiper step-slider">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
+
         {% for block in section.blocks %}
-          <div class="step-box" {{ block.shopify_attributes }}>
+          <div class="step-box swiper-slide" {{ block.shopify_attributes }}>
             <img
               src="{{ block.settings.image | image_url: width: 400 }}"
               width="1"
@@ -115,7 +115,6 @@
           </div>
         {% endfor %}
 
-    </div>
   </div>
 </div>
     
