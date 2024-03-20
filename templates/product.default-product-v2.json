@@ -34,13 +34,13 @@
           "settings": {
           }
         },
-        "short_benefits_w9UXmW": {
-          "type": "short-benefits",
+        "form": {
+          "type": "form",
           "settings": {
           }
         },
-        "form": {
-          "type": "form",
+        "short_benefits_w9UXmW": {
+          "type": "short-benefits",
           "settings": {
           }
         },
@@ -54,8 +54,8 @@
         "title",
         "loox-rating",
         "description",
-        "short_benefits_w9UXmW",
         "form",
+        "short_benefits_w9UXmW",
         "trust_seals_8rEAFt"
       ],
       "settings": {
