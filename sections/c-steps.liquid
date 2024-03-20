@@ -74,23 +74,41 @@
 
 
 <div class="desktop-view">
-<div class="container">
-  {% for block in section.blocks %}
-      <div class="step-box" {{ block.shopify_attributes }}>
-        <img
-          src="{{ block.settings.image | image_url: width: 400 }}"
-          width="1"
-          height="1"
-        >
-        <div class="text-box">
-          <h3>{{ block.settings.heading }}</h3>
-          {{ block.settings.paragraph }}
+  <div class="container">
+    {% for block in section.blocks %}
+        <div class="step-box" {{ block.shopify_attributes }}>
+          <img
+            src="{{ block.settings.image | image_url: width: 400 }}"
+            width="1"
+            height="1"
+          >
+          <div class="text-box">
+            <h3>{{ block.settings.heading }}</h3>
+            {{ block.settings.paragraph }}
+          </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
   </div>
 </div>
-
+<div class="mobile-view">
+  <div class="container">
+    <div class="steps-slider">
+      {% for block in section.blocks %}
+        <div class="step-box" {{ block.shopify_attributes }}>
+          <img
+            src="{{ block.settings.image | image_url: width: 400 }}"
+            width="1"
+            height="1"
+          >
+          <div class="text-box">
+            <h3>{{ block.settings.heading }}</h3>
+            {{ block.settings.paragraph }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 
     
     
