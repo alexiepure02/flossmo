@@ -1,4 +1,4 @@
-$('.steps-slider').slick({
+$('.steps-sliders').slick({
 centerMode: false,
 centerPadding: '00px',
 slidesToShow: 1.10,
