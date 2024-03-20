@@ -71,8 +71,11 @@
 
 <div class="steps">
   <h1>As easy as 1-2-3.</h1>
-  <div class="container">
-    {% for block in section.blocks %}
+
+
+<div class="desktop-view">
+<div class="container">
+  {% for block in section.blocks %}
       <div class="step-box" {{ block.shopify_attributes }}>
         <img
           src="{{ block.settings.image | image_url: width: 400 }}"
@@ -85,9 +88,13 @@
         </div>
       </div>
     {% endfor %}
-
-
   </div>
+</div>
+
+
+    
+    
+  
 </div>
 
 {% schema %}
