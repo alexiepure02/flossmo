@@ -38,6 +38,7 @@
             data-pattern="4.9/5 by 110+ Happy Customers"
           ></div>
         </a>
+        <a href="" class="text-decoration"><button class="global-button--primary"> {% if product.available %}BUY NOW {% else %}{{ settings.sold_out_text }}{% endif %}</button></a>
         {% comment %}
         <div class="js-product_sections">
           {% render 'product-form-sticky',
