@@ -367,6 +367,9 @@ html{
   /* .product-gallery__thumbnails{
     display:none;
   } */
+  .product_gallery_nav .gallery-cell img{
+    display:none;
+  }
   .custom-stickys{
     justify-content:center;
   }
