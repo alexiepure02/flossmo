@@ -4,4 +4,5 @@
       pagination: {
         el: ".swiper-pagination",
       },
+      spacebetween:20px,
     });
