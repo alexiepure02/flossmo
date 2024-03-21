@@ -348,6 +348,9 @@ button.add_to_cart .text {
 .w-full{
   width:100% !important;
 }
+html{
+  scroll-behavior:smooth;
+}
 @media only screen and (min-width:990px){
   .mobile-view{
     display:none !important;
@@ -366,6 +369,9 @@ button.add_to_cart .text {
   }
   .custom-stickys{
     justify-content:center;
+  }
+  .custom-buynow{
+    width:100%;
   }
 }
 
