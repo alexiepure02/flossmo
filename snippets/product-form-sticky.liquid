@@ -158,7 +158,7 @@
         >
           <div class="checkout_box">
             <span class="text">
-              {% if product.available %}BUY NOW - {% else %}{{ settings.sold_out_text }}{% endif %}
+              {% if product.available %}BUY NOW {% else %}{{ settings.sold_out_text }}{% endif %}
             </span>
             {% comment %} <img src="{{ 'arrow-right-mobile.svg' | asset_url }}" alt="arrow right icon"> {% endcomment %}
             <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
