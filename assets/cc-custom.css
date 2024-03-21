@@ -370,6 +370,12 @@ html{
   .product_gallery_nav .gallery-cell img{
     display:none;
   }
+  .product_gallery_nav .gallery-cell.custom-dimensions{
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 100px;
+  }
   .custom-stickys{
     justify-content:center;
   }
