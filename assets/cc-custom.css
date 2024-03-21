@@ -342,7 +342,9 @@ button.add_to_cart .text {
 
 
 
-
+.text-decoration{
+  text-decoration:none !important;
+}
 .w-full{
   width:100% !important;
 }
