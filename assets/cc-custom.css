@@ -362,4 +362,9 @@ button.add_to_cart .text {
   .product-gallery__thumbnails{
     display:none;
   }
+  .custom-stickys{
+    justify-content:center;
+  }
 }
+
+
